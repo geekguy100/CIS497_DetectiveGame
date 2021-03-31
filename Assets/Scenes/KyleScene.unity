@@ -332,6 +332,10 @@ PrefabInstance:
       propertyPath: speed
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3221242057188321556, guid: 5223fea1de9332a419749ffc58d7ef3a, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -1389414000800170030, guid: 82d63bc997ec1d848be6652dd81da8bd, type: 2}
     - target: {fileID: 4220584989347107669, guid: 5223fea1de9332a419749ffc58d7ef3a, type: 3}
       propertyPath: m_Name
       value: Player
