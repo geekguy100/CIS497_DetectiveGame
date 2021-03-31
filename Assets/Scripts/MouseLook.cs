@@ -1,7 +1,7 @@
 /*****************************************************************************
 // File Name :         MouseLook.cs
 // Author :            Kyle Grenier
-// Creation Date :     03/11/2021
+// Creation Date :     03/31/2021
 //
 // Brief Description : Enables character roation with the mouse.
 *****************************************************************************/
