@@ -24,7 +24,7 @@ public class Journal : MonoBehaviour
     private int currentPage;
 
     // Update is called once per frame
-    void Update()
+    void Start()
     {
         AddClue(0, "I found this clue at runtime");
         AddClue(1, "I found this clue at runtime");
