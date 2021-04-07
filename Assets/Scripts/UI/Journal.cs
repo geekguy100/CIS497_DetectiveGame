@@ -29,7 +29,10 @@ public class Journal : MonoBehaviour
         AddClue(0, "I found this clue at runtime");
         AddClue(1, "I found this clue at runtime");
     }
-
+    private void Update()
+    {
+        
+    }
     public void AddClue(int character, string clue)
     {
         pages[character].clues[pages[character].discoveredClues] = clue;
@@ -51,4 +54,6 @@ public class Journal : MonoBehaviour
         }
 
     }
+
+    
 }
