@@ -13,7 +13,7 @@ public class JournalPage
 
     public int discoveredClues = 0;
 }
-public class Journal : MonoBehaviour
+public class Journal : Singleton<Journal>
 {
     [SerializeField] JournalPage[] pages;
 
