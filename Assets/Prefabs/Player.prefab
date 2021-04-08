@@ -56,7 +56,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4220584989347107669}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -117,7 +117,7 @@ AudioSource:
   m_GameObject: {fileID: 4220584989347107669}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1389414000800170030, guid: 82d63bc997ec1d848be6652dd81da8bd, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -252,8 +252,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebb0d636f7a20c94ca9f0bf529eb5be4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
-  amplitude: 0.25
 --- !u!114 &456847654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33d9e4c7508a3004ca90f2cda89650b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 90
+  sensitivity: 200
   headUpperAngleLimit: 85
   headLowerAngleLimit: -80
 --- !u!114 &456847655
@@ -293,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 480bb944e1bfe2c49aa8b899f99ba8a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 4
   gravity: -9.81
 --- !u!1 &4220584989534331534
 GameObject:

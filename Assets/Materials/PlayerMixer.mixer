@@ -1,5 +1,25 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-7422217783900147819
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 9a67b86ab2718f642bbb15486e679c39
+  m_EffectName: ParamEQ
+  m_MixLevel: 9cd41a14565b32b4cb57794fe7402309
+  m_Parameters:
+  - m_ParameterName: Center freq
+    m_GUID: 6973a0acf2860604f9c9f4e4d9b63728
+  - m_ParameterName: Octave range
+    m_GUID: 959781c00d3bbb746963c98351f6ff4e
+  - m_ParameterName: Frequency gain
+    m_GUID: 78e7ae3d0573c2741a1504aa1918ebd2
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!243 &-1389414000800170030
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -15,6 +35,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 5818058719869848322}
+  - {fileID: -7422217783900147819}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -86,13 +107,23 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 86cc861f15960a6489f6c0fedc37a8d9
   m_FloatValues:
+    959781c00d3bbb746963c98351f6ff4e: 2.71
     c0a3b0010b70c9848b15a3a5df93f8ea: -3219
+    c4b0d7110f8d0104783c0f3ee3a97e10: 0.863
     e26deab1193bfd141a5045861df4909d: 0
     19da70648404c37458fc7191052a3688: -772
     b5cf5eb43bfd85a469d622d12ad074e1: 394
+    e22ea815706d03b419bc4916060b3f72: -10000
+    07daa4b5bfc9bdf4598b07c34e1e889c: -986
     1719fbe5814795f41ab4dd4a3a712936: -1193
+    f65e66c8a09436f4fb1f0d49cb96d7ee: 2000
     df633219e15489a45a16a561c91ada98: 1.72
-    30ad912c71000ce48b60b62fb08a28f0: -6.991066
+    30ad912c71000ce48b60b62fb08a28f0: -19.255663
+    6973a0acf2860604f9c9f4e4d9b63728: 9069
+    196f10dcef6e8234099efa4a5c6c0e9e: -4591
+    8bc1130ddf659594f91344e28492f41a: 307
+    78e7ae3d0573c2741a1504aa1918ebd2: 0.76
+    654b964d9fb659c4785bacc55b9b3542: 0.747
   m_TransitionOverrides: {}
 --- !u!244 &5818058719869848322
 AudioMixerEffectController:
