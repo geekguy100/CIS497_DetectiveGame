@@ -7,11 +7,37 @@
 *****************************************************************************/
 using UnityEngine;
 
+public struct CharacterData
+{
+    public CharacterData(string name, string[] knownClueTags)
+    {
+        this.name = name;
+        this.knownClueTags = knownClueTags;
+    }
+
+    public readonly string name;
+    public readonly string[] knownClueTags;
+}
+
 [System.Serializable]
 public class Character
 {
     public string Name;
     public CharacterClue[] KnownClues;
+
+    /// <summary>
+    /// Returns a struct containing the character's essential data: name and known clue tags.
+    /// </summary>
+    /// <returns>The character's essential data.</returns>
+    public CharacterData GetData()
+    {
+        string[] knownClueTags = new string[KnownClues.Length];
+
+        for (int i = 0; i < knownClueTags.Length; ++i)
+            knownClueTags[i] = KnownClues[1].ClueTag;
+
+        return new CharacterData(Name, knownClueTags);
+    }
 
     public override string ToString()
     {

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using System.Linq;
 using UnityEngine.UI;
 using TMPro;
 
@@ -23,20 +25,26 @@ public class Journal : Singleton<Journal>
 
     private int currentPage;
 
-    // Update is called once per frame
     void Start()
     {
-        AddClue(0, "I found this clue at runtime");
-        AddClue(1, "I found this clue at runtime");
+        AddClue("Billy Bob", "I found this clue at runtime");
+        AddClue("Mary Sue", "I found this clue at runtime");
     }
-    private void Update()
+
+    public void AddClue(string charName, string clue)
     {
-        
-    }
-    public void AddClue(int character, string clue)
-    {
-        pages[character].clues[pages[character].discoveredClues] = clue;
-        pages[character].discoveredClues++;
+        JournalPage pageToAddClueTo = pages.Where(t => t.charName == charName).FirstOrDefault();
+
+        if (pageToAddClueTo == null)
+        {
+            Debug.LogWarning("Could not find a journal page with character name '" + charName + "'.");
+            return;
+        }
+
+        int characterIndex = Array.IndexOf(pages, pageToAddClueTo);
+
+        pages[characterIndex].clues[pages[characterIndex].discoveredClues] = clue;
+        pages[characterIndex].discoveredClues++;
     }
 
     public void ChangePage(int page)
@@ -44,6 +52,7 @@ public class Journal : Singleton<Journal>
         currentPage = page;
         UpdateJournalDisplay();
     }
+
     void UpdateJournalDisplay()
     {
         characterName.text = pages[currentPage].charName;
@@ -53,7 +62,5 @@ public class Journal : Singleton<Journal>
             clueSlots[i].text = pages[currentPage].clues[i];
         }
 
-    }
-
-    
+    } 
 }

@@ -16,7 +16,17 @@ public class JournalToggle : MonoBehaviour
 
     public void ToggleJournal()
     {
-        if (journal.activeSelf == true) journal.SetActive(false);
-        else journal.SetActive(true);
+        if (journal.activeSelf == true)
+        {
+            journal.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            journal.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 }
