@@ -1,0 +1,45 @@
+{
+  "Characters": [
+    {
+      "Name": "Faith Phillips",
+      "KnownClues":[
+        {
+          "ClueTag": "footprints",
+          "Dialogue": "Hey those were mine!"
+        }
+      ]
+    },
+    {
+      "Name": "Richard Wright",
+      "KnownClues":[
+        {
+          "ClueTag": "rubberband",
+          "Dialogue": "My brother lost that!"
+        },
+        {
+          "ClueTag": "sock",
+          "Dialogue": "My missing sock! You're a genius!"
+        }
+      ]
+    },
+    {
+      "Name": "Cherry"
+    },
+    {
+      "Name": "Nancy Reed"
+    },
+    {
+      "Name": "Paul Butler",
+      "KnownClues":[
+        {
+          "ClueTag": "footprints",
+          "Dialogue": "Talk to Faith. She's got weird looking shoes."
+        },
+        {
+          "ClueTag": "cigar",
+          "Dialogue": "Yeah I left that on the street. So what?"
+        }
+      ]
+    }
+  ]
+}
