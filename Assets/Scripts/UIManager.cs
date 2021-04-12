@@ -91,12 +91,12 @@ public class UIManager : Singleton<UIManager>
     private void PopulateButtons()
     {
         Clue[] knownClues = Journal.Instance.GetAllKnownClues();
-        print(knownClues.Length);
 
         // Check to see if we already have a button associated with the clue.
         // If we do, don't create a new one.
         foreach (Clue clue in knownClues)
         {
+            print(clue.ClueTag);
             bool foundClue = false;
 
             foreach (QuestionButton qb in questionButtons)
@@ -109,7 +109,9 @@ public class UIManager : Singleton<UIManager>
             }
 
             if (foundClue)
-                break;
+                continue;
+
+            print("Creating a button for clue " + clue.ClueTag);
 
             Button button = Instantiate(closeButton, buttonPanel.transform);
             button.GetComponentInChildren<TextMeshProUGUI>().text = clue.ClueTag + "?";
