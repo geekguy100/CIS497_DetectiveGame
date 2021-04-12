@@ -16,7 +16,10 @@ public struct Clue
         this.clueDesc = clueDesc;
     }
 
+    [Tooltip("The clue tag exactly as it is written in the JSON file.")]
     [SerializeField] private string clueTag;
+
+    [Tooltip("The description of the clue. This will be added to the journal.")]
     [SerializeField] private string clueDesc;
 
     public string ClueTag { get { return clueTag; } }
@@ -28,8 +31,27 @@ public class InGameClue : MonoBehaviour, IInteractable
     [Tooltip("The clue's data.")]
     [SerializeField] private Clue clue;
 
+    private Color color;
+
+    void Awake()
+    {
+        color = GetComponent<MeshRenderer>().material.color;
+    }
+
+
     public void Interact(IInteractor interactor)
     {
         Debug.Log("Picked up a clue!");
+    }
+
+    public void OnAssigned(IInteractor interactor)
+    {
+        print("CLUE FOUND");
+        GetComponent<MeshRenderer>().material.color = Color.green;
+    }
+
+    public void OnUnassigned(IInteractor interactor)
+    {
+        GetComponent<MeshRenderer>().material.color = color;
     }
 }

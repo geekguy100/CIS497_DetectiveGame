@@ -19,6 +19,16 @@ public abstract class IInteractor : MonoBehaviour
     public void SetInteractable(IInteractable interactable)
     {
         this.interactable = interactable;
+        interactable.OnAssigned(this);
+    }
+
+    /// <summary>
+    /// Sets the interactable to null.
+    /// </summary>
+    public void UnassignInteractable()
+    {
+        interactable.OnUnassigned(this);
+        interactable = null;
     }
 
     /// <summary>
@@ -28,14 +38,6 @@ public abstract class IInteractor : MonoBehaviour
     public IInteractable GetInteractable()
     {
         return interactable;
-    }
-
-    /// <summary>
-    /// Sets the interactable to null.
-    /// </summary>
-    public void UnassignInteractable()
-    {
-        interactable = null;
     }
 
     /// <summary>

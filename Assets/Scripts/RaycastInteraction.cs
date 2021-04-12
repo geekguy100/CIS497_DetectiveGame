@@ -43,12 +43,14 @@ public class RaycastInteraction : MonoBehaviour
             IInteractable interactable = hit.transform.GetComponent<IInteractable>();
             if (interactable == null)
             {
-                Debug.Log("RAYCAST INTERACTION: " + hit.transform.name + " is on the Interactable layer but has no IInteractable component!");
+                Debug.Log("RAYCAST INTERACTION: " + hit.transform.name + " is on an interactable layer but has no IInteractable component!");
                 return;
             }
 
             if (interactor.GetInteractable() != interactable)
+            {
                 interactor.SetInteractable(interactable);
+            }
         }
         else if (interactor.GetInteractable() != null)
             interactor.UnassignInteractable();

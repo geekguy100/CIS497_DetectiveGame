@@ -270,8 +270,8 @@ GameObject:
   - component: {fileID: 192547979}
   - component: {fileID: 192547978}
   - component: {fileID: 192547982}
-  m_Layer: 6
-  m_Name: Cube (1)
+  m_Layer: 7
+  m_Name: CLUE_Footprints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -347,7 +347,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192547977}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.28, y: 1.6093211, z: -19.627684}
+  m_LocalPosition: {x: -13.69, y: 0.18, z: -19.627684}
   m_LocalScale: {x: 1.3002, y: 1.3002, z: 1.3002}
   m_Children: []
   m_Father: {fileID: 0}
@@ -366,8 +366,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clue:
-    clueTag: 
-    clueDesc: 
+    clueTag: footprints
+    clueDesc: Some strange footprints I found in the garden.
 --- !u!1 &207528059
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,40 +547,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &232798998 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4220584989347107669, guid: 5223fea1de9332a419749ffc58d7ef3a, type: 3}
-  m_PrefabInstance: {fileID: 456847650}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &232799010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 232798998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 637440db0c61627438076feaf361bca0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  origin: {fileID: 1729967109}
-  rayLength: 5
-  whatIsInteractable:
-    serializedVersion: 2
-    m_Bits: 64
---- !u!114 &232799011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 232798998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35456dec8b15ce740ba139aa7f518c4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &265875706
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,7 +828,7 @@ GameObject:
   - component: {fileID: 386163809}
   - component: {fileID: 386163808}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1354,13 +1320,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 919132147743493053, guid: 5223fea1de9332a419749ffc58d7ef3a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4220584989347107669, guid: 5223fea1de9332a419749ffc58d7ef3a, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4220584989347107670, guid: 5223fea1de9332a419749ffc58d7ef3a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4220584989347107688, guid: 5223fea1de9332a419749ffc58d7ef3a, type: 3}
       propertyPath: m_RootOrder
@@ -1405,10 +1371,6 @@ PrefabInstance:
     - target: {fileID: 4220584989347107688, guid: 5223fea1de9332a419749ffc58d7ef3a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4220584989534331534, guid: 5223fea1de9332a419749ffc58d7ef3a, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5223fea1de9332a419749ffc58d7ef3a, type: 3}
@@ -4783,11 +4745,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1664006164}
   m_CullTransparentMesh: 1
---- !u!4 &1729967109 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4220584989534331523, guid: 5223fea1de9332a419749ffc58d7ef3a, type: 3}
-  m_PrefabInstance: {fileID: 456847650}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1837756991
 GameObject:
   m_ObjectHideFlags: 0
@@ -5660,10 +5617,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 919132148821162525, guid: 3db7f3c432569ee49ad53c9c9a4055fa, type: 3}
-      propertyPath: characterName
-      value: Faith Phillips
-      objectReference: {fileID: 0}
     - target: {fileID: 3468702798736561903, guid: 3db7f3c432569ee49ad53c9c9a4055fa, type: 3}
       propertyPath: m_RootOrder
       value: 1

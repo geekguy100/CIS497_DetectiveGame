@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 213e0e697012a0247b79f7641a1a540f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterName: Faith Phillips
 --- !u!114 &919132148821162526
 MonoBehaviour:
   m_ObjectHideFlags: 0

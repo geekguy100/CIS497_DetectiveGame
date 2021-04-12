@@ -39,4 +39,14 @@ public class NPCInteraction : MonoBehaviour, IInteractable
         UIManager.Instance.UpdateDialoguePanel(character.Name, "What's up?");
         UIManager.Instance.ToggleQuestionPanel();
     }
+
+    public void OnAssigned(IInteractor interactor)
+    {
+        
+    }
+
+    public void OnUnassigned(IInteractor interactor)
+    {
+        
+    }
 }
