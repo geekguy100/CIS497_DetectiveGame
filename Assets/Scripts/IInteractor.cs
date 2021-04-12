@@ -19,7 +19,7 @@ public abstract class IInteractor : MonoBehaviour
     public void SetInteractable(IInteractable interactable)
     {
         this.interactable = interactable;
-        interactable.OnAssigned(this);
+        interactable?.OnAssigned(this);
     }
 
     /// <summary>
@@ -27,7 +27,7 @@ public abstract class IInteractor : MonoBehaviour
     /// </summary>
     public void UnassignInteractable()
     {
-        interactable.OnUnassigned(this);
+        interactable?.OnUnassigned(this);
         interactable = null;
     }
 

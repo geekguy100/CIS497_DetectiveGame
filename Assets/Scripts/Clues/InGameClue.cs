@@ -41,7 +41,8 @@ public class InGameClue : MonoBehaviour, IInteractable
 
     public void Interact(IInteractor interactor)
     {
-        Debug.Log("Picked up a clue!");
+        UIManager.Instance.UpdateClueText(clue.ClueTag);
+        Journal.Instance.AddClue("Billy Bob", clue);
     }
 
     public void OnAssigned(IInteractor interactor)

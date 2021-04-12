@@ -25,6 +25,9 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private GameObject buttonPanel;
     [SerializeField] Button closeButton;
 
+    [Header("Misc")]
+    [SerializeField] private TextMeshProUGUI clueFoundText;
+
     private List<QuestionButton> questionButtons;
     private struct QuestionButton
     {
@@ -53,7 +56,7 @@ public class UIManager : Singleton<UIManager>
         dialoguePanel.SetActive(true);
         dialogueText.text = characterName + ": " + dialogue;
 
-        StartCoroutine(DeactivateDialoguePanel());
+        StartCoroutine(DeactivateAfterTime(dialoguePanel));
     }
 
     public void ToggleQuestionPanel()
@@ -76,6 +79,13 @@ public class UIManager : Singleton<UIManager>
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void UpdateClueText(string clue)
+    {
+        clueFoundText.text = "A new clue has been recorded: " + clue;
+        clueFoundText.gameObject.SetActive(true);
+        StartCoroutine(DeactivateAfterTime(clueFoundText.gameObject));
     }
 
     private void PopulateButtons()
@@ -112,9 +122,9 @@ public class UIManager : Singleton<UIManager>
         }
     }
 
-    private IEnumerator DeactivateDialoguePanel()
+    private IEnumerator DeactivateAfterTime(GameObject obj)
     {
         yield return new WaitForSeconds(dialogueScreenTime);
-        dialoguePanel.SetActive(false);
+        obj.SetActive(false);
     }
 }
