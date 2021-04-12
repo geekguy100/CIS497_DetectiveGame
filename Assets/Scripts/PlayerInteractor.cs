@@ -10,9 +10,11 @@ using UnityEngine;
 // TODO: Should this component ONLY be added (or enabled) when the player has their magnifying glass out?
 public class PlayerInteractor : IInteractor
 {
+    [SerializeField] private GameObject magnifyingGlass;
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && !magnifyingGlass.activeInHierarchy)
             PerformInteraction();
     }
 }

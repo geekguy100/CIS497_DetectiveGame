@@ -1320,6 +1320,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 232799011, guid: 5223fea1de9332a419749ffc58d7ef3a, type: 3}
+      propertyPath: magnifyingGlass
+      value: 
+      objectReference: {fileID: 456847652}
     - target: {fileID: 919132147743493053, guid: 5223fea1de9332a419749ffc58d7ef3a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1374,6 +1378,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5223fea1de9332a419749ffc58d7ef3a, type: 3}
+--- !u!1 &456847652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132147743493053, guid: 5223fea1de9332a419749ffc58d7ef3a, type: 3}
+  m_PrefabInstance: {fileID: 456847650}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &456847653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456847652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eab931067a5cbc439a39b353fc2003a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 109
 --- !u!1 &572422889
 GameObject:
   m_ObjectHideFlags: 0

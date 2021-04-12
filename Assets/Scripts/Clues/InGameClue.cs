@@ -46,7 +46,6 @@ public class InGameClue : MonoBehaviour, IInteractable
 
     public void OnAssigned(IInteractor interactor)
     {
-        print("CLUE FOUND");
         GetComponent<MeshRenderer>().material.color = Color.green;
     }
 
