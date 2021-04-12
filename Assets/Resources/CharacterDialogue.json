@@ -2,7 +2,13 @@
   "Characters": [
     {
       "Name": "Faith Phillips",
-      "KnownClues":[
+      "Intro": [
+        {
+          "Tag": "Intro",
+          "Dialogue": "My name is Faith Phillips and I am Michael’s mother. I’ve already talked to my husband, and my lawyers are on the way."
+        }
+      ],
+      "KnownClues": [
         {
           "ClueTag": "footprints",
           "Dialogue": "Hey those were mine!"
@@ -10,36 +16,74 @@
       ]
     },
     {
-      "Name": "Richard Wright",
-      "KnownClues":[
+      "Name": "Christopher Phillips",
+      "Intro": [
         {
-          "ClueTag": "rubberband",
-          "Dialogue": "My brother lost that!"
-        },
+          "Tag": "Intro",
+          "Dialogue": "I saw Michael leave. I think he wanted to talk to the desk girl. I also saw the garbage man yelling at the naked lady."
+        }
+      ],
+      "KnownClues": [
         {
-          "ClueTag": "sock",
-          "Dialogue": "My missing sock! You're a genius!"
+
         }
       ]
     },
     {
-      "Name": "Cherry"
+      "Name": "Richard Wright",
+      "Intro": [
+        {
+          "Tag": "Intro",
+          "Dialogue": "My name is Richard Wright. I’m the housekeeper and maintenance technician for the motel. We had a large pipe burst rendering half the motel unusable. I was cleaning up some of that mess around the time they arrived. I did see not long after there was a black suv that seemed like it was circling around, but I didn’t really look into it."
+        }
+      ],
+        "KnownClues": [
+          {
+            "ClueTag": "rubberband",
+            "Dialogue": "My brother lost that!"
+          },
+          {
+            "ClueTag": "sock",
+            "Dialogue": "My missing sock! You're a genius!"
+          }
+        ]
     },
     {
-      "Name": "Nancy Reed"
+      "Name": "Cherry",
+      "Intro": [
+        {
+          "Tag": "Intro",
+          "Dialogue": "My friend’s call me Cherry and I didn’t see a thing. I was just leaving when you got here."
+        }
+      ]
+    },
+    {
+      "Name": "Nancy Reed",
+      "Intro": [
+        {
+          "Tag": "Intro",
+          "Dialogue": "My name is Nancy Reed, and I’m the receptionist for the motel. I was just going about my normal business when a family came to check in. The mother was extremely rude when I told her most of the rooms were closed due to a pipe burst. I talked to Richard a little after that and then the son, the victim, came down. He was clearly flirting, but I turned him down and he left."
+        }
+      ]
     },
     {
       "Name": "Paul Butler",
-      "KnownClues":[
+      "Intro": [
         {
-          "ClueTag": "footprints",
-          "Dialogue": "Talk to Faith. She's got weird looking shoes."
-        },
-        {
-          "ClueTag": "cigar",
-          "Dialogue": "Yeah I left that on the street. So what?"
+          "Tag": "Intro",
+          "Dialogue": "I’m Paul. I sleep on the sidewalk out there. I didn’t see anything. I was just looking to see if anyone threw away any food."
         }
-      ]
+      ],
+        "KnownClues": [
+          {
+            "ClueTag": "footprints",
+            "Dialogue": "Talk to Faith. She's got weird looking shoes."
+          },
+          {
+            "ClueTag": "cigar",
+            "Dialogue": "Yeah I left that on the street. So what?"
+          }
+        ]
     }
   ]
 }
