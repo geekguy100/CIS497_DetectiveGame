@@ -365,7 +365,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6fcdc8913c4a6345820f14d3729540d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clueTag: DDD
+  clue:
+    clueTag: 
+    clueDesc: 
 --- !u!1 &207528059
 GameObject:
   m_ObjectHideFlags: 0
@@ -3215,73 +3217,123 @@ MonoBehaviour:
   - charName: Billy Bob
     charDesc: A test case for the journal.
     clues:
-    - first clue for Billy
-    - second clue for Billy
-    - Third clue for Billy
-    - fourth  clue for Billy
-    - fifth
-    - sixth
-    - seventh
-    - eigth
-    - ninth
-    - 
-    discoveredClues: 9
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    cluesDiscovered: 0
   - charName: Mary Sue
     charDesc: 'Another test case. '
     clues:
-    - first clue for Mary
-    - second
-    - third
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    discoveredClues: 3
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    cluesDiscovered: 0
   - charName: 
     charDesc: 
     clues:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    discoveredClues: 0
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    cluesDiscovered: 0
   - charName: 
     charDesc: 
     clues:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    discoveredClues: 0
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    cluesDiscovered: 0
   - charName: 
     charDesc: 
     clues:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    discoveredClues: 0
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    cluesDiscovered: 0
   characterName: {fileID: 572422892}
   characterDesc: {fileID: 92423986}
   clueSlots:
@@ -4754,10 +4806,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2335224218692054400, guid: 3db7f3c432569ee49ad53c9c9a4055fa, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 3468702798736561903, guid: 3db7f3c432569ee49ad53c9c9a4055fa, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4768,7 +4816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3468702798736561903, guid: 3db7f3c432569ee49ad53c9c9a4055fa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.72
+      value: 1.284
       objectReference: {fileID: 0}
     - target: {fileID: 3468702798736561903, guid: 3db7f3c432569ee49ad53c9c9a4055fa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4804,11 +4852,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4280845709225806933, guid: 3db7f3c432569ee49ad53c9c9a4055fa, type: 3}
       propertyPath: m_Name
-      value: Reference character
-      objectReference: {fileID: 0}
-    - target: {fileID: 4280845709225806933, guid: 3db7f3c432569ee49ad53c9c9a4055fa, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967294
+      value: Test NPC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3db7f3c432569ee49ad53c9c9a4055fa, type: 3}

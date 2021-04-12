@@ -10,8 +10,9 @@ public class JournalPage
     public string charDesc;
     public Clue[] clues;
 
-    public int discoveredClues = 0;
+    public int cluesDiscovered = 0;
 }
+
 public class Journal : Singleton<Journal>
 {
     [SerializeField] JournalPage[] pages;
@@ -40,8 +41,30 @@ public class Journal : Singleton<Journal>
 
         int characterIndex = Array.IndexOf(pages, pageToAddClueTo);
 
-        pages[characterIndex].clues[pages[characterIndex].discoveredClues] = clue;
-        pages[characterIndex].discoveredClues++;
+        pages[characterIndex].clues[pages[characterIndex].cluesDiscovered] = clue;
+        pages[characterIndex].cluesDiscovered++;
+    }
+
+    /// <summary>
+    /// Returns true if the player has discovered a clue.
+    /// </summary>
+    /// <param name="clueTag">The tag of the clue to check for.</param>
+    /// <returns>True if the player has discovered a clue.</returns>
+    public bool DiscoveredClue(string clueTag)
+    {
+        foreach (JournalPage page in pages)
+        {
+            Clue[] cluesOnPage = page.clues;
+            string[] clueTags = new string[cluesOnPage.Length];
+
+            for (int i = 0; i < clueTags.Length; ++i)
+                clueTags[i] = cluesOnPage[i].ClueTag;
+
+            if (clueTags.Contains(clueTag))
+                return true;
+        }
+
+        return false;
     }
 
     public void ChangePage(int page)
@@ -58,6 +81,5 @@ public class Journal : Singleton<Journal>
         {
             clueSlots[i].text = pages[currentPage].clues[i].ClueDesc;
         }
-
     }
 }
