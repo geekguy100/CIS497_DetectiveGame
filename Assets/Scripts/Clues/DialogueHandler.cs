@@ -46,4 +46,9 @@ public static class DialogueHandler
         return false;
     }
 
+    public static Character GetCharacter(string name)
+    {
+        return dialogue.Characters.Where(t => t.Name == name).FirstOrDefault();
+    }
+
 }

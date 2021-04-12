@@ -34,7 +34,7 @@ public class Character
         string[] knownClueTags = new string[KnownClues.Length];
 
         for (int i = 0; i < knownClueTags.Length; ++i)
-            knownClueTags[i] = KnownClues[1].ClueTag;
+            knownClueTags[i] = KnownClues[i].ClueTag;
 
         return new CharacterData(Name, knownClueTags);
     }

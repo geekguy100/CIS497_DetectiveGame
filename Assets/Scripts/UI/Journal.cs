@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Linq;
+using System.Collections.Generic;
 using TMPro;
 
 [System.Serializable]
@@ -25,8 +26,9 @@ public class Journal : Singleton<Journal>
 
     void Start()
     {
-        AddClue("Billy Bob", new Clue("test1", "I foundt this clue at runtime."));
+        AddClue("Billy Bob", new Clue("test1", "I found this clue at runtime."));
         AddClue("Mary Sue", new Clue("test2", "I found this clue at runtime."));
+        AddClue("Mary Sue", new Clue("footprints", "I found some oddly shaped footprints in the garden."));
     }
 
     public void AddClue(string charName, Clue clue)
@@ -50,11 +52,14 @@ public class Journal : Singleton<Journal>
     /// </summary>
     /// <param name="clueTag">The tag of the clue to check for.</param>
     /// <returns>True if the player has discovered a clue.</returns>
-    public bool DiscoveredClue(string clueTag)
+    public bool HasDiscoveredClue(string clueTag)
     {
         foreach (JournalPage page in pages)
         {
             Clue[] cluesOnPage = page.clues;
+            if (cluesOnPage.Length == 0)
+                continue;
+
             string[] clueTags = new string[cluesOnPage.Length];
 
             for (int i = 0; i < clueTags.Length; ++i)
@@ -65,6 +70,21 @@ public class Journal : Singleton<Journal>
         }
 
         return false;
+    }
+
+    public Clue[] GetAllKnownClues()
+    {
+        List<Clue> knownClues = new List<Clue>();
+
+        foreach(JournalPage page in pages)
+        {
+            for (int i = 0; i < page.cluesDiscovered; ++i)
+            {
+                knownClues.Add(page.clues[i]);
+            }
+        }
+
+        return knownClues.ToArray();
     }
 
     public void ChangePage(int page)
