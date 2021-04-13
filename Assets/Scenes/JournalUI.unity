@@ -1842,7 +1842,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 778238607}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1537057885}
+        m_TargetAssemblyTypeName: Journal, Assembly-CSharp
+        m_MethodName: ChangePage
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &778238607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3544,73 +3556,147 @@ MonoBehaviour:
   - charName: Faith Phillips
     charDesc: "Michael\u2019s mother, and the wife to politician Jackson Phillips"
     clues:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    discoveredClues: 0
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    cluesDiscovered: 0
   - charName: Richard Wright
     charDesc: The primary housekeeper for the motel
     clues:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    discoveredClues: 0
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    cluesDiscovered: 0
   - charName: Mary "Cherry" Ross
     charDesc: 'A local lady of the night, she frequents the area around the motel '
     clues:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    discoveredClues: 0
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    cluesDiscovered: 0
   - charName: Nancy Reed
     charDesc: ' The late night receptionist at the motel'
     clues:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    discoveredClues: 0
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    cluesDiscovered: 0
   - charName: Paul Butler
     charDesc: A homeless man who sleeps in the bus stop near the motel
     clues:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    discoveredClues: 0
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    cluesDiscovered: 0
+  - charName: Misc
+    charDesc: 
+    clues:
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    - clueTag: 
+      clueDesc: 
+    cluesDiscovered: 0
   characterName: {fileID: 1717467146}
   characterDesc: {fileID: 1186227530}
   clueSlots:
