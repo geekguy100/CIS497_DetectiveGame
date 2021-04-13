@@ -2,31 +2,70 @@
   "Characters": [
     {
       "Name": "Faith Phillips",
-      "Intro":  "My name is Faith Phillips and I am Michael's mother. I've already talked to my husband, and my lawyers are on the way.",
+      "Intro": "My name is Faith Phillips and I am Michael's mother. I've already talked to my husband, and my lawyers are on the way.",
+      "Knowledge": "We were driving back from one of my husband's political rallies when we decided to stop for the night. I thought everyone was asleep. We just woke up when you arrived.,",
       "KnownClues": [
         {
-          "ClueTag": "footprints",
-          "Dialogue": "Hey those were mine!"
+          "ClueTag": "Receipt",
+          "Dialogue": "I threw it out. What kind of investigator asks about trash when my son is dead?"
+        },
+        {
+          "ClueTag": "Room Key",
+          "Dialogue": "He probably took it with him when he left the room. They only gave us one key."
+        },
+        {
+          "ClueTag": "Michael's ID",
+          "Dialogue": "That's my son's. He always has it with him."
+        },
+        {
+          "ClueTag": "Poison Syringe",
+          "Dialogue": "What is that? I've never seen anything like that."
+        },
+        {
+          "ClueTag": "Cigarette Ash",
+          "Dialogue": "Michael was a good boy. Only his father smokes and he never does it around the children."
+        },
+        {
+          "ClueTag": "Guest Book",
+          "Dialogue": "We just checked in. The receptionist had me sign that."
+        },
+        {
+          "ClueTag": "Faith's Purse",
+          "Dialogue": "That's my purse! Fine. My husband has been receiving a lot of death threats recently."
+        },
+        {
+          "ClueTag": "Dirty Note",
+          "Dialogue": "I've never seen that before. This has to be some sick joke. Someone paid $10,000 to kill my son."
+        },
+        {
+          "ClueTag": "Security Camera",
+          "Dialogue": "If you have a camera, then you should be able to see who killed my son!"
+        },
+        {
+          "ClueTag": "Candy Wrapper",
+          "Dialogue": "What does a candy wrapper have to do with my son? Do your job!"
         }
       ]
     },
     {
       "Name": "Christopher Phillips",
-      "Intro": "My name is Christopher. Where is my brother?"
+      "Intro": "My name is Christopher. Where is my brother?",
+      "Knowledge": "I saw Michael leave. I think he wanted to talk to the desk girl. Then the garbage man yelled at the naked lady."
     },
     {
       "Name": "Richard Wright",
       "Intro": "My name is Richard Wright. I'm the housekeeper and maintenance technician for the motel.",
-        "KnownClues": [
-          {
-            "ClueTag": "Michael's ID",
-            "Dialogue": "I was in the maintenance room when the boy, Michael, passed by. He stopped and thanked me for working through the night. He left, but I noticed he dropped his ID, so I went to return it to him."
-          },
-          {
-            "ClueTag": "sock",
-            "Dialogue": "My missing sock! You're a genius!"
-          }
-        ]
+      "Knowledge": "We had a large pipe burst rendering half the motel unusable. I was cleaning up some of that mess around the time they arrived. I did see not long after there was a black suv that seemed like it was circling around, but I didn't really look into it.",
+      "KnownClues": [
+        {
+          "ClueTag": "Michael's ID",
+          "Dialogue": "I was in the maintenance room when the boy, Michael, passed by. He stopped and thanked me for working through the night. He left, but I noticed he dropped his ID, so I went to return it to him."
+        },
+        {
+          "ClueTag": "sock",
+          "Dialogue": "My missing sock! You're a genius!"
+        }
+      ]
     },
     {
       "Name": "Cherry",
