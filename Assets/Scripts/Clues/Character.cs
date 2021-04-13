@@ -24,6 +24,7 @@ public class Character
 {
     public string Name;
     public CharacterClue[] KnownClues;
+    public string Intro;
 
     /// <summary>
     /// Returns a struct containing the character's essential data: name and known clue tags.

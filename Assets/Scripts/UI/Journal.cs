@@ -26,8 +26,7 @@ public class Journal : Singleton<Journal>
 
     void Start()
     {
-        AddClue("Billy Bob", new Clue("test1", "I found this clue at runtime."));
-        AddClue("Mary Sue", new Clue("test2", "I found this clue at runtime."));
+        ChangePage(5);
     }
 
     public void AddClue(string charName, Clue clue)
