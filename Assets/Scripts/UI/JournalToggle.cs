@@ -2,21 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JournalToggle : MonoBehaviour
+public class JournalToggle : ISubject
 {
-    [SerializeField] GameObject journal;
+    [SerializeField] private GameObject journal;
+    //[SerializeField] private Journal journalComponent;
 
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.J))
         {
             ToggleJournal();
+            NotifyObservers(journal.activeInHierarchy);
         }
     }
 
     public void ToggleJournal()
     {
-        if (journal.activeSelf == true)
+        if (journal.activeInHierarchy == true)
         {
             journal.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;

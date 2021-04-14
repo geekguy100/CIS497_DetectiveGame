@@ -45,7 +45,7 @@ public class InGameClue : MonoBehaviour, IInteractable
         if (!Journal.Instance.HasDiscoveredClue(clue.ClueTag))
         {
             UIManager.Instance.UpdateClueText(clue.ClueTag);
-            Journal.Instance.AddClue("Case", clue);
+            Journal.Instance.AddClue("Misc", clue);
         }
     }
 

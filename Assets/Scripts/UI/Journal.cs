@@ -14,7 +14,7 @@ public class JournalPage
     public int cluesDiscovered = 0;
 }
 
-public class Journal : Singleton<Journal>
+public class Journal : Singleton<Journal>, IObserver
 {
     [SerializeField] JournalPage[] pages;
 
@@ -22,10 +22,13 @@ public class Journal : Singleton<Journal>
     [SerializeField] TextMeshProUGUI characterDesc;
     [SerializeField] TextMeshProUGUI[] clueSlots;
 
+    [SerializeField] private ISubject journalSubject;
+
     private int currentPage;
 
     void Start()
     {
+        journalSubject?.RegisterObserver(this);
         ChangePage(5);
     }
 
@@ -99,5 +102,15 @@ public class Journal : Singleton<Journal>
         {
             clueSlots[i].text = pages[currentPage].clues[i].ClueDesc;
         }
+    }
+
+    // Called when the journal is toggled on or off.
+    public void UpdateData(object data)
+    {
+        bool journalVisible = (bool)data;
+
+        // If the journal was toggled on, refresh the page.
+        if (journalVisible)
+            UpdateJournalDisplay();
     }
 }
