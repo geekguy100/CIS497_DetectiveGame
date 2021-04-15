@@ -19,6 +19,7 @@ public class UIManager : Singleton<UIManager>
     [Header("Dialogue Containers")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private TextMeshProUGUI nameText;
 
     [Header("Clue Probing")]
     [SerializeField] private GameObject questionPanel;
@@ -54,7 +55,8 @@ public class UIManager : Singleton<UIManager>
         StopAllCoroutines();
 
         dialoguePanel.SetActive(true);
-        dialogueText.text = characterName + ": " + dialogue;
+        nameText.text = characterName;
+        dialogueText.text = dialogue;
 
         StartCoroutine(DeactivateAfterTime(dialoguePanel));
     }
