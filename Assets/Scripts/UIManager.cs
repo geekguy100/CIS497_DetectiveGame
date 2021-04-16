@@ -124,6 +124,7 @@ public class UIManager : Singleton<UIManager>
 
             questionButtons.Add(new QuestionButton(button, clue));
         }
+        
     }
 
     private IEnumerator DeactivateAfterTime(GameObject obj)

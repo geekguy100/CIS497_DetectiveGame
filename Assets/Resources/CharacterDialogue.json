@@ -3,8 +3,11 @@
     {
       "Name": "Faith Phillips",
       "Intro": "My name is Faith Phillips and I am Michael's mother. I've already talked to my husband, and my lawyers are on the way.",
-      "Knowledge": "We were driving back from one of my husband's political rallies when we decided to stop for the night. I thought everyone was asleep. We just woke up when you arrived.,",
       "KnownClues": [
+        {
+          "ClueTag": "Knowledge",
+          "Dialogue": "We were driving back from one of my husband's political rallies when we decided to stop for the night. I thought everyone was asleep. We just woke up when you arrived."
+        },
         {
           "ClueTag": "Receipt",
           "Dialogue": "I threw it out. What kind of investigator asks about trash when my son is dead?"
@@ -44,50 +47,246 @@
         {
           "ClueTag": "Candy Wrapper",
           "Dialogue": "What does a candy wrapper have to do with my son? Do your job!"
+        },
+        {
+          "ClueTag": "Altercation",
+          "Dialogue": "It was not an altercation. The receptionist wouldn't let me have any rooms. She was forcing me into this one."
         }
       ]
     },
     {
       "Name": "Christopher Phillips",
       "Intro": "My name is Christopher. Where is my brother?",
-      "Knowledge": "I saw Michael leave. I think he wanted to talk to the desk girl. Then the garbage man yelled at the naked lady."
+      "KnownClues": [
+        {
+          "ClueTag": "Knowledge",
+          "Dialogue": "I saw Michael leave. I think he wanted to talk to the desk girl. Then the garbage man yelled at the naked lady."
+        }
+      ]
     },
     {
       "Name": "Richard Wright",
       "Intro": "My name is Richard Wright. I'm the housekeeper and maintenance technician for the motel.",
-      "Knowledge": "We had a large pipe burst rendering half the motel unusable. I was cleaning up some of that mess around the time they arrived. I did see not long after there was a black suv that seemed like it was circling around, but I didn't really look into it.",
       "KnownClues": [
+        {
+          "ClueTag": "Knowledge",
+          "Dialogue": "We had a large pipe burst rendering half the motel unusable. I was cleaning up some of that mess around the time they arrived. I did see not long after there was a black car that seemed like it was circling around."
+        },
+        {
+          "ClueTag": "Black Car",
+          "Dialogue": "I was going to look into it but then I saw the mother arguing with Nancy over the rooms. She wouldn't take no for an answer when we told her some of them were closed."
+        },
+        {
+          "ClueTag": "Altercation",
+          "Dialogue": "She was just another rude guest, happens all the time. I don't think she would have done anything. I talked to Nancy and she said wasn't really bothered by it."
+        },
         {
           "ClueTag": "Michael's ID",
           "Dialogue": "I was in the maintenance room when the boy, Michael, passed by. He stopped and thanked me for working through the night. He left, but I noticed he dropped his ID, so I went to return it to him."
         },
         {
-          "ClueTag": "sock",
-          "Dialogue": "My missing sock! You're a genius!"
+          "ClueTag": "Candy Wrapper",
+          "Dialogue": "Probably from the vending machine. Only me and Nancy can get in there and there shouldn't have been anything wrong with the candy in the machine."
+        },
+        {
+          "ClueTag": "Richard's Watch",
+          "Dialogue": "Oh this, it was a birthday present from my wife. 40 years and I've spent 15 of them with her."
+        },
+        {
+          "ClueTag": "Chewing Tobacco",
+          "Dialogue": "Yeah, I used to smoke, but for the past few months I've been using that instead. It's supposed to be better for you I guess."
+        },
+        {
+          "ClueTag": "Cigarette Ash",
+          "Dialogue": "No, I've got my chew and Nancy doesn't smoke at all. I think that hobo Paul might."
+        },
+        {
+          "ClueTag": "Poison Syringe",
+          "Dialogue": "No, I don't typically need something like that for my work. I'd bet Paul or Cherry uses them for drugs."
+        },
+        {
+          "ClueTag": "Guest Book",
+          "Dialogue": "That's the guest book, it's how guests check in to their rooms. As far as I know, only Nancy would have access to that."
+        },
+        {
+          "ClueTag": "Strands of Hair",
+          "Dialogue": "Looks like Cherry's hair. I'm honestly not sure if it's real or fake."
+        },
+        {
+          "ClueTag": "Nancy's Tattoo",
+          "Dialogue": "Yes, we knew about her past. It was a whole ordeal with her boyfriend. Nancy is a good worker, she's never been rude or stolen from the motel. If it weren't for the tattoo, I wouldn't even believe she was in a gang."
+        },
+        {
+          "ClueTag": "Criminal Record",
+          "Dialogue": "Yes, we knew about her past. It was a whole ordeal with her boyfriend. Nancy is a good worker, she's never been rude or stolen from the motel. If it weren't for the tattoo, I wouldn't even believe she was in a gang."
+        },
+        {
+          "ClueTag": "Nancy's Bruising",
+          "Dialogue": "I'm not sure how that happened. the mother and her argued, but there was no fight."
+        },
+        {
+          "ClueTag": "Dirty Note",
+          "Dialogue": "I promise, I have never seen that note before. I understand it's covered in dirt, but I've been dealing with burst pipes. My hands are clean. It has to be someone else."
+        },
+        {
+          "ClueTag": "Security Camera",
+          "Dialogue": "We only have the one camera, in case something happens. From what I heard, all it shows is that Michael left his room alone."
+        }
+      ]
+    },
+    {
+      "Name": "Nancy Reed",
+      "Intro": "My name is Nancy Reed, and I'm the receptionist for the motel.",
+      "KnownClues": [
+        {
+          "ClueTag": "Knowledge",
+          "Dialogue": " I was just going about my normal business when a family came to check in. The mother was extremely rude when I told her most of the rooms were closed due to a pipe burst. Later, the... victim came down. He was clearly flirting, but I turned him down and he left."
+        },
+        {
+          "ClueTag": "Altercation",
+          "Dialogue": "She was upset that the rooms were closed. Voices were raised, but she eventually calmed down."
+        },
+        {
+          "ClueTag": "Flirting",
+          "Dialogue": "I'm not the best when it comes to relationships, so I turned him down. After that is a bit blurry. Cherry showed up. She's not allowed in the motel for obvious reasons so I told her to leave and then... I don't remember. Did I fall asleep?"
+        },
+        {
+          "ClueTag": "Room Key",
+          "Dialogue": "We have two for each room, just in case someone loses it or steals it. They're locked inside this drawer and only me and Richard would be able to get into them. All but that one are accounted for."
+        },
+        {
+          "ClueTag": "Candy Wrapper",
+          "Dialogue": "That looks like it's from our vending machine. As long as no one tries breaking the vending machine, me and Richard just refill it from time to time."
+        },
+        {
+          "ClueTag": "Richard's Watch",
+          "Dialogue": "Oh yeah, he said it was a gift or something. He's had it for a little while now."
+        },
+        {
+          "ClueTag": "Chewing Tobacco",
+          "Dialogue": "That's probably Richard's, he's been chewing that instead of smoking."
+        },
+        {
+          "ClueTag": "Cigarette Ash",
+          "Dialogue": "I don't smoke, and Richard hasn't recently."
+        },
+        {
+          "ClueTag": "Poison Syringe",
+          "Dialogue": "Oh god no. The only person I could imagine needing something like that is a drug addict."
+        },
+        {
+          "ClueTag": "Guest Book",
+          "Dialogue": "Yeah, that's what I use to check guests into their rooms. Only I use it, but... I remember Cherry asking about it. I don't know why."
+        },
+        {
+          "ClueTag": "Strands of Hair",
+          "Dialogue": "No, it's probably from Cherry. She sheds all over the place."
+        },
+        {
+          "ClueTag": "Nancy's Bruising",
+          "Dialogue": "I… I really don't remember well. Cherry came in and then I woke up to cops."
+        },
+        {
+          "ClueTag": "Nancy's Tattoo",
+          "Dialogue": "Um… yeah. I used to date a guy who was part of a gang and one night I got really drunk and ended up with a tattoo. I'm not part of any gang, and I definitely regret getting it."
+        },
+        {
+          "ClueTag": "Dirty Note",
+          "Dialogue": "I have never seen that before and it's covered in mud. I keep my hands clean, it can't be mine."
+        },
+        {
+          "ClueTag": "Smudged Note",
+          "Dialogue": "I have never seen that note before. But it's covered in red lipstick like Cherry wears."
+        },
+        {
+          "ClueTag": "Security Camera",
+          "Dialogue": "We only have one camera and all I could find is that he left the room late last night."
         }
       ]
     },
     {
       "Name": "Cherry",
-      "Intro": "Mary Ross, but my friends call me Cherry."
-    },
-    {
-      "Name": "Nancy Reed",
-      "Intro": "My name is Nancy Reed, and I'm the receptionist for the motel."
+      "Intro": "Mary Ross, but my friends call me Cherry.",
+      "KnownClues": [
+        {
+          "ClueTag": "Knowledge",
+          "Dialogue": "I didn't see a thing. I was just leaving when you got here."
+        },
+        {
+          "ClueTag": "Candy Wrapper",
+          "Dialogue": "No sugar, you can't have candy and keep up this kind of figure."
+        },
+        {
+          "ClueTag": "Poison Syringe",
+          "Dialogue": "No honey, I don't play with needles. And I'm not nearly smart enough to be messing with poisons."
+        },
+        {
+          "ClueTag": "Cigarrete Ash",
+          "Dialogue": "Normally, a girl wouldn't tell secrets, but I've seen Paul go through a pack a day."
+        },
+        {
+          "ClueTag": "Guest Book",
+          "Dialogue": "I can't say that I do. I'm not usually the one whose name is in the guest book."
+        },
+        {
+          "ClueTag": "Strands of Hair",
+          "Dialogue": ""
+        },
+        {
+          "ClueTag": "Smudged Note",
+          "Dialogue": "Ok fine. Some creep in a black car came by and offered me money to give them that book. But I swear I didn't kill the kid."
+        },
+        {
+          "ClueTag": "Black Car",
+          "Dialogue": "It was plain, I never saw who was inside. The money is already gone."
+        },
+        {
+          "ClueTag": "Nancy's Bruising",
+          "Dialogue": "Ok yeah, she wouldn't even give me a chance to talk. I pushed her and she hit her head. I didn't mean to hurt her."
+        },
+        {
+          "ClueTag": "Dirty Note",
+          "Dialogue": "Ew, gross, that's covered in dirt. Sweetie, if my hands were that dirty, I'd be out of a job."
+        }
+      ]
     },
     {
       "Name": "Paul Butler",
       "Intro": "I'm Paul. I sleep on the sidewalk out there.",
-        "KnownClues": [
-          {
-            "ClueTag": "footprints",
-            "Dialogue": "Talk to Faith. She's got weird looking shoes."
-          },
-          {
-            "ClueTag": "cigar",
-            "Dialogue": "Yeah I left that on the street. So what?"
-          }
-        ]
+      "KnownClues": [
+        {
+          "ClueTag": "Knowledge",
+          "Dialogue": "I didn't see anything. I was just looking to see if anyone threw away any food."
+        },
+        {
+          "ClueTag": "Candy Wrapper",
+          "Dialogue": "I don't have much money to use a vending machine."
+        },
+        {
+          "ClueTag": "Poison Syringe",
+          "Dialogue": ""
+        },
+        {
+          "ClueTag": "Cigarette Ash",
+          "Dialogue": "Uh, well, I do smoke, but only if I can get my hands on a pack."
+        },
+        {
+          "ClueTag": "Chewing Tobacco",
+          "Dialogue": "No, that's a bit too rich for me."
+        },
+        {
+          "ClueTag": "Dirty Note",
+          "Dialogue": ""
+        },
+        {
+          "ClueTag": "Guest Book",
+          "Dialogue": "I don't know nothing about that, but I heard Cherry say something about it."
+        },
+        {
+          "ClueTag": "Smudged Note",
+          "Dialogue": "Someone in a black car gave that to Cherry. But I don't know anything else about it."
+        }
+      ]
     }
   ]
 }

@@ -29,6 +29,7 @@ public class Journal : Singleton<Journal>, IObserver
     void Start()
     {
         journalSubject?.RegisterObserver(this);
+        AddClue("Misc", new Clue("Knowledge", ""));
         ChangePage(5);
     }
 
