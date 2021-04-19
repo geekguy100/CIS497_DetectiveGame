@@ -84,7 +84,7 @@
         },
         {
           "ClueTag": "Michael's ID",
-          "Dialogue": "I was in the maintenance room when the boy, Michael, passed by. He stopped and thanked me for working through the night. He left, but I noticed he dropped his ID, so I went to return it to him."
+          "Dialogue": "I was in the maintenance room when the boy, Michael, passed by. He dropped his ID, so I went to return it to him."
         },
         {
           "ClueTag": "Candy Wrapper",
@@ -96,7 +96,7 @@
         },
         {
           "ClueTag": "Chewing Tobacco",
-          "Dialogue": "Yeah, I used to smoke, but for the past few months I've been using that instead. It's supposed to be better for you I guess."
+          "Dialogue": "Yeah, I used to smoke, but I've been trying to use that instead. It's supposed to be better for you I guess."
         },
         {
           "ClueTag": "Cigarette Ash",
@@ -167,11 +167,11 @@
         },
         {
           "ClueTag": "Chewing Tobacco",
-          "Dialogue": "That's probably Richard's, he's been chewing that instead of smoking."
+          "Dialogue": "That's probably Richard's, he said he wanted to try that instead of smoking."
         },
         {
           "ClueTag": "Cigarette Ash",
-          "Dialogue": "I don't smoke, and Richard hasn't recently."
+          "Dialogue": "I don't smoke, and Richard has been using chewing stuff."
         },
         {
           "ClueTag": "Poison Syringe",
@@ -226,7 +226,7 @@
         },
         {
           "ClueTag": "Cigarrete Ash",
-          "Dialogue": "Normally, a girl wouldn't tell secrets, but I've seen Paul go through a pack a day."
+          "Dialogue": "Normally, a girl wouldn't tell secrets, but Paul and that housekeeper fella had a smoke together."
         },
         {
           "ClueTag": "Guest Book",
@@ -257,7 +257,7 @@
     {
       "Name": "Paul Butler",
       "Intro": "I'm Paul. I sleep on the sidewalk out there.",
-      "Accusation": "I understand. I've made so many mistakes. Take me away, at least I'll finally have a roof over my head.",
+      "Accusation": "I didn't do it. You have to believe me!",
       "KnownClues": [
         {
           "ClueTag": "Knowledge",
@@ -273,7 +273,7 @@
         },
         {
           "ClueTag": "Cigarette Ash",
-          "Dialogue": "Uh, well, I do smoke, but only if I can get my hands on a pack."
+          "Dialogue": "Uh, well, I do smoke, but only if I can get my hands on a pack. The maintenance man gave me one when he came out for a break."
         },
         {
           "ClueTag": "Chewing Tobacco",

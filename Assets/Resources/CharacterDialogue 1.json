@@ -100,7 +100,7 @@
         },
         {
           "ClueTag": "Cigarette Ash",
-          "Dialogue": "No, I've got my chew and Nancy doesn't smoke at all. I think that hobo Paul might."
+          "Dialogue": "No, I've got my chew and Nancy doesn't smoke at all. I think that hobo Paul might or maybe Cherry."
         },
         {
           "ClueTag": "Poison Syringe",
@@ -179,7 +179,7 @@
         },
         {
           "ClueTag": "Guest Book",
-          "Dialogue": "Yeah, that's what I use to check guests into their rooms. Only I use it, but... I remember Cherry asking about it. I don't know why."
+          "Dialogue": "Yeah, that's what I use to check guests into their rooms. Only I use it, but... I remember Paul asking about it. I don't know why."
         },
         {
           "ClueTag": "Strands of Hair",
@@ -187,7 +187,7 @@
         },
         {
           "ClueTag": "Nancy's Bruising",
-          "Dialogue": "I… I really don't remember well. Cherry came in and then I woke up to cops."
+          "Dialogue": "I… I really don't remember well. Paul came in and then I woke up to cops."
         },
         {
           "ClueTag": "Nancy's Tattoo",
@@ -210,7 +210,7 @@
     {
       "Name": "Cherry",
       "Intro": "Mary Ross, but my friends call me Cherry.",
-      "Accusation": "I didn't kill the damn kid. I can't go to jail, I won't last!",
+      "Accusation": "Please! No! I can't go to jail, I won't last!",
       "KnownClues": [
         {
           "ClueTag": "Knowledge",
@@ -226,7 +226,11 @@
         },
         {
           "ClueTag": "Cigarrete Ash",
-          "Dialogue": "Normally, a girl wouldn't tell secrets, but I've seen Paul go through a pack a day."
+          "Dialogue": "I've been known to have one or two, what's it to you?"
+        },
+        {
+          "ClueTag": "Chewing Tobacco",
+          "Dialogue": "Ew, gross. That stuff ruins your teeth."
         },
         {
           "ClueTag": "Guest Book",
@@ -238,19 +242,15 @@
         },
         {
           "ClueTag": "Smudged Note",
-          "Dialogue": "Ok fine. Some creep in a black car came by and offered me money to give them that guest book. But I swear I didn't kill the kid."
+          "Dialogue": "Ok fine. Some creep in a black car came by and offered me money to give them that guest book. But I refused. That's when Paul took it."
         },
         {
           "ClueTag": "Black Car",
-          "Dialogue": "It was plain, I never saw who was inside. The money is already gone."
-        },
-        {
-          "ClueTag": "Nancy's Bruising",
-          "Dialogue": "Ok yeah, she wouldn't even give me a chance to talk. I pushed her and she hit her head. I didn't mean to hurt her."
+          "Dialogue": "It was plain, I never saw who was inside."
         },
         {
           "ClueTag": "Dirty Note",
-          "Dialogue": "Ew, gross, that's covered in dirt. Sweetie, if my hands were that dirty, I'd be out of a job."
+          "Dialogue": "I have never seen that before. I don't know what you're talking about."
         }
       ]
     },
@@ -281,15 +281,19 @@
         },
         {
           "ClueTag": "Dirty Note",
-          "Dialogue": "I have never seen that before. I don't know what you're talking about."
+          "Dialogue": "I couldn't kill a kid, not even for that much money."
         },
         {
           "ClueTag": "Guest Book",
-          "Dialogue": "I don't know nothing about that, but I heard Cherry say something about it."
+          "Dialogue": "I don't know nothing about that."
+        },
+        {
+          "ClueTag": "Nancy's Bruising",
+          "Dialogue": "I didn't mean to hurt her. I was desperate. I pushed her and she hit her head."
         },
         {
           "ClueTag": "Smudged Note",
-          "Dialogue": "Someone in a black car gave that to Cherry. But I don't know anything else about it."
+          "Dialogue": "Ok fine. Somebody in a black car gave me money to get that guest book. But I didn't kill anybody. Cherry took it off of me and that's why it's smudged."
         }
       ]
     }
