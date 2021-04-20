@@ -87,6 +87,8 @@ public class UIManager : Singleton<UIManager>
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        HideDialoguePanel();
+        //DeactivateAfterTime(dialoguePanel);
         GameManager.Instance.UnpauseGame();
     }
 
@@ -95,6 +97,12 @@ public class UIManager : Singleton<UIManager>
         clueFoundText.text = "A new clue has been recorded: " + clue;
         clueFoundText.gameObject.SetActive(true);
         StartCoroutine(DeactivateAfterTime(clueFoundText.gameObject));
+    }
+
+    public void HideDialoguePanel()
+    {
+        StopAllCoroutines();
+        dialoguePanel.SetActive(false);
     }
 
     private void PopulateButtons()
@@ -137,15 +145,10 @@ public class UIManager : Singleton<UIManager>
         
     }
 
-    public void HideDialoguePanel()
-    {
-        StopAllCoroutines();
-        dialoguePanel.SetActive(false);
-    }
-
     private IEnumerator DeactivateAfterTime(GameObject obj)
     {
         yield return new WaitForSeconds(dialogueScreenTime);
-        obj.SetActive(false);
+        if (!questionPanel.activeInHierarchy)
+            obj.SetActive(false);
     }
 }
