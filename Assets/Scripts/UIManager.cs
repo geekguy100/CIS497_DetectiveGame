@@ -105,6 +105,9 @@ public class UIManager : Singleton<UIManager>
         // If we do, don't create a new one.
         foreach (Clue clue in knownClues)
         {
+            if (clue.ClueTag == string.Empty)
+                continue;
+
             print(clue.ClueTag);
             bool foundClue = false;
 
