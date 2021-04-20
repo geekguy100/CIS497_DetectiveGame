@@ -21,10 +21,16 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI nameText;
 
+    [Header("Button Prefab")]
+    [SerializeField] private Button buttonPrefab;
+
     [Header("Clue Probing")]
     [SerializeField] private GameObject questionPanel;
-    [SerializeField] private GameObject buttonPanel;
-    [SerializeField] Button closeButton;
+    [SerializeField] private GameObject questionButtonPanel;
+
+    [Header("Accusation")]
+    [SerializeField] private GameObject accusationPanel;
+    [SerializeField] private GameObject accusationButtonPanel;
 
     [Header("Misc")]
     [SerializeField] private TextMeshProUGUI clueFoundText;
@@ -47,7 +53,7 @@ public class UIManager : Singleton<UIManager>
     private void Start()
     {
         questionButtons = new List<QuestionButton>();
-        questionButtons.Add(new QuestionButton(closeButton, new Clue()));
+        //questionButtons.Add(new QuestionButton(questionCloseButton, new Clue()));
     }
 
     public void DisplayDialoguePanel(string characterName, string dialogue)
@@ -61,34 +67,59 @@ public class UIManager : Singleton<UIManager>
         //StartCoroutine(DeactivateAfterTime(dialoguePanel));
     }
 
-    public bool ToggleQuestionPanel()
+    public void ToggleQuestionPanel(string characterName, string characterIntro)
     {
+        if (accusationPanel.activeInHierarchy)
+            return;
+
         questionPanel.SetActive(!questionPanel.activeInHierarchy);
 
         // If we toggled on the question panel, fill it with all of the
-        // button we need.
+        // buttons we need.
         if (questionPanel.activeInHierarchy)
         {
+            DisplayDialoguePanel(characterName, characterIntro);
+
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-            PopulateButtons();
+            PopulateQuestionPanelButtons();
             GameManager.Instance.PauseGame();
         }
         else
         {
             OnQuestionPanelDisable();
-            GameManager.Instance.UnpauseGame();
         }
+    }
 
-        return questionPanel.activeInHierarchy;
+    public void DisplayAccusationPanel()
+    {
+        questionPanel.SetActive(false);
+        accusationPanel?.SetActive(true);
+
+        // If we toggled on the accusation panel, fill it with all of the
+        // button we need.
+        if (accusationPanel.activeInHierarchy)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            PopulateAccusationPanelButtons();
+            GameManager.Instance.PauseGame();
+        }
+    }
+
+    public void OnAccusationPanelDisable()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        accusationPanel.SetActive(false);
+        GameManager.Instance.UnpauseGame();
     }
 
     public void OnQuestionPanelDisable()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        HideDialoguePanel();
-        //DeactivateAfterTime(dialoguePanel);
+        dialoguePanel.SetActive(false);
         GameManager.Instance.UnpauseGame();
     }
 
@@ -99,13 +130,14 @@ public class UIManager : Singleton<UIManager>
         StartCoroutine(DeactivateAfterTime(clueFoundText.gameObject));
     }
 
-    public void HideDialoguePanel()
-    {
-        StopAllCoroutines();
-        dialoguePanel.SetActive(false);
-    }
+    //public void HideOpenPanels()
+    //{
+    //    StopAllCoroutines();
+    //    dialoguePanel.SetActive(false);
+    //    accusationPanel.SetActive(false);
+    //}
 
-    private void PopulateButtons()
+    private void PopulateQuestionPanelButtons()
     {
         Clue[] knownClues = Journal.Instance.GetAllKnownClues();
 
@@ -133,7 +165,7 @@ public class UIManager : Singleton<UIManager>
 
             print("Creating a button for clue " + clue.ClueTag);
 
-            Button button = Instantiate(closeButton, buttonPanel.transform);
+            Button button = Instantiate(buttonPrefab, questionButtonPanel.transform);
             button.GetComponentInChildren<TextMeshProUGUI>().text = clue.ClueTag + "?";
 
             // Reset whatever was on the close button.
@@ -143,6 +175,21 @@ public class UIManager : Singleton<UIManager>
             questionButtons.Add(new QuestionButton(button, clue));
         }
         
+    }
+
+    private void PopulateAccusationPanelButtons()
+    {
+        Clue[] knownClues = Journal.Instance.GetAllKnownClues();
+
+        foreach (QuestionButton qb in questionButtons)
+        {
+            Button button = Instantiate(buttonPrefab, accusationButtonPanel.transform);
+            button.GetComponentInChildren<TextMeshProUGUI>().text = qb.clue.ClueTag;
+
+            // Reset whatever was on the close button.
+            button.onClick.RemoveAllListeners();
+            //button.onClick.AddListener(() => { QuestionHandler.ProbeClue(clue); });
+        }
     }
 
     private IEnumerator DeactivateAfterTime(GameObject obj)

@@ -35,12 +35,7 @@ public class NPCInteraction : MonoBehaviour, IInteractable
     {
         // TODO: We'll need a new JSON field for IntroDialogue. For now, I'm hard coding it.
         activeCharacter = character;
-        bool questionPanelActive = UIManager.Instance.ToggleQuestionPanel();
-
-        if (questionPanelActive)
-            UIManager.Instance.DisplayDialoguePanel(character.Name, character.Intro);
-        else
-            UIManager.Instance.HideDialoguePanel();
+        UIManager.Instance.ToggleQuestionPanel(character.Name, character.Intro);
     }
 
     public void OnAssigned(IInteractor interactor)
