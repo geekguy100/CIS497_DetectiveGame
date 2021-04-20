@@ -13,9 +13,9 @@ TagManager:
   - UI
   - Interactable
   - Clue
-  - 
-  - 
-  - 
+  - clue vision portal
+  - postProcessing
+  - cluePostProcessing
   - 
   - 
   - 
