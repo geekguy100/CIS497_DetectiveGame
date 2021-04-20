@@ -23,12 +23,14 @@ public class JournalToggle : ISubject
             journal.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            GameManager.Instance.UnpauseGame();
         }
         else
         {
             journal.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            GameManager.Instance.PauseGame();
         }
     }
 }

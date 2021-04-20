@@ -18,7 +18,7 @@ public static class QuestionHandler
         if (activeCharacterData.knownClueTags.Contains(clue.ClueTag))
         {
             CharacterClue charClue = character.KnownClues.Where(t => t.ClueTag == clue.ClueTag).FirstOrDefault();
-            UIManager.Instance.UpdateDialoguePanel(activeCharacterData.name, charClue.Dialogue);
+            UIManager.Instance.DisplayDialoguePanel(activeCharacterData.name, charClue.Dialogue);
 
             //Adding in other clues gained from questioning
             if (activeCharacterData.name == "Richard Wright" && clue.ClueTag == "Knowledge" && !Journal.Instance.HasDiscoveredClue("Black Car"))
@@ -43,7 +43,7 @@ public static class QuestionHandler
             }
         }
         else
-            UIManager.Instance.UpdateDialoguePanel(activeCharacterData.name, "I'm not sure what you're talking about...");
+            UIManager.Instance.DisplayDialoguePanel(activeCharacterData.name, "I'm not sure what you're talking about...");
 
         // TODO: We'll need to add in a JSON field to represent what the character says if they don't know what you're talking about. For now, it's hardcoded.
     }

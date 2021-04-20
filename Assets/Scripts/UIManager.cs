@@ -50,7 +50,7 @@ public class UIManager : Singleton<UIManager>
         questionButtons.Add(new QuestionButton(closeButton, new Clue()));
     }
 
-    public void UpdateDialoguePanel(string characterName, string dialogue)
+    public void DisplayDialoguePanel(string characterName, string dialogue)
     {
         StopAllCoroutines();
 
@@ -58,10 +58,10 @@ public class UIManager : Singleton<UIManager>
         nameText.text = characterName;
         dialogueText.text = dialogue;
 
-        StartCoroutine(DeactivateAfterTime(dialoguePanel));
+        //StartCoroutine(DeactivateAfterTime(dialoguePanel));
     }
 
-    public void ToggleQuestionPanel()
+    public bool ToggleQuestionPanel()
     {
         questionPanel.SetActive(!questionPanel.activeInHierarchy);
 
@@ -72,15 +72,22 @@ public class UIManager : Singleton<UIManager>
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             PopulateButtons();
+            GameManager.Instance.PauseGame();
         }
         else
+        {
             OnQuestionPanelDisable();
+            GameManager.Instance.UnpauseGame();
+        }
+
+        return questionPanel.activeInHierarchy;
     }
 
     public void OnQuestionPanelDisable()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        GameManager.Instance.UnpauseGame();
     }
 
     public void UpdateClueText(string clue)
@@ -125,6 +132,12 @@ public class UIManager : Singleton<UIManager>
             questionButtons.Add(new QuestionButton(button, clue));
         }
         
+    }
+
+    public void HideDialoguePanel()
+    {
+        StopAllCoroutines();
+        dialoguePanel.SetActive(false);
     }
 
     private IEnumerator DeactivateAfterTime(GameObject obj)

@@ -1,5 +1,5 @@
 /*****************************************************************************
-// File Name :         CharacterClue.cs
+// File Name :         GameManager.cs
 // Author :            Kyle Grenier
 // Creation Date :     #CREATIONDATE#
 //
@@ -7,15 +7,19 @@
 *****************************************************************************/
 using UnityEngine;
 
-[System.Serializable]
-public class CharacterClue
+public class GameManager : Singleton<GameManager>
 {
-    public string ClueTag;
-    public string Dialogue;
+    private bool paused = false;
 
-    public override string ToString()
+    public void PauseGame()
     {
-        string result = "Clue Tag: " + ClueTag + "\nDialogue: " + Dialogue + "\n";
-        return result;
+        paused = true;
+        Time.timeScale = 0;
+    }
+
+    public void UnpauseGame()
+    {
+        paused = false;
+        Time.timeScale = 1;
     }
 }
