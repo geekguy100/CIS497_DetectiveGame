@@ -11,6 +11,7 @@ using UnityEngine;
 public class CharacterDialogue
 {
     public Character[] Characters;
+    public string Culprit;
 
     public override string ToString()
     {

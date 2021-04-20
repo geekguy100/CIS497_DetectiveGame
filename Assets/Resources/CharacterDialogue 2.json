@@ -187,11 +187,11 @@
         },
         {
           "ClueTag": "Nancy's Bruising",
-          "Dialogue": "I… I really don't remember well. Cherry came in and then I woke up to cops."
+          "Dialogue": "I... I really don't remember well. Cherry came in and then I woke up to cops."
         },
         {
           "ClueTag": "Nancy's Tattoo",
-          "Dialogue": "Um… yeah. I used to date a guy who was part of a gang and one night I got really drunk and ended up with a tattoo. I'm not part of any gang, and I definitely regret getting it."
+          "Dialogue": "Um... yeah. I used to date a guy who was part of a gang and one night I got really drunk and ended up with a tattoo. I'm not part of any gang, and I definitely regret getting it."
         },
         {
           "ClueTag": "Dirty Note",
@@ -293,5 +293,6 @@
         }
       ]
     }
-  ]
+  ],
+  "Culprit": "Richard Wright"
 }
