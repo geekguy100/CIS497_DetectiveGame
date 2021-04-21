@@ -294,5 +294,6 @@
       ]
     }
   ],
-  "Culprit": "Richard Wright"
+  "Culprit": "Richard Wright",
+  "RequiredAccusationClueTags":["Dirty Note", "Poison Syringe"]
 }

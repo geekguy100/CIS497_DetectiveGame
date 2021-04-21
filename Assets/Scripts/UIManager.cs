@@ -36,6 +36,8 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private TextMeshProUGUI clueFoundText;
 
     private List<QuestionButton> questionButtons;
+    private List<QuestionButton> accusationButtons;
+
     private struct QuestionButton
     {
         public QuestionButton(Button button, Clue clue)
@@ -53,6 +55,7 @@ public class UIManager : Singleton<UIManager>
     private void Start()
     {
         questionButtons = new List<QuestionButton>();
+        accusationButtons = new List<QuestionButton>();
         //questionButtons.Add(new QuestionButton(questionCloseButton, new Clue()));
     }
 
@@ -183,12 +186,18 @@ public class UIManager : Singleton<UIManager>
 
         foreach (QuestionButton qb in questionButtons)
         {
+            // If we already have an accusation button set up, continue.
+            if (accusationButtons.Contains(qb))
+                continue;
+
             Button button = Instantiate(buttonPrefab, accusationButtonPanel.transform);
             button.GetComponentInChildren<TextMeshProUGUI>().text = qb.clue.ClueTag;
 
             // Reset whatever was on the close button.
             button.onClick.RemoveAllListeners();
-            //button.onClick.AddListener(() => { QuestionHandler.ProbeClue(clue); });
+            button.onClick.AddListener(() => { GameManager.Instance.AccuseCharacter(qb.clue); });
+
+            accusationButtons.Add(qb);
         }
     }
 

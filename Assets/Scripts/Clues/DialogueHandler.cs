@@ -69,4 +69,13 @@ public static class DialogueHandler
         return dialogue.Characters.Where(t => t.Name == name).FirstOrDefault();
     }
 
+    public static string GetCulpritName()
+    {
+        return dialogue.Culprit;
+    }
+
+    public static string[] GetRequiredAccusationClueTags()
+    {
+        return dialogue.RequiredAccusationClueTags;
+    }
 }

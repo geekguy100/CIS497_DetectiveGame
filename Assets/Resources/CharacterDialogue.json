@@ -294,5 +294,6 @@
       ]
     }
   ],
-  "Culprit": "Paul Butler"
+  "Culprit": "Paul Butler",
+  "RequiredAccusationClueTags":["Dirty Note", "Poison Syringe"]
 }

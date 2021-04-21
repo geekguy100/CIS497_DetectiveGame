@@ -298,5 +298,6 @@
       ]
     }
   ],
-  "Culprit": "Cherry"
+  "Culprit": "Cherry",
+  "RequiredAccusationClueTags":["Dirty Note", "Poison Syringe"]
 }

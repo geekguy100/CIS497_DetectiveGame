@@ -23,17 +23,17 @@ public static class QuestionHandler
             //Adding in other clues gained from questioning
             if (activeCharacterData.name == "Richard Wright" && clue.ClueTag == "Knowledge" && !Journal.Instance.HasDiscoveredClue("Black Car"))
             {
-                Journal.Instance.AddClue("Misc", new Clue("Black Car", "Reports of a strange black car outside the motel."));
+                Journal.Instance.AddClue("Case", new Clue("Black Car", "Reports of a strange black car outside the motel."));
                 UIManager.Instance.UpdateClueText("Black Car");
             }
             if (activeCharacterData.name == "Richard Wright" && clue.ClueTag == "Black Car" && !Journal.Instance.HasDiscoveredClue("Altercation"))
             {
-                Journal.Instance.AddClue("Misc", new Clue("Altercation", "Reports of a verbal fight between Faith and Nancy."));
+                Journal.Instance.AddClue("Case", new Clue("Altercation", "Reports of a verbal fight between Faith and Nancy."));
                 UIManager.Instance.UpdateClueText("Altercation");
             }
             if (activeCharacterData.name == "Nancy Reed" && clue.ClueTag == "Knowledge" && !Journal.Instance.HasDiscoveredClue("Altercation"))
             {
-                Journal.Instance.AddClue("Misc", new Clue("Altercation", "Reports of a verbal fight between Faith and Nancy."));
+                Journal.Instance.AddClue("Case", new Clue("Altercation", "Reports of a verbal fight between Faith and Nancy."));
                 UIManager.Instance.UpdateClueText("Altercation");
             }
             if (activeCharacterData.name == "Nancy Reed" && clue.ClueTag == "Knowledge" && !Journal.Instance.HasDiscoveredClue("Flirting"))
@@ -44,7 +44,5 @@ public static class QuestionHandler
         }
         else
             UIManager.Instance.DisplayDialoguePanel(activeCharacterData.name, "I'm not sure what you're talking about...");
-
-        // TODO: We'll need to add in a JSON field to represent what the character says if they don't know what you're talking about. For now, it's hardcoded.
     }
 }

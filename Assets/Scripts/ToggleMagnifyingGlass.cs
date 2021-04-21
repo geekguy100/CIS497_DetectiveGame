@@ -14,7 +14,9 @@ public class ToggleMagnifyingGlass : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.M))
+        {
             Toggle();
+        }
     }
 
     private void Toggle()

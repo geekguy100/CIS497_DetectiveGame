@@ -12,6 +12,7 @@ public class CharacterDialogue
 {
     public Character[] Characters;
     public string Culprit;
+    public string[] RequiredAccusationClueTags;
 
     public override string ToString()
     {
