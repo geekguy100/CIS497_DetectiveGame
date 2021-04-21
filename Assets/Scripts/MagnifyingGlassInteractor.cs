@@ -13,7 +13,5 @@ public class MagnifyingGlassInteractor : IInteractor
     {
         if (Input.GetKeyDown(KeyCode.E))
             PerformInteraction();
-        else if (Input.GetKeyDown(KeyCode.M))
-            UnassignInteractable();
     }
 }

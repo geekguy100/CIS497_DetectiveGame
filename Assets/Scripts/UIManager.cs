@@ -32,6 +32,8 @@ public class UIManager : Singleton<UIManager>
     [Header("Accusation")]
     [SerializeField] private GameObject accusationPanel;
     [SerializeField] private GameObject accusationButtonPanel;
+    [SerializeField] private GameObject resultsPanel;
+    [SerializeField] private TextMeshProUGUI resultsText;
 
     [Header("Misc")]
     [SerializeField] private GameObject clueFoundPanel;
@@ -57,11 +59,13 @@ public class UIManager : Singleton<UIManager>
     private void OnEnable()
     {
         EventManager.OnClueFound += UpdateClueText;
+        EventManager.OnAccusation += DisplayAccusation;
     }
 
     private void OnDisable()
     {
         EventManager.OnClueFound -= UpdateClueText;
+        EventManager.OnAccusation -= DisplayAccusation;
     }
 
     private void Start()
@@ -156,6 +160,13 @@ public class UIManager : Singleton<UIManager>
         StartCoroutine(DeactivateAfterTime(clueFoundPanel));
     }
 
+    private void DisplayAccusation(string text)
+    {
+        resultsText.text = text;
+        resultsPanel.SetActive(true);
+        StartCoroutine(DeactivateAfterTime(resultsPanel));
+    }
+
     //public void HideOpenPanels()
     //{
     //    StopAllCoroutines();
@@ -222,8 +233,11 @@ public class UIManager : Singleton<UIManager>
         }
     }
 
-    private IEnumerator DeactivateAfterTime(GameObject obj)
+    private IEnumerator DeactivateAfterTime(GameObject obj, float time = -1)
     {
+        if (time < 0)
+            time = dialogueScreenTime;
+
         yield return new WaitForSecondsRealtime(dialogueScreenTime);
 
         obj.SetActive(false);

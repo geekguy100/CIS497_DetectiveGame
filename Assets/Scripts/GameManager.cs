@@ -76,13 +76,14 @@ public class GameManager : Singleton<GameManager>
 
     private void CorrectAccusation(Clue clue)
     {
-        print("You made the right accusation! " + NPCInteraction.activeCharacter.Name + " == " + DialogueHandler.GetCulpritName() + " is the culprit!");
-        print("Clue passed in: " + clue.ClueTag);
+        string result = "You made the right accusation! " + NPCInteraction.activeCharacter.Name + " == " + DialogueHandler.GetCulpritName() + " is the culprit!\n";
+        result += "Clue passed in: " + clue.ClueTag;
+        EventManager.Accusation(result);
     }
 
     private void IncorrectAccusation(Clue accusation)
     {
-        print("WRONG ACCUSATION");
+        string result = "WRONG ACCUSATION\n";
 
         string accusedCharacterName = NPCInteraction.activeCharacter.Name;
         string missingTags = string.Empty;
@@ -106,11 +107,12 @@ public class GameManager : Singleton<GameManager>
         else
             missingTags = "You did not pass in the correct clue.";
 
-        print("MISSING TAGS: " + missingTags);
+        //result += "MISSING TAGS: " + missingTags + "\n";
 
-        if (DialogueHandler.GetCulpritName() != accusedCharacterName)
-            print("You did not accuse the correct character. The culprit was actually " + DialogueHandler.GetCulpritName());
+        //if (DialogueHandler.GetCulpritName() != accusedCharacterName)
+        //    result += "You did not accuse the correct character. The culprit was actually " + DialogueHandler.GetCulpritName();
 
+        EventManager.Accusation(result);
     }
 
     #endregion

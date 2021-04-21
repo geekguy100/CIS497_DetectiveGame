@@ -10,11 +10,18 @@ using UnityEngine;
 public class ToggleMagnifyingGlass : MonoBehaviour
 {
     [SerializeField] private GameObject magnifyingGlass;
+    private MagnifyingGlassInteractor interactor;
+
+    private void Awake()
+    {
+        interactor = magnifyingGlass.GetComponent<MagnifyingGlassInteractor>();
+    }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.M))
         {
+            interactor.UnassignInteractable();
             Toggle();
         }
     }
