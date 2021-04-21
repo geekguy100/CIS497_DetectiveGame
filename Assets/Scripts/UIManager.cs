@@ -52,6 +52,15 @@ public class UIManager : Singleton<UIManager>
     }
 
 
+    private void OnEnable()
+    {
+        EventManager.OnClueFound += UpdateClueText;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnClueFound -= UpdateClueText;
+    }
 
     private void Start()
     {
@@ -127,9 +136,9 @@ public class UIManager : Singleton<UIManager>
         GameManager.Instance.UnpauseGame();
     }
 
-    public void UpdateClueText(string clue)
+    private void UpdateClueText(string page, Clue clue)
     {
-        clueFoundText.text = "A new clue has been recorded: " + clue;
+        clueFoundText.text = "A new clue has been recorded: " + clue.ClueTag;
         clueFoundText.gameObject.SetActive(true);
         PopulateQuestionPanelButtons();
         StartCoroutine(DeactivateAfterTime(clueFoundText.gameObject));

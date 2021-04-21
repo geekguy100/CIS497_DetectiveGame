@@ -44,8 +44,9 @@ public class InGameClue : MonoBehaviour, IInteractable
         // Only log the clue of we haven't discovered it before.
         if (!Journal.Instance.HasDiscoveredClue(clue.ClueTag))
         {
-            UIManager.Instance.UpdateClueText(clue.ClueTag);
-            Journal.Instance.AddClue("Case", clue);
+            EventManager.ClueFound("Case", clue);
+            //UIManager.Instance.UpdateClueText(clue.ClueTag);
+            //Journal.Instance.AddClue("Case", clue);
         }
     }
 

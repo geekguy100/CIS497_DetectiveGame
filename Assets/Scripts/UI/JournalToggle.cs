@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JournalToggle : ISubject
+public class JournalToggle : MonoBehaviour
 {
     [SerializeField] private GameObject journal;
     //[SerializeField] private Journal journalComponent;
@@ -12,7 +12,6 @@ public class JournalToggle : ISubject
         if(Input.GetKeyDown(KeyCode.J))
         {
             ToggleJournal();
-            NotifyObservers(journal.activeInHierarchy);
         }
     }
 
