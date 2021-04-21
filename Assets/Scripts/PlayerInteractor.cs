@@ -11,9 +11,12 @@ using UnityEngine;
 public class PlayerInteractor : IInteractor
 {
     [SerializeField] private GameObject magnifyingGlass;
+    [SerializeField] GameObject speechBubble;
 
     private void Update()
     {
+        if (GetInteractable()!= null && GetInteractable() is NPCInteraction) speechBubble.gameObject.SetActive(true);
+        else speechBubble.gameObject.SetActive(false);
         if (Input.GetKeyDown(KeyCode.E) && !magnifyingGlass.activeInHierarchy)
             PerformInteraction();
     }
