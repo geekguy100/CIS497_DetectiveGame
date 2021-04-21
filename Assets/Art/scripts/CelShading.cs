@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
 [Serializable]
-[PostProcess(typeof(CelShadingRenderer), PostProcessEvent.BeforeStack, "Custom/Cell Shading")]
+[PostProcess(typeof(CelShadingRenderer), PostProcessEvent.BeforeStack, "Custom/Cell Shading", false)]
 public sealed class CelShading : PostProcessEffectSettings
 {
     [Range(0f, 1f)] public FloatParameter shadowOpacity = new FloatParameter {value = 0.8f};

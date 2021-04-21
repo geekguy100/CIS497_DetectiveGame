@@ -177,7 +177,7 @@ MonoBehaviour:
     value: 1
   shadowOpacity:
     overrideState: 1
-    value: 0.711
+    value: 0.785
   mask:
     overrideState: 1
     value: {fileID: 8600000, guid: 811d4d2faefe24a4f919062698f7dedf, type: 2}
