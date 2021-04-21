@@ -10,10 +10,11 @@ using UnityEngine;
 [System.Serializable]
 public struct Clue
 {
-    public Clue(string clueTag, string clueDesc)
+    public Clue(string clueTag, string clueDesc, string person = "Case")
     {
         this.clueTag = clueTag;
         this.clueDesc = clueDesc;
+        this.person = person;
     }
 
     [Tooltip("The clue tag exactly as it is written in the JSON file.")]
@@ -22,8 +23,13 @@ public struct Clue
     [Tooltip("The description of the clue. This will be added to the journal.")]
     [SerializeField] private string clueDesc;
 
+    [Tooltip("The person associated with this clue and the page of the Journal the clue will be recorded into. " +
+        "Defaults to 'Case' if left blank.")]
+    [SerializeField] private string person;
+
     public string ClueTag { get { return clueTag; } }
     public string ClueDesc { get { return clueDesc; } }
+    public string Person { get { return person; } }
 }
 
 public class InGameClue : MonoBehaviour, IInteractable
@@ -31,31 +37,28 @@ public class InGameClue : MonoBehaviour, IInteractable
     [Tooltip("The clue's data.")]
     [SerializeField] private Clue clue;
 
-    private Color color;
-
-    void Awake()
-    {
-        color = GetComponent<MeshRenderer>().material.color;
-    }
-
 
     public void Interact(IInteractor interactor)
     {
         // Only log the clue of we haven't discovered it before.
         if (!Journal.Instance.HasDiscoveredClue(clue.ClueTag))
         {
-            UIManager.Instance.UpdateClueText(clue.ClueTag);
-            Journal.Instance.AddClue("Misc", clue);
+            EventManager.ClueFound(clue);
+            interactor.UnassignInteractable();
+            //UIManager.Instance.HideScanPanel();
+            //UIManager.Instance.UpdateClueText(clue.ClueTag);
+            //Journal.Instance.AddClue("Case", clue);
         }
     }
 
     public void OnAssigned(IInteractor interactor)
     {
-        GetComponent<MeshRenderer>().material.color = Color.green;
+        if (!Journal.Instance.HasDiscoveredClue(clue.ClueTag))
+            UIManager.Instance.DisplayScanPanel();
     }
 
     public void OnUnassigned(IInteractor interactor)
     {
-        GetComponent<MeshRenderer>().material.color = color;
+        UIManager.Instance.HideScanPanel();
     }
 }

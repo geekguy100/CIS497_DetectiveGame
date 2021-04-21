@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JournalToggle : ISubject
+public class JournalToggle : MonoBehaviour
 {
     [SerializeField] private GameObject journal;
     //[SerializeField] private Journal journalComponent;
@@ -12,7 +12,6 @@ public class JournalToggle : ISubject
         if(Input.GetKeyDown(KeyCode.J))
         {
             ToggleJournal();
-            NotifyObservers(journal.activeInHierarchy);
         }
     }
 
@@ -23,12 +22,14 @@ public class JournalToggle : ISubject
             journal.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            GameManager.Instance.UnpauseGame();
         }
         else
         {
             journal.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            GameManager.Instance.PauseGame();
         }
     }
 }

@@ -15,7 +15,25 @@ public static class DialogueHandler
     [RuntimeInitializeOnLoadMethod]
     private static void LoadDialogue()
     {
-        TextAsset jsonFile = Resources.Load("CharacterDialogue") as TextAsset;
+        TextAsset jsonFile;
+        int r = Random.Range(0, 3);
+        Debug.Log(r);
+        switch (r)
+        {
+            case 0:
+                jsonFile = Resources.Load("CharacterDialogue") as TextAsset;
+                break;
+            case 1:
+                jsonFile = Resources.Load("CharacterDialogue 1") as TextAsset;
+                break;
+            case 2:
+                jsonFile = Resources.Load("CharacterDialogue 2") as TextAsset;
+                break;
+            default:
+                jsonFile = Resources.Load("CharacterDialogue") as TextAsset;
+                break;
+        }
+        
         dialogue = JsonUtility.FromJson<CharacterDialogue>(jsonFile.text);
 
         Debug.Log("Retrieved character dialogue.");
@@ -51,4 +69,13 @@ public static class DialogueHandler
         return dialogue.Characters.Where(t => t.Name == name).FirstOrDefault();
     }
 
+    public static string GetCulpritName()
+    {
+        return dialogue.Culprit;
+    }
+
+    public static string[] GetRequiredAccusationClueTags()
+    {
+        return dialogue.RequiredAccusationClueTags;
+    }
 }

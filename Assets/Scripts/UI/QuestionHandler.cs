@@ -18,11 +18,35 @@ public static class QuestionHandler
         if (activeCharacterData.knownClueTags.Contains(clue.ClueTag))
         {
             CharacterClue charClue = character.KnownClues.Where(t => t.ClueTag == clue.ClueTag).FirstOrDefault();
-            UIManager.Instance.UpdateDialoguePanel(activeCharacterData.name, charClue.Dialogue);
+            UIManager.Instance.DisplayDialoguePanel(activeCharacterData.name, charClue.Dialogue);
+
+            //Adding in other clues gained from questioning
+            if (activeCharacterData.name == "Richard Wright" && clue.ClueTag == "Knowledge" && !Journal.Instance.HasDiscoveredClue("Black Car"))
+            {
+                EventManager.OnClueFound(new Clue("Black Car", "Reports of a strange black car outside the motel.", "Richard Wright"));
+                //Journal.Instance.AddClue(new Clue("Black Car", "Reports of a strange black car outside the motel."));
+                //UIManager.Instance.UpdateClueText("Black Car");
+            }
+            if (activeCharacterData.name == "Richard Wright" && clue.ClueTag == "Black Car" && !Journal.Instance.HasDiscoveredClue("Altercation"))
+            {
+                EventManager.OnClueFound(new Clue("Altercation", "Reports of a verbal fight between Faith and Nancy.", "Richard Wright"));
+                //Journal.Instance.AddClue(new Clue("Altercation", "Reports of a verbal fight between Faith and Nancy."));
+                //UIManager.Instance.UpdateClueText("Altercation");
+            }
+            if (activeCharacterData.name == "Nancy Reed" && clue.ClueTag == "Knowledge" && !Journal.Instance.HasDiscoveredClue("Altercation"))
+            {
+                EventManager.OnClueFound(new Clue("Altercation", "Reports of a verbal fight between Faith and Nancy.", "Nancy Reed"));
+                //Journal.Instance.AddClue(new Clue("Altercation", "Reports of a verbal fight between Faith and Nancy."));
+                //UIManager.Instance.UpdateClueText("Altercation");
+            }
+            if (activeCharacterData.name == "Nancy Reed" && clue.ClueTag == "Knowledge" && !Journal.Instance.HasDiscoveredClue("Flirting"))
+            {
+                EventManager.OnClueFound(new Clue("Flirting", "Reports of flirting between Michael and Nancy.", "Nancy Reed"));
+                //Journal.Instance.AddClue("Nancy Reed", new Clue("Flirting", "Reports of flirting between Michael and Nancy."));
+                //UIManager.Instance.UpdateClueText("Flirting");
+            }
         }
         else
-            UIManager.Instance.UpdateDialoguePanel(activeCharacterData.name, "I'm not sure what you're talking about...");
-
-        // TODO: We'll need to add in a JSON field to represent what the character says if they don't know what you're talking about. For now, it's hardcoded.
+            UIManager.Instance.DisplayDialoguePanel(activeCharacterData.name, "I'm not sure what you're talking about...");
     }
 }

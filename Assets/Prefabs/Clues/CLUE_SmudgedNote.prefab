@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7a9ad5b3fbedf9d4bb356ac92c0c08e5, type: 2}
+  - {fileID: 2100000, guid: 7197acede7509f742b99640894244ff7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,3 +112,4 @@ MonoBehaviour:
     clueTag: Smudged Note
     clueDesc: "A red lipstick smudge over the words \u201CA woman just checked in,
       tell me their room number and I will give you $3,000\u201D"
+    person: Case

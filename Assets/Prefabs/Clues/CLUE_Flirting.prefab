@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7a9ad5b3fbedf9d4bb356ac92c0c08e5, type: 2}
+  - {fileID: 2100000, guid: 7197acede7509f742b99640894244ff7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -111,3 +111,4 @@ MonoBehaviour:
   clue:
     clueTag: Flirting
     clueDesc: Reports of flirting between Michael and Nancy.
+    person: Case

@@ -6,7 +6,6 @@
 // Brief Description : ADD BRIEF DESCRIPTION OF THE FILE HERE
 *****************************************************************************/
 using UnityEngine;
-using System.Linq;
 
 public class NPCInteraction : MonoBehaviour, IInteractable
 {
@@ -16,7 +15,8 @@ public class NPCInteraction : MonoBehaviour, IInteractable
     private Character character;
 
     // The character the player is currently talking to.
-    public static Character activeCharacter;
+    private static Character _activeCharacter;
+    public static Character activeCharacter { get { return _activeCharacter; } }
 
     private void Start()
     {
@@ -35,9 +35,8 @@ public class NPCInteraction : MonoBehaviour, IInteractable
     public void Interact(IInteractor interactor)
     {
         // TODO: We'll need a new JSON field for IntroDialogue. For now, I'm hard coding it.
-        activeCharacter = character;
-        UIManager.Instance.UpdateDialoguePanel(character.Name, character.Intro);
-        UIManager.Instance.ToggleQuestionPanel();
+        _activeCharacter = character;
+        UIManager.Instance.ToggleQuestionPanel(character.Name, character.Intro);
     }
 
     public void OnAssigned(IInteractor interactor)

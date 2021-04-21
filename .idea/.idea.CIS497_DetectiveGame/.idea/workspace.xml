@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="91c90227-04e3-42c5-9851-53711e6600ec" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Art/PostProcessing Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/PostProcessing Volume Profile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Shaders/SS Cel Shader.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Shaders/SS Cel Shader.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Shaders/SS Cel Shader.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Shaders/SS Cel Shader.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/motel pieces/Motel_main_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/motel pieces/Motel_main_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/motel pieces/glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/motel pieces/glass.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/motel pieces/grey.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/motel pieces/grey.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/motel pieces/light grey.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/motel pieces/light grey.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/motel pieces/motel test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/motel pieces/motel test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/magnifying glass.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/magnifying glass.prefab" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Art/CelShading.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.0.3/PostProcessing/Editor/Effects/AmbientOcclusionEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.0.3/PostProcessing/Runtime/Effects/AmbientOcclusion.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.0.3/PostProcessing/Runtime/Effects/Bloom.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.0.3/PostProcessing/Runtime/Effects/AmbientOcclusion.cs" />
+        <option value="$PROJECT_DIR$/Assets/Art/CelShading.cs" />
+        <option value="$PROJECT_DIR$/Assets/Art/ClueVision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Art/scripts/CelShading.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1rRkMknJwYQguxzzls0johBbg9L" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="91c90227-04e3-42c5-9851-53711e6600ec" name="Default Changelist" comment="" />
+      <created>1618946246451</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618946246451</updated>
+      <workItem from="1618946260763" duration="6647000" />
+      <workItem from="1618956238511" duration="928000" />
+      <workItem from="1619027668158" duration="13000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="477" y="346" key="run.anything.popup" timestamp="1618951203950">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="477" y="346" key="run.anything.popup/0.0.3440.1400@0.0.3440.1400" timestamp="1618951203950" />
+  </component>
+</project>

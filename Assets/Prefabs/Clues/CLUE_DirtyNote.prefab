@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7a9ad5b3fbedf9d4bb356ac92c0c08e5, type: 2}
+  - {fileID: 2100000, guid: 7197acede7509f742b99640894244ff7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,3 +112,4 @@ MonoBehaviour:
     clueTag: Dirty Note
     clueDesc: "Covered in dirt and mud, it reads \u201CI can give you $10,000 if
       you take this syringe, find anyone from room 221, and inject them with it.\u201D"
+    person: Case
