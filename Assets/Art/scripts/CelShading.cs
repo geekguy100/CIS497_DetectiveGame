@@ -7,6 +7,8 @@ using UnityEngine.Rendering.PostProcessing;
 public sealed class CelShading : PostProcessEffectSettings
 {
     [Range(0f, 1f)] public FloatParameter shadowOpacity = new FloatParameter {value = 0.8f};
+    
+    public TextureParameter mask = new TextureParameter();
 }
 
 public sealed class CelShadingRenderer : PostProcessEffectRenderer<CelShading>
@@ -25,6 +27,7 @@ public sealed class CelShadingRenderer : PostProcessEffectRenderer<CelShading>
         var sheet = context.propertySheets.Get(_celShader);
         var mat = new Material(_celShader);
         mat.SetFloat("_ShadowOpacity", settings.shadowOpacity);
+        mat.SetTexture("_Mask", settings.mask);
         context.command.BuiltinBlit(context.source, context.destination, mat, 0);
     }
 
