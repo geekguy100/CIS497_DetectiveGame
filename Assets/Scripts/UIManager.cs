@@ -131,6 +131,7 @@ public class UIManager : Singleton<UIManager>
     {
         clueFoundText.text = "A new clue has been recorded: " + clue;
         clueFoundText.gameObject.SetActive(true);
+        PopulateQuestionPanelButtons();
         StartCoroutine(DeactivateAfterTime(clueFoundText.gameObject));
     }
 
