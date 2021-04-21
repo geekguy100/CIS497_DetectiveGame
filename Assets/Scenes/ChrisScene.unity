@@ -245,6 +245,7 @@ MonoBehaviour:
   clue:
     clueTag: footprints
     clueDesc: Some strange footprints I found in the garden.
+    person: 
 --- !u!114 &224342968 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4708364977547130671, guid: febcb1fdc6ab66240b7f293f551e9c37, type: 3}
@@ -415,7 +416,7 @@ RectTransform:
   m_Children:
   - {fileID: 1807427441}
   m_Father: {fileID: 779812211}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1393,120 +1394,170 @@ MonoBehaviour:
     clues:
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     cluesDiscovered: 0
   - charName: Richard Wright
     charDesc: The housekeeper and maintenance man for the motel
     clues:
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     cluesDiscovered: 0
   - charName: Nancy Reed
     charDesc: The late night receptionist at the motel.
     clues:
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     cluesDiscovered: 0
   - charName: Mary "Cherry" Ross
     charDesc: A floozy that was found lingering outside the motel.
     clues:
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     cluesDiscovered: 0
   - charName: Paul Butler
     charDesc: A homeless man who sleeps in the bus stop near the motel.
     clues:
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     cluesDiscovered: 0
   - charName: Case
     charDesc: A young boy has died a mysterious death at a motel.
@@ -1514,25 +1565,70 @@ MonoBehaviour:
     - clueTag: 
       clueDesc: 'The medics say he was poisoned. This may be the work of the notorious
         Poisoner. '
+      person: 
     - clueTag: 
       clueDesc: We've locked the area, so the killer has to be one of the suspects.
+      person: 
     - clueTag: 
       clueDesc: Investigate the crime scene and interrogate the suspects.
+      person: 
     - clueTag: 
       clueDesc: When you're ready, accuse one of them.
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     - clueTag: 
       clueDesc: 
+      person: 
     cluesDiscovered: 4
+  - charName: Misc
+    charDesc: Clues you have not yet pinned to a particular character will be shown
+      here.
+    clues:
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    cluesDiscovered: 0
   characterName: {fileID: 572422892}
   characterDesc: {fileID: 92423986}
   clueSlots:
@@ -1735,6 +1831,8 @@ MonoBehaviour:
   knowledgeButton: {fileID: 2009630514168630355}
   accusationPanel: {fileID: 6656234620958412187}
   accusationButtonPanel: {fileID: 6656234620583481355}
+  resultsPanel: {fileID: 0}
+  resultsText: {fileID: 0}
   clueFoundPanel: {fileID: 0}
   clueFoundText: {fileID: 1225607423}
   scanPanel: {fileID: 0}
@@ -2426,6 +2524,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 779812211}
     m_Modifications:
+    - target: {fileID: 534594814, guid: febcb1fdc6ab66240b7f293f551e9c37, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1631968392}
     - target: {fileID: 4708364976567891803, guid: febcb1fdc6ab66240b7f293f551e9c37, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
