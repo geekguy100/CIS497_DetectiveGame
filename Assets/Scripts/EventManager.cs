@@ -9,10 +9,10 @@ using System;
 
 public static class EventManager
 {
-    public static Action<string, Clue> OnClueFound;
+    public static Action<Clue> OnClueFound;
 
-    public static void ClueFound(string page, Clue clue)
+    public static void ClueFound(Clue clue)
     {
-        OnClueFound?.Invoke(page, clue);
+        OnClueFound?.Invoke(clue);
     }
 }

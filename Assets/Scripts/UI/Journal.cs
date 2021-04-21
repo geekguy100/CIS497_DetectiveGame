@@ -40,13 +40,13 @@ public class Journal : Singleton<Journal>
         ChangePage(5);
     }
 
-    public void AddClue(string charName, Clue clue)
+    public void AddClue(Clue clue)
     {
-        JournalPage pageToAddClueTo = pages.Where(t => t.charName == charName).FirstOrDefault();
+        JournalPage pageToAddClueTo = pages.Where(t => t.charName == clue.Person).FirstOrDefault();
 
         if (pageToAddClueTo == null)
         {
-            Debug.LogWarning("Could not find a journal page with character name '" + charName + "'.");
+            Debug.LogWarning("Could not find a journal page with character name '" + clue.Person + "'.");
             return;
         }
 

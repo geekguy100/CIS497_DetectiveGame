@@ -148,7 +148,7 @@ public class UIManager : Singleton<UIManager>
         scanPanel.SetActive(false);
     }
 
-    private void UpdateClueText(string page, Clue clue)
+    private void UpdateClueText(Clue clue)
     {
         clueFoundText.text = "Clue Recorded: " + clue.ClueTag.ToUpper();
         clueFoundPanel.SetActive(true);
