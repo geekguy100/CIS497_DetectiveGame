@@ -11,6 +11,7 @@ using System.Linq;
 public class GameManager : Singleton<GameManager>
 {
     private bool paused = false;
+    public bool Paused { get { return paused; } }
 
     public void PauseGame()
     {

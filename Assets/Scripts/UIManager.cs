@@ -27,6 +27,7 @@ public class UIManager : Singleton<UIManager>
     [Header("Clue Probing")]
     [SerializeField] private GameObject questionPanel;
     [SerializeField] private GameObject questionButtonPanel;
+    [SerializeField] private Button knowledgeButton;
 
     [Header("Accusation")]
     [SerializeField] private GameObject accusationPanel;
@@ -56,13 +57,13 @@ public class UIManager : Singleton<UIManager>
     {
         questionButtons = new List<QuestionButton>();
         accusationButtons = new List<QuestionButton>();
+        knowledgeButton.onClick.AddListener(() => { QuestionHandler.ProbeClue(new Clue("Knowledge", "Preliminary knowledge the character knows.")); });
+        //AddClue("Case", new Clue("Knowledge", ""));
         //questionButtons.Add(new QuestionButton(questionCloseButton, new Clue()));
     }
 
     public void DisplayDialoguePanel(string characterName, string dialogue)
     {
-        StopAllCoroutines();
-
         dialoguePanel.SetActive(true);
         nameText.text = characterName;
         dialogueText.text = dialogue;
@@ -151,7 +152,7 @@ public class UIManager : Singleton<UIManager>
             if (clue.ClueTag == string.Empty)
                 continue;
 
-            print(clue.ClueTag);
+            //print(clue.ClueTag);
             bool foundClue = false;
 
             foreach (QuestionButton qb in questionButtons)
@@ -182,8 +183,6 @@ public class UIManager : Singleton<UIManager>
 
     private void PopulateAccusationPanelButtons()
     {
-        Clue[] knownClues = Journal.Instance.GetAllKnownClues();
-
         foreach (QuestionButton qb in questionButtons)
         {
             // If we already have an accusation button set up, continue.
@@ -203,8 +202,8 @@ public class UIManager : Singleton<UIManager>
 
     private IEnumerator DeactivateAfterTime(GameObject obj)
     {
-        yield return new WaitForSeconds(dialogueScreenTime);
-        if (!questionPanel.activeInHierarchy)
-            obj.SetActive(false);
+        yield return new WaitForSecondsRealtime(dialogueScreenTime);
+
+        obj.SetActive(false);
     }
 }
