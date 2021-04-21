@@ -34,7 +34,9 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private GameObject accusationButtonPanel;
 
     [Header("Misc")]
+    [SerializeField] private GameObject clueFoundPanel;
     [SerializeField] private TextMeshProUGUI clueFoundText;
+    [SerializeField] private GameObject scanPanel;
 
     private List<QuestionButton> questionButtons;
     private List<QuestionButton> accusationButtons;
@@ -136,12 +138,22 @@ public class UIManager : Singleton<UIManager>
         GameManager.Instance.UnpauseGame();
     }
 
+    public void DisplayScanPanel()
+    {
+        scanPanel.SetActive(true);
+    }
+
+    public void HideScanPanel()
+    {
+        scanPanel.SetActive(false);
+    }
+
     private void UpdateClueText(string page, Clue clue)
     {
-        clueFoundText.text = "A new clue has been recorded: " + clue.ClueTag;
-        clueFoundText.gameObject.SetActive(true);
+        clueFoundText.text = "Clue Recorded: " + clue.ClueTag.ToUpper();
+        clueFoundPanel.SetActive(true);
         PopulateQuestionPanelButtons();
-        StartCoroutine(DeactivateAfterTime(clueFoundText.gameObject));
+        StartCoroutine(DeactivateAfterTime(clueFoundPanel));
     }
 
     //public void HideOpenPanels()

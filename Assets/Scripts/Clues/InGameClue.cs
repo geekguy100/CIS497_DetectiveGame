@@ -31,13 +31,6 @@ public class InGameClue : MonoBehaviour, IInteractable
     [Tooltip("The clue's data.")]
     [SerializeField] private Clue clue;
 
-    private Color color;
-
-    void Awake()
-    {
-        color = GetComponent<MeshRenderer>().material.color;
-    }
-
 
     public void Interact(IInteractor interactor)
     {
@@ -45,6 +38,8 @@ public class InGameClue : MonoBehaviour, IInteractable
         if (!Journal.Instance.HasDiscoveredClue(clue.ClueTag))
         {
             EventManager.ClueFound("Case", clue);
+            interactor.UnassignInteractable();
+            //UIManager.Instance.HideScanPanel();
             //UIManager.Instance.UpdateClueText(clue.ClueTag);
             //Journal.Instance.AddClue("Case", clue);
         }
@@ -52,11 +47,12 @@ public class InGameClue : MonoBehaviour, IInteractable
 
     public void OnAssigned(IInteractor interactor)
     {
-        GetComponent<MeshRenderer>().material.color = Color.green;
+        if (!Journal.Instance.HasDiscoveredClue(clue.ClueTag))
+            UIManager.Instance.DisplayScanPanel();
     }
 
     public void OnUnassigned(IInteractor interactor)
     {
-        GetComponent<MeshRenderer>().material.color = color;
+        UIManager.Instance.HideScanPanel();
     }
 }
