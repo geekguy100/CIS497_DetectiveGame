@@ -1,0 +1,299 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6879373688962334196
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6879373688962334154}
+  - component: {fileID: 6879373688962334197}
+  m_Layer: 0
+  m_Name: Journal 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6879373688962334154
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6879373688962334196}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6879373688962334197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6879373688962334196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a72b1ca6b80ea3d4b84f036e968d04c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pages:
+  - charName: Faith Phillips
+    charDesc: Michael's mother and wife to a politician. She is accompanied by her
+      son Christopher.
+    clues:
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    cluesDiscovered: 0
+  - charName: Richard Wright
+    charDesc: The housekeeper and maintenance man for the motel
+    clues:
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    cluesDiscovered: 0
+  - charName: Nancy Reed
+    charDesc: The late night receptionist at the motel.
+    clues:
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    cluesDiscovered: 0
+  - charName: Mary "Cherry" Ross
+    charDesc: A floozy that was found lingering outside the motel.
+    clues:
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    cluesDiscovered: 0
+  - charName: Paul Butler
+    charDesc: A homeless man who sleeps in the bus stop near the motel.
+    clues:
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    cluesDiscovered: 0
+  - charName: Case
+    charDesc: A young man has died a mysterious death at a motel.
+    clues:
+    - clueTag: 
+      clueDesc: 'The medics say he was poisoned. This may be the work of the notorious
+        Poisoner. '
+      person: 
+    - clueTag: 
+      clueDesc: We've locked the area, so the killer has to be one of the suspects.
+      person: 
+    - clueTag: 
+      clueDesc: Investigate the crime scene and interrogate the suspects.
+      person: 
+    - clueTag: 
+      clueDesc: When you're ready, accuse one of them.
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    cluesDiscovered: 4
+  - charName: Misc
+    charDesc: 'Clues unrelated to a particular person appear here. '
+    clues:
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    - clueTag: 
+      clueDesc: 
+      person: 
+    cluesDiscovered: 0
+  characterName: {fileID: 0}
+  characterDesc: {fileID: 0}
+  clueSlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
