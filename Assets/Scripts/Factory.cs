@@ -11,8 +11,8 @@ public static class Factory
     /// <returns>A prefab of the item to spawn.</returns>
     public static GameObject Spawn(string clueTag)
     {
-        return null;
+        // Retrieving the item prefab.
+        GameObject prefab = Resources.Load(clueTag) as GameObject;
+        return prefab;
     }
-
-
 }

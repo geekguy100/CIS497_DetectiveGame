@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7774744800911887859}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -13.69, y: -1.27, z: -19.627684}
-  m_LocalScale: {x: 1.3002, y: 1.3002, z: 1.3002}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -112,4 +112,4 @@ MonoBehaviour:
     clueTag: Faith's Purse
     clueDesc: Faith's Purse contains a letter from her husband detailing a recent
       death threat he received.
-    person: Case
+    person: Faith Phillips

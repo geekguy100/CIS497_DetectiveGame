@@ -37,6 +37,18 @@ public class InGameClue : MonoBehaviour, IInteractable
     [Tooltip("The clue's data.")]
     [SerializeField] private Clue clue;
 
+    private GameObject visual;
+
+    private void Start()
+    {
+        GameObject visualPrefab = Factory.Spawn(clue.ClueTag.ToString());
+        if (visualPrefab != null)
+        {
+            visual = Instantiate(visualPrefab, transform.position, visualPrefab.transform.rotation);
+            visual.gameObject.name = clue.ClueTag;
+        }
+    }
+
 
     public void Interact(IInteractor interactor)
     {
