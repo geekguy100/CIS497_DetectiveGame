@@ -61,6 +61,7 @@ public class InGameClue : MonoBehaviour, IInteractable
         if (!Journal.Instance.HasDiscoveredClue(clue.ClueTag))
         {
             EventManager.ClueFound(clue);
+            gameObject.layer = LayerMask.NameToLayer("Default"); // Makes sure the clue shader is not present after discovering the clue.
             interactor.UnassignInteractable();
             //UIManager.Instance.HideScanPanel();
             //UIManager.Instance.UpdateClueText(clue.ClueTag);
