@@ -2667,6 +2667,7 @@ MonoBehaviour:
     clueTag: Random Sphere
     clueDesc: Thanks for Trying out our game!
     person: Case
+    defaultMisc: 0
 --- !u!1001 &655432764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3230,33 +3231,43 @@ MonoBehaviour:
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     cluesDiscovered: 0
   - charName: Richard Wright
     charDesc: The housekeeper and maintenance man for the motel
@@ -3264,33 +3275,43 @@ MonoBehaviour:
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     cluesDiscovered: 0
   - charName: Nancy Reed
     charDesc: The late night receptionist at the motel.
@@ -3298,33 +3319,43 @@ MonoBehaviour:
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     cluesDiscovered: 0
   - charName: Mary "Cherry" Ross
     charDesc: A floozy that was found lingering outside the motel.
@@ -3332,33 +3363,43 @@ MonoBehaviour:
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     cluesDiscovered: 0
   - charName: Paul Butler
     charDesc: A homeless man who sleeps in the bus stop near the motel.
@@ -3366,33 +3407,43 @@ MonoBehaviour:
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     cluesDiscovered: 0
   - charName: Case
     charDesc: A young boy has died a mysterious death at a motel.
@@ -3401,33 +3452,43 @@ MonoBehaviour:
       clueDesc: 'The medics say he was poisoned. This may be the work of the notorious
         Poisoner. '
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: We've locked the area, so the killer has to be one of the suspects.
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: Investigate the crime scene and interrogate the suspects.
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: When you're ready, accuse one of them.
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     - clueTag: 
       clueDesc: 
       person: 
+      defaultMisc: 0
     cluesDiscovered: 4
   characterName: {fileID: 42958161}
   characterDesc: {fileID: 42958160}

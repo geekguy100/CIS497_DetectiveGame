@@ -112,4 +112,4 @@ MonoBehaviour:
     clueTag: Burst Pipes
     clueDesc: Employees claim there was a large pipe burst, causing many rooms to
       be unusable.
-    person: Case
+    person: Misc

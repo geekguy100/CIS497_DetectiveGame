@@ -112,4 +112,4 @@ MonoBehaviour:
     clueTag: Poison Syringe
     clueDesc: A syringe that contains faint traces of poison. This might be the murder
       weapon.
-    person: Case
+    person: Misc

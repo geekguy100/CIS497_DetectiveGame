@@ -111,4 +111,4 @@ MonoBehaviour:
   clue:
     clueTag: Injection Site
     clueDesc: Puncture wound on Michael's back. Indicates the poison was injected.
-    person: Case
+    person: Misc

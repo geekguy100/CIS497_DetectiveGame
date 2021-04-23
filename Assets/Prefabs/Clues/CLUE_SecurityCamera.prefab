@@ -112,4 +112,4 @@ MonoBehaviour:
     clueTag: Security Camera
     clueDesc: A camera pointing toward the motel rooms. Shows Michael leaving, but
       no one else.
-    person: Case
+    person: Misc

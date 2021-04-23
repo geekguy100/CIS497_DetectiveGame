@@ -111,4 +111,4 @@ MonoBehaviour:
   clue:
     clueTag: Candy Wrapper
     clueDesc: A discarded candy wrapper. Found near the vending machine.
-    person: Case
+    person: Misc

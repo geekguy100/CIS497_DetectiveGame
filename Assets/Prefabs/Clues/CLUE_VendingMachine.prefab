@@ -111,4 +111,4 @@ MonoBehaviour:
   clue:
     clueTag: Vending Machine
     clueDesc: Michael's body was found in front of this vending machine.
-    person: Case
+    person: Misc

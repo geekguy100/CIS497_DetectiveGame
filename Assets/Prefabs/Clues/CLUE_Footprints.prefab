@@ -111,4 +111,4 @@ MonoBehaviour:
   clue:
     clueTag: Footprints
     clueDesc: Multiple sets of footprints outside. Too many to track.
-    person: Case
+    person: Misc

@@ -111,4 +111,4 @@ MonoBehaviour:
   clue:
     clueTag: Altercation
     clueDesc: Reports of a verbal fight between Faith and Nancy.
-    person: Case
+    person: Misc

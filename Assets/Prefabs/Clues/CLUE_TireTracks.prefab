@@ -111,4 +111,4 @@ MonoBehaviour:
   clue:
     clueTag: Tire Tracks
     clueDesc: A few sets of tire tracks. Unfortunately, the squad cars ran over them.
-    person: Case
+    person: Misc

@@ -59,6 +59,46 @@ public class Journal : Singleton<Journal>
     }
 
     /// <summary>
+    /// Moves a clue from whatever page it is currently on to the specified person's page.
+    /// </summary>
+    /// <param name="clue">The clue to move.</param>
+    /// <param name="person">The tab to move the clue to.</param>
+    public void MoveClueToPage(Clue clue, string person)
+    {
+        JournalPage pageToRemoveFrom = pages.Where(t => t.charName == "Misc").FirstOrDefault();
+        if (pageToRemoveFrom == null)
+        {
+            Debug.LogWarning("Could not remove clue from page -- page is nonexistent.");
+            return;
+        }
+
+        int characterIndex = Array.IndexOf(pages, pageToRemoveFrom);
+
+        // We'll convert the array of pages into a list, convert the array of clues on that page into a list,
+        // remove the clue we want, convert everything back into an array, and reassign our pages array.
+        List<JournalPage> pageList = pages.ToList();
+        List<Clue> cluesOnPage = pageList.ElementAt(characterIndex).clues.ToList();
+
+        // ****IF THIS DOESN'T WORK DELETE THE ELEMENT THAT MATCHES THE PASSED IN CLUETAG!!!****
+        if (!cluesOnPage.Contains(clue))
+        {
+            Debug.LogWarning("JOURNAL: Cannot move clue to page '" + person + "' because the clue is non-existnent on the Misc page.");
+            return;
+        }
+
+        cluesOnPage.Remove(clue);
+        pageList.ElementAt(characterIndex).cluesDiscovered--;
+
+        // Reassigning the clues.
+        pageList.ElementAt(characterIndex).clues = cluesOnPage.ToArray();
+
+        // Reassigning the pages.
+        pages = pageList.ToArray();
+
+        AddClue(new Clue(clue.ClueTag, clue.ClueDesc, person));
+    }
+
+    /// <summary>
     /// Returns true if the player has discovered a clue.
     /// </summary>
     /// <param name="clueTag">The tag of the clue to check for.</param>

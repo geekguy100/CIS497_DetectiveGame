@@ -14,6 +14,14 @@ public static class QuestionHandler
         Character character = NPCInteraction.activeCharacter;
         CharacterData activeCharacterData = character.GetData();
 
+        // If we are probing a character about a clue they have info on,
+        // remove the clue from the Misc tab and add it to their section.
+        if (DialogueHandler.CharacterKnowsClue(activeCharacterData.name, clue.ClueTag))
+        {
+            Journal.Instance.MoveClueToPage(clue, activeCharacterData.name);
+            //Journal.Instance.AddClue(new Clue(clue.ClueTag, clue.ClueDesc, false, clue.Person));
+        }
+
         // If this character knows anything about the clue, let them speak about it.
         if (activeCharacterData.knownClueTags.Contains(clue.ClueTag))
         {

@@ -111,4 +111,4 @@ MonoBehaviour:
   clue:
     clueTag: Forced Door
     clueDesc: A motel room door. It appears to have been forced open.
-    person: Case
+    person: Misc

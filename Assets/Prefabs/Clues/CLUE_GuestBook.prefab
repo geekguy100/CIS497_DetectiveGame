@@ -111,4 +111,4 @@ MonoBehaviour:
   clue:
     clueTag: Guest Book
     clueDesc: The guest book for the motel. The last entry has been ripped out.
-    person: Case
+    person: Misc

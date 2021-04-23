@@ -111,4 +111,4 @@ MonoBehaviour:
   clue:
     clueTag: Cigarette Ash
     clueDesc: Flecks of cigarette ash found on Michael's body.
-    person: Case
+    person: Misc

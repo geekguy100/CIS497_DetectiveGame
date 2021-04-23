@@ -10,7 +10,13 @@ using UnityEngine;
 [System.Serializable]
 public struct Clue
 {
-    public Clue(string clueTag, string clueDesc, string person = "Case")
+    /// <summary>
+    /// A Clue that can be added to the journal and probed about to NPCs.
+    /// </summary>
+    /// <param name="clueTag">The keyword/tag associated with the clue.</param>
+    /// <param name="clueDesc">The lengthier description of the clue.</param>
+    /// <param name="person">The journal tab this clue will be initally placed into. Defaults to 'Misc' if no name is provided.</param>
+    public Clue(string clueTag, string clueDesc, string person = "Misc")
     {
         this.clueTag = clueTag;
         this.clueDesc = clueDesc;
@@ -23,8 +29,7 @@ public struct Clue
     [Tooltip("The description of the clue. This will be added to the journal.")]
     [SerializeField] private string clueDesc;
 
-    [Tooltip("The person associated with this clue and the page of the Journal the clue will be recorded into. " +
-        "Defaults to 'Case' if left blank.")]
+    [Tooltip("The person associated with this clue and the page of the Journal the clue will be recorded into.")]
     [SerializeField] private string person;
 
     public string ClueTag { get { return clueTag; } }

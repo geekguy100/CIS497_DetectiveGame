@@ -111,4 +111,4 @@ MonoBehaviour:
   clue:
     clueTag: Black Vehicle
     clueDesc: Reports of a strange black car outside the motel.
-    person: Case
+    person: Misc
