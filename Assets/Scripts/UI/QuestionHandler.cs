@@ -6,6 +6,7 @@
 // Brief Description : Handles the process of checking if a character knows anything about the selected clue.
 *****************************************************************************/
 using System.Linq;
+using UnityEngine;
 
 public static class QuestionHandler
 {
@@ -23,6 +24,7 @@ public static class QuestionHandler
         }
 
         // If this character knows anything about the clue, let them speak about it.
+        Debug.Log("Character knows clue tagged " + clue.ClueTag + "?    " + activeCharacterData.knownClueTags.Contains(clue.ClueTag));
         if (activeCharacterData.knownClueTags.Contains(clue.ClueTag))
         {
             CharacterClue charClue = character.KnownClues.Where(t => t.ClueTag == clue.ClueTag).FirstOrDefault();
@@ -49,6 +51,7 @@ public static class QuestionHandler
             }
             if (activeCharacterData.name == "Nancy Reed" && clue.ClueTag == "Knowledge" && !Journal.Instance.HasDiscoveredClue("Flirting"))
             {
+                Debug.Log("Flirting thing");
                 EventManager.OnClueFound(new Clue("Flirting", "Reports of flirting between Michael and Nancy.", "Nancy Reed"));
                 //Journal.Instance.AddClue("Nancy Reed", new Clue("Flirting", "Reports of flirting between Michael and Nancy."));
                 //UIManager.Instance.UpdateClueText("Flirting");

@@ -154,9 +154,10 @@ public class UIManager : Singleton<UIManager>
 
     private void UpdateClueText(Clue clue)
     {
+        print("CLUE FOUND: " + clue.ClueTag);
         clueFoundText.text = "Clue Recorded: " + clue.ClueTag.ToUpper();
         clueFoundPanel.SetActive(true);
-        PopulateQuestionPanelButtons();
+        //PopulateQuestionPanelButtons();
         StartCoroutine(DeactivateAfterTime(clueFoundPanel));
     }
 
@@ -174,7 +175,7 @@ public class UIManager : Singleton<UIManager>
     //    accusationPanel.SetActive(false);
     //}
 
-    private void PopulateQuestionPanelButtons()
+    public void PopulateQuestionPanelButtons()
     {
         Clue[] knownClues = Journal.Instance.GetAllKnownClues();
 
@@ -214,7 +215,7 @@ public class UIManager : Singleton<UIManager>
         
     }
 
-    private void PopulateAccusationPanelButtons()
+    public void PopulateAccusationPanelButtons()
     {
         foreach (QuestionButton qb in questionButtons)
         {

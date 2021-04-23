@@ -55,6 +55,8 @@ public class Journal : Singleton<Journal>
         pages[characterIndex].clues[pages[characterIndex].cluesDiscovered] = clue;
         pages[characterIndex].cluesDiscovered++;
 
+        UIManager.Instance.PopulateQuestionPanelButtons();
+        UIManager.Instance.PopulateAccusationPanelButtons();
         UpdateJournalDisplay();
     }
 
@@ -82,7 +84,7 @@ public class Journal : Singleton<Journal>
         // ****IF THIS DOESN'T WORK DELETE THE ELEMENT THAT MATCHES THE PASSED IN CLUETAG!!!****
         if (!cluesOnPage.Contains(clue))
         {
-            Debug.LogWarning("JOURNAL: Cannot move clue to page '" + person + "' because the clue is non-existnent on the Misc page.");
+            Debug.LogWarning("JOURNAL: Cannot move clue tagged '" + clue.ClueTag + "' to page '" + person + "' because the clue is non-existnent on the Misc page.");
             return;
         }
 
@@ -100,6 +102,9 @@ public class Journal : Singleton<Journal>
 
     public bool PageContainsClue(string page, Clue clue)
     {
+        if (clue.ClueTag == "Knowledge")
+            return true;
+
         JournalPage pageWithClue = pages.Where(t => t.charName == page).FirstOrDefault();
 
         if (pageWithClue == null)
