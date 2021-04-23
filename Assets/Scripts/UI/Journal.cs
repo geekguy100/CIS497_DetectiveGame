@@ -171,7 +171,11 @@ public class Journal : Singleton<Journal>
         characterDesc.text = pages[currentPage].charDesc;
         for (int i = 0; i < pages[currentPage].clues.Length; i++)
         {
-            clueSlots[i].text = pages[currentPage].clues[i].ClueDesc;
+            string clueDesc = pages[currentPage].clues[i].ClueDesc;
+            string clueTag = pages[currentPage].clues[i].ClueTag;
+            clueDesc = (string.IsNullOrWhiteSpace(clueTag) ? clueDesc : ("<i><u>" + clueTag.ToUpper() + "</u></i>" + ": " + clueDesc));
+
+            clueSlots[i].text = clueDesc;
         }
     }
 }
