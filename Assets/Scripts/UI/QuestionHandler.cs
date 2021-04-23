@@ -14,9 +14,9 @@ public static class QuestionHandler
         Character character = NPCInteraction.activeCharacter;
         CharacterData activeCharacterData = character.GetData();
 
-        // If we are probing a character about a clue they have info on,
-        // remove the clue from the Misc tab and add it to their section.
-        if (DialogueHandler.CharacterKnowsClue(activeCharacterData.name, clue.ClueTag))
+        // If we are probing a character about a clue they have info on and it's NOT already in their journal tab,
+        // remove the clue from the Misc tab and add it to their tab.
+        if (!Journal.Instance.PageContainsClue(activeCharacterData.name, clue) && DialogueHandler.CharacterKnowsClue(activeCharacterData.name, clue.ClueTag))
         {
             Journal.Instance.MoveClueToPage(clue, activeCharacterData.name);
             //Journal.Instance.AddClue(new Clue(clue.ClueTag, clue.ClueDesc, false, clue.Person));

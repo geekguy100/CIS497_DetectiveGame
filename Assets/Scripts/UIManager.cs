@@ -190,7 +190,7 @@ public class UIManager : Singleton<UIManager>
 
             foreach (QuestionButton qb in questionButtons)
             {
-                if (qb.clue.Equals(clue))
+                if (qb.clue.ClueTag == clue.ClueTag)
                 {
                     foundClue = true;
                     break;

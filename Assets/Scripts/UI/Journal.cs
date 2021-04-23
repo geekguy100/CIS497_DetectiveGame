@@ -98,6 +98,27 @@ public class Journal : Singleton<Journal>
         AddClue(new Clue(clue.ClueTag, clue.ClueDesc, person));
     }
 
+    public bool PageContainsClue(string page, Clue clue)
+    {
+        JournalPage pageWithClue = pages.Where(t => t.charName == page).FirstOrDefault();
+
+        if (pageWithClue == null)
+        {
+            Debug.LogWarning("JOURNAL: Cannot check if page '" + page + "' contains clue because it is nonexistent.");
+            return false;
+        }
+
+        bool alreadyContains = false;
+        foreach(Clue clueInQuestion in pageWithClue.clues.Where(t=>t.ClueTag == clue.ClueTag))
+        {
+            alreadyContains = true;
+            break;
+        }
+
+        print("PAGE " + page + " CONTAINS THE CLUE: " + alreadyContains);
+        return alreadyContains;
+    }
+
     /// <summary>
     /// Returns true if the player has discovered a clue.
     /// </summary>
