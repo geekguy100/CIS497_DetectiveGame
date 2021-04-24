@@ -30,6 +30,10 @@
           "Dialogue": "Michael was a good boy. Only his father smokes and he never does it around the children."
         },
         {
+          "ClueTag": "Pack of Cigs",
+          "Dialogue": "That vagrant or that hooker must have dropped them."
+        },
+        {
           "ClueTag": "Guest Book",
           "Dialogue": "We just checked in. The receptionist had me sign that."
         },
@@ -107,6 +111,10 @@
           "Dialogue": "No, I've got my chew and Nancy doesn't smoke at all. I think that hobo Paul might or maybe Cherry."
         },
         {
+          "ClueTag": "Pack of Cigs",
+          "Dialogue": "Probably from Paul or Cherry. I haven't smoked in a bit."
+        },
+        {
           "ClueTag": "Poison Syringe",
           "Dialogue": "No, I don't typically need something like that for my work. I'd bet Paul or Cherry uses them for drugs."
         },
@@ -178,6 +186,10 @@
           "Dialogue": "I don't smoke, and Richard hasn't recently."
         },
         {
+          "ClueTag": "Pack of Cigs",
+          "Dialogue": "No clue. A guest probably dropped them."
+        },
+        {
           "ClueTag": "Poison Syringe",
           "Dialogue": "Oh god no. The only person I could imagine needing something like that is a drug addict."
         },
@@ -225,12 +237,24 @@
           "Dialogue": "No sugar, you can't have candy and keep up this kind of figure."
         },
         {
+          "ClueTag": "Heeled Footprint",
+          "Dialogue": "It's not nice to comment on a girl's weight."
+        },
+        {
+          "ClueTag": "Cherry's Purse",
+          "Dialogue": "Sometimes you need a little protection. I'm sure you can tell that I didn't use it."
+        },
+        {
           "ClueTag": "Poison Syringe",
           "Dialogue": "No honey, I don't play with sharp objects."
         },
         {
           "ClueTag": "Cigarrete Ash",
           "Dialogue": "I've been known to have one or two, what's it to you?"
+        },
+        {
+          "ClueTag": "Pack of Cigs",
+          "Dialogue": "Not mine, unfortunately."
         },
         {
           "ClueTag": "Chewing Tobacco",
@@ -272,12 +296,24 @@
           "Dialogue": "I don't have much money to use a vending machine."
         },
         {
+          "ClueTag": "Cardboard Sign",
+          "Dialogue": "At this point, no one even reads the sign. I don't get much sympathy."
+        },
+        {
+          "ClueTag": "Coin Cup",
+          "Dialogue": "I thought I lost that. There's my life savings."
+        },
+        {
           "ClueTag": "Poison Syringe",
           "Dialogue": "I don't do any drugs, if that's what you're asking."
         },
         {
           "ClueTag": "Cigarette Ash",
           "Dialogue": "Uh, well, I do smoke, but only if I can get my hands on a pack."
+        },
+        {
+          "ClueTag": "Pack of Cigs",
+          "Dialogue": "I must of dropped those. There aren't any left are there?"
         },
         {
           "ClueTag": "Chewing Tobacco",

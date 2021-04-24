@@ -110,5 +110,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clue:
     clueTag: Cardbaord Sign
-    clueDesc: A cardboard sign found near Paul's corner. It reads, "Anything Helps"
+    clueDesc: A cardboard sign found near Paul's corner. It reads, "Anything Helps".
     person: Paul Butler

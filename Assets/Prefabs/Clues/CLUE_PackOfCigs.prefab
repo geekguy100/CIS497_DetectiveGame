@@ -109,6 +109,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clue:
-    clueTag: Cigarette Pack
+    clueTag: Pack of Cigs
     clueDesc: An empty pack of cigarettes. Found near the corner where Paul sleeps.
     person: Paul Butler
