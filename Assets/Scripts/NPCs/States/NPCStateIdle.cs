@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCStateIdle : MonoBehaviour
+public class NPCStateIdle : INPCState
 {
-    // Start is called before the first frame update
-    void Start()
+    NPCStateController controller;
+    public NPCStateIdle(NPCStateController controller)
     {
-        
+        this.controller = controller;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Idle()
     {
-        
+        controller.currentState = controller.idleState;
+
+        controller.TurnAwayFromPlayer();
+    }
+    public void LookAtPlayer()
+    {
+        controller.currentState = controller.talkingState;
     }
 }

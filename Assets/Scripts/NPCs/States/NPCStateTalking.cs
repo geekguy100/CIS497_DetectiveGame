@@ -2,28 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCStateTalking : MonoBehaviour
+public class NPCStateTalking : INPCState
 {
-    Quaternion startingPos;
-    GameObject player;
-    Vector3 lookHere;
-    // Start is called before the first frame update
-    void Start()
+    NPCStateController controller;
+    public NPCStateTalking(NPCStateController controller)
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        startingPos = transform.rotation;
+        this.controller = controller;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Idle()
     {
-        if (Mathf.Abs(transform.position.x - player.transform.position.x) < 5 && Mathf.Abs(transform.position.z - player.transform.position.z) < 5)
-        {
-            lookHere = player.transform.position;
-            lookHere.y = transform.position.y;
-            transform.LookAt(lookHere);
-        }
-        else transform.rotation = startingPos;
-        
+        controller.currentState = controller.idleState;
+    }
+    public void LookAtPlayer()
+    {
+        controller.currentState = controller.talkingState;
+
+        controller.TurnTowardPlayer();
     }
 }
