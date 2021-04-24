@@ -110,6 +110,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clue:
     clueTag: Smudged Note
-    clueDesc: "A red lipstick smudge over the words \u201CA woman just checked in,
-      tell me their room number and I will give you $3,000\u201D"
+    clueDesc: "Red lipstick smudge, \u201CA woman just checked in, tell me their
+      room number and I'll give you $3,000\u201D"
     person: Misc

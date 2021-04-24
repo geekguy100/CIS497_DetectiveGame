@@ -17,11 +17,14 @@ public static class QuestionHandler
 
         // If we are probing a character about a clue they have info on and it's NOT already in their journal tab,
         // remove the clue from the Misc tab and add it to their tab.
-        if (!Journal.Instance.PageContainsClue(activeCharacterData.name, clue) && DialogueHandler.CharacterKnowsClue(activeCharacterData.name, clue.ClueTag))
+        ////This code commented out due to unintended side effects. A workaround was made so that this wouldn't be needed anymore.
+        ////Sorry Kyle
+        /*if (!Journal.Instance.PageContainsClue(activeCharacterData.name, clue) && DialogueHandler.CharacterKnowsClue(activeCharacterData.name, clue.ClueTag))
         {
+            Debug.Log("Moving clue: " + clue.ClueTag + " to page: " + activeCharacterData.name);
             Journal.Instance.MoveClueToPage(clue, activeCharacterData.name);
             //Journal.Instance.AddClue(new Clue(clue.ClueTag, clue.ClueDesc, false, clue.Person));
-        }
+        }*/
 
         // If this character knows anything about the clue, let them speak about it.
         Debug.Log("Character knows clue tagged " + clue.ClueTag + "?    " + activeCharacterData.knownClueTags.Contains(clue.ClueTag));

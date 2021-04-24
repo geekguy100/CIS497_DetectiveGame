@@ -42,6 +42,10 @@
           "Dialogue": "I've never seen that before. This has to be some sick joke. Someone paid $10,000 to kill my son."
         },
         {
+          "ClueTag": "Smudged Note",
+          "Dialogue": "I've never seen that before. What kind of maniac would do something like this?"
+        },
+        {
           "ClueTag": "Security Camera",
           "Dialogue": "If you have a camera, then you should be able to see who killed my son!"
         },

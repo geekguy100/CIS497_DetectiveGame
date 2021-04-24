@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &9034860980493699292
+--- !u!1 &7419869863213219918
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1726908803619859446}
-  - component: {fileID: 2917557272578459802}
-  - component: {fileID: 364703575858457268}
-  - component: {fileID: 1013344585288972168}
-  - component: {fileID: 8160216009683428256}
-  m_Layer: 7
-  m_Name: CLUE_VendingMachine
+  - component: {fileID: 2281006570245150787}
+  - component: {fileID: 5652813176124574482}
+  - component: {fileID: 6994341716718166426}
+  - component: {fileID: 1016009417505655012}
+  - component: {fileID: 4914365351341493842}
+  m_Layer: 0
+  m_Name: CLUE_HeeledFootprint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1726908803619859446
+--- !u!4 &2281006570245150787
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9034860980493699292}
+  m_GameObject: {fileID: 7419869863213219918}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.69, y: -1.27, z: -19.627684}
+  m_LocalPosition: {x: 24.184269, y: 2.0333776, z: 8.351839}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2917557272578459802
+--- !u!33 &5652813176124574482
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9034860980493699292}
+  m_GameObject: {fileID: 7419869863213219918}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &364703575858457268
+--- !u!23 &6994341716718166426
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9034860980493699292}
+  m_GameObject: {fileID: 7419869863213219918}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -83,32 +83,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1013344585288972168
+--- !u!65 &1016009417505655012
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9034860980493699292}
+  m_GameObject: {fileID: 7419869863213219918}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8160216009683428256
+--- !u!114 &4914365351341493842
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9034860980493699292}
+  m_GameObject: {fileID: 7419869863213219918}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6fcdc8913c4a6345820f14d3729540d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   clue:
-    clueTag: Vending Machine
-    clueDesc: Michael's body was found in front of this vending machine.
-    person: Misc
+    clueTag: Heeled Footprint
+    clueDesc: A footprint in the dirt. The shape is clearly from a pair of heels.
+    person: Mary "Cherry" Ross
