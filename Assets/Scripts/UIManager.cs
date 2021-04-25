@@ -68,6 +68,12 @@ public class UIManager : Singleton<UIManager>
         EventManager.OnAccusation -= DisplayAccusation;
     }
 
+    protected override void Awake()
+    {
+        base.Awake();
+        DontDestroyOnLoad(gameObject);
+    }
+
     private void Start()
     {
         questionButtons = new List<QuestionButton>();

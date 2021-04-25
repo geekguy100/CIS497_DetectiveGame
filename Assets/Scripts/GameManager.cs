@@ -13,6 +13,12 @@ public class GameManager : Singleton<GameManager>
     private bool paused = false;
     public bool Paused { get { return paused; } }
 
+    protected override void Awake()
+    {
+        base.Awake();
+        DontDestroyOnLoad(gameObject);
+    }
+
     public void PauseGame()
     {
         paused = true;
@@ -113,6 +119,11 @@ public class GameManager : Singleton<GameManager>
         //    result += "You did not accuse the correct character. The culprit was actually " + DialogueHandler.GetCulpritName();
 
         EventManager.Accusation(result);
+    }
+
+    private void HandleEndGame()
+    {
+
     }
 
     #endregion
