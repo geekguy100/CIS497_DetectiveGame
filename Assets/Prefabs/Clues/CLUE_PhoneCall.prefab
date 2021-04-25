@@ -110,6 +110,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clue:
     clueTag: Phone Call
-    clueDesc: Faith called her husband as soon as we arrived. She won't answer many
-      questions without a lawyer.
+    clueDesc: Faith called her husband when we arrived. She won't answer many questions
+      without a lawyer.
     person: Faith Phillips

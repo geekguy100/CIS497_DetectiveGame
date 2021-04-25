@@ -36,19 +36,19 @@ public static class QuestionHandler
             //Adding in other clues gained from questioning
             if (activeCharacterData.name == "Richard Wright" && clue.ClueTag == "Knowledge" && !Journal.Instance.HasDiscoveredClue("Black Car"))
             {
-                EventManager.OnClueFound(new Clue("Black Car", "Reports of a strange black car outside the motel.", "Richard Wright"));
+                EventManager.OnClueFound(new Clue("Black Car", "Reports of a strange black car outside the motel.", "Misc"));
                 //Journal.Instance.AddClue(new Clue("Black Car", "Reports of a strange black car outside the motel."));
                 //UIManager.Instance.UpdateClueText("Black Car");
             }
             if (activeCharacterData.name == "Richard Wright" && clue.ClueTag == "Black Car" && !Journal.Instance.HasDiscoveredClue("Altercation"))
             {
-                EventManager.OnClueFound(new Clue("Altercation", "Reports of a verbal fight between Faith and Nancy.", "Richard Wright"));
+                EventManager.OnClueFound(new Clue("Altercation", "Reports of a verbal fight between Faith and Nancy.", "Misc"));
                 //Journal.Instance.AddClue(new Clue("Altercation", "Reports of a verbal fight between Faith and Nancy."));
                 //UIManager.Instance.UpdateClueText("Altercation");
             }
             if (activeCharacterData.name == "Nancy Reed" && clue.ClueTag == "Knowledge" && !Journal.Instance.HasDiscoveredClue("Altercation"))
             {
-                EventManager.OnClueFound(new Clue("Altercation", "Reports of a verbal fight between Faith and Nancy.", "Nancy Reed"));
+                EventManager.OnClueFound(new Clue("Altercation", "Reports of a verbal fight between Faith and Nancy.", "Misc"));
                 //Journal.Instance.AddClue(new Clue("Altercation", "Reports of a verbal fight between Faith and Nancy."));
                 //UIManager.Instance.UpdateClueText("Altercation");
             }
