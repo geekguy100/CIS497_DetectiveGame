@@ -6,12 +6,18 @@
 // Brief Description : ADD BRIEF DESCRIPTION OF THE FILE HERE
 *****************************************************************************/
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Linq;
 
 public class GameManager : Singleton<GameManager>
 {
     private bool paused = false;
     public bool Paused { get { return paused; } }
+
+    private bool gameOver = false;
+    public bool GameOver { get { return gameOver; } }
+
+    private bool correctAccusation = false;
 
     protected override void Awake()
     {
@@ -84,13 +90,12 @@ public class GameManager : Singleton<GameManager>
     {
         string result = "You made the right accusation! " + NPCInteraction.activeCharacter.Name + " == " + DialogueHandler.GetCulpritName() + " is the culprit!\n";
         result += "Clue passed in: " + clue.ClueTag;
-        EventManager.Accusation(result);
+
+        HandleEndGame(true);
     }
 
     private void IncorrectAccusation(Clue accusation)
     {
-        string result = "WRONG ACCUSATION\n";
-
         string accusedCharacterName = NPCInteraction.activeCharacter.Name;
         string missingTags = string.Empty;
 
@@ -118,13 +123,42 @@ public class GameManager : Singleton<GameManager>
         //if (DialogueHandler.GetCulpritName() != accusedCharacterName)
         //    result += "You did not accuse the correct character. The culprit was actually " + DialogueHandler.GetCulpritName();
 
-        EventManager.Accusation(result);
-    }
-
-    private void HandleEndGame()
-    {
-
+        HandleEndGame(false);
     }
 
     #endregion
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+            HandleEndGame(true);
+    }
+
+    private void HandleEndGame(bool correctAccusation)
+    {
+        gameOver = true;
+        this.correctAccusation = correctAccusation;
+
+        TransitionHandler.Instance.FadeIn(AfterTransition);
+    }
+
+    private void AfterTransition()
+    {
+        print("Scene End loaded");
+        SceneManager.LoadScene("EndScene");
+
+        Debug.Log(NPCInteraction.activeCharacter == null);
+        GameObject culrpit = Instantiate(CharacterFactory.GetCharacterPrefab(NPCInteraction.activeCharacter.Name), GameObject.FindGameObjectWithTag("Finish").transform);
+        culrpit.transform.localPosition = Vector3.zero;
+
+        //EventManager.Accusation(correctAccusation);
+        TransitionHandler.Instance.FadeOut();
+    }
+
+    public void Restart()
+    {
+        gameOver = false;
+        UnpauseGame();
+        SceneManager.LoadScene("ChrisScene");
+    }
 }

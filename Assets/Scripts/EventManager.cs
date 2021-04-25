@@ -10,15 +10,15 @@ using System;
 public static class EventManager
 {
     public static Action<Clue> OnClueFound;
-    public static Action<string> OnAccusation;
+    public static Action<bool> OnAccusation;
 
     public static void ClueFound(Clue clue)
     {
         OnClueFound?.Invoke(clue);
     }
 
-    public static void Accusation(string text)
+    public static void Accusation(bool correctAccusation)
     {
-        OnAccusation?.Invoke(text);
+        OnAccusation?.Invoke(correctAccusation);
     }
 }

@@ -11,12 +11,15 @@ using System.Linq;
 public static class DialogueHandler
 {
     private static CharacterDialogue dialogue;
+    private static int scenario;
+    public static int Scenario { get { return scenario; } }
 
     [RuntimeInitializeOnLoadMethod]
     private static void LoadDialogue()
     {
         TextAsset jsonFile;
         int r = Random.Range(0, 3);
+        scenario = r;
         Debug.Log(r);
         switch (r)
         {

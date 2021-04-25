@@ -15,12 +15,9 @@ public class ObjectPooler : Singleton<ObjectPooler>
 
     public static ObjectPooler instance;
 
-    private void Awake()
+    protected override void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
+        base.Awake();
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
     }
     #endregion

@@ -9,19 +9,20 @@ public class Transition_AfterFadeIn : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        CoroutineRunner.StartCoroutine(WaitThenTransition(animator));
+        CoroutineRunner.StartCoroutine(WaitThenInvokeCallback(stateInfo.length));
     }
 
-    private IEnumerator WaitThenTransition(Animator animator)
+    private IEnumerator WaitThenInvokeCallback(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
-        animator.SetTrigger("FadeOut");
+        TransitionHandler.Instance.InvokeCallback();
     }
 
-    // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
+    //// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
-    //    
+    //    if (stateInfo.normalizedTime == 1)
+    //        TransitionHandler.Instance.InvokeCallback()
     //}
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Collections;
 using TMPro;
 using UnityEngine.UI;
+using System.Linq;
 
 public class UIManager : Singleton<UIManager>
 {
@@ -40,6 +41,13 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private TextMeshProUGUI clueFoundText;
     [SerializeField] private GameObject scanPanel;
 
+    [Header("Icons")]
+    [SerializeField] private GameObject journalIcon;
+    [SerializeField] private GameObject magIcon;
+
+    [Header("End Game")]
+    [SerializeField] private Newspaper[] newspapers;
+
     private List<QuestionButton> questionButtons;
     private List<QuestionButton> accusationButtons;
 
@@ -59,13 +67,13 @@ public class UIManager : Singleton<UIManager>
     private void OnEnable()
     {
         EventManager.OnClueFound += UpdateClueText;
-        EventManager.OnAccusation += DisplayAccusation;
+        EventManager.OnAccusation += HandleEndGame;
     }
 
     private void OnDisable()
     {
         EventManager.OnClueFound -= UpdateClueText;
-        EventManager.OnAccusation -= DisplayAccusation;
+        EventManager.OnAccusation -= HandleEndGame;
     }
 
     protected override void Awake()
@@ -136,6 +144,7 @@ public class UIManager : Singleton<UIManager>
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        dialoguePanel.SetActive(false);
         accusationPanel.SetActive(false);
         GameManager.Instance.UnpauseGame();
     }
@@ -167,11 +176,27 @@ public class UIManager : Singleton<UIManager>
         StartCoroutine(DeactivateAfterTime(clueFoundPanel));
     }
 
-    private void DisplayAccusation(string text)
+    private void HandleEndGame(bool correctAccusation)
     {
-        resultsText.text = text;
-        resultsPanel.SetActive(true);
-        StartCoroutine(DeactivateAfterTime(resultsPanel));
+        journalIcon.SetActive(false);
+        magIcon.SetActive(false);
+
+        Newspaper newspaper;
+        if (correctAccusation)
+            newspaper = newspapers.Where(t => t.Character == NPCInteraction.activeCharacter.Name).FirstOrDefault();
+        else
+            newspaper = newspapers.Where(t => t.Character == "Incorrect").FirstOrDefault();
+
+        if (newspaper == null)
+            throw new MissingReferenceException("The newspaper could not be found!");
+
+        StartCoroutine(WaitThenSpawnNewspaper(newspaper));
+    }
+
+    private IEnumerator WaitThenSpawnNewspaper(Newspaper newspaper)
+    {
+        yield return new WaitForSeconds(2f);
+        Instantiate(newspaper, transform.GetChild(0));
     }
 
     //public void HideOpenPanels()

@@ -19,7 +19,7 @@ public class ToggleMagnifyingGlass : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.M) && !GameManager.Instance.GameOver)
         {
             interactor.UnassignInteractable();
             Toggle();
