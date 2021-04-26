@@ -44,9 +44,12 @@ public class UIManager : Singleton<UIManager>
     [Header("Icons")]
     [SerializeField] private GameObject journalIcon;
     [SerializeField] private GameObject magIcon;
+    [SerializeField] private GameObject speechBubble;
 
     [Header("End Game")]
     [SerializeField] private Newspaper[] newspapers;
+    [SerializeField] private GameObject journal;
+    private Newspaper activeNewspaper;
 
     private List<QuestionButton> questionButtons;
     private List<QuestionButton> accusationButtons;
@@ -68,12 +71,14 @@ public class UIManager : Singleton<UIManager>
     {
         EventManager.OnClueFound += UpdateClueText;
         EventManager.OnAccusation += HandleEndGame;
+        EventManager.OnGameRestart += Init;
     }
 
     private void OnDisable()
     {
         EventManager.OnClueFound -= UpdateClueText;
         EventManager.OnAccusation -= HandleEndGame;
+        EventManager.OnGameRestart -= Init;
     }
 
     protected override void Awake()
@@ -89,6 +94,7 @@ public class UIManager : Singleton<UIManager>
         knowledgeButton.onClick.AddListener(() => { QuestionHandler.ProbeClue(new Clue("Knowledge", "Preliminary knowledge the character knows.")); });
         //AddClue("Case", new Clue("Knowledge", ""));
         //questionButtons.Add(new QuestionButton(questionCloseButton, new Clue()));
+        print(DialogueHandler.GetCulpritName());
     }
 
     public void DisplayDialoguePanel(string characterName, string dialogue)
@@ -98,6 +104,16 @@ public class UIManager : Singleton<UIManager>
         dialogueText.text = dialogue;
 
         //StartCoroutine(DeactivateAfterTime(dialoguePanel));
+    }
+
+    public void ShowSpeechBubble()
+    {
+        speechBubble.SetActive(true);
+    }
+
+    public void HideSpeechBubble()
+    {
+        speechBubble.SetActive(false);
     }
 
     public void ToggleQuestionPanel(string characterName, string characterIntro)
@@ -180,12 +196,22 @@ public class UIManager : Singleton<UIManager>
     {
         journalIcon.SetActive(false);
         magIcon.SetActive(false);
+        journal.SetActive(false);
+        dialoguePanel.SetActive(false);
+        accusationPanel.SetActive(false);
 
         Newspaper newspaper;
+
         if (correctAccusation)
+        {
+            Debug.Log("Correct accusation");
             newspaper = newspapers.Where(t => t.Character == NPCInteraction.activeCharacter.Name).FirstOrDefault();
+        }
         else
+        {
+            Debug.Log("Incorrect accusation...");
             newspaper = newspapers.Where(t => t.Character == "Incorrect").FirstOrDefault();
+        }
 
         if (newspaper == null)
             throw new MissingReferenceException("The newspaper could not be found!");
@@ -196,7 +222,7 @@ public class UIManager : Singleton<UIManager>
     private IEnumerator WaitThenSpawnNewspaper(Newspaper newspaper)
     {
         yield return new WaitForSeconds(2f);
-        Instantiate(newspaper, transform.GetChild(0));
+        activeNewspaper = Instantiate(newspaper, transform.GetChild(0));
     }
 
     //public void HideOpenPanels()
@@ -248,20 +274,38 @@ public class UIManager : Singleton<UIManager>
 
     public void PopulateAccusationPanelButtons()
     {
-        foreach (QuestionButton qb in questionButtons)
+        Clue[] knownClues = Journal.Instance.GetAllKnownClues();
+
+        foreach (Clue clue in knownClues)
         {
-            // If we already have an accusation button set up, continue.
-            if (accusationButtons.Contains(qb))
+            if (clue.ClueTag == string.Empty)
                 continue;
 
+            //print(clue.ClueTag);
+            bool foundClue = false;
+
+            foreach (QuestionButton qb in accusationButtons)
+            {
+                if (qb.clue.ClueTag == clue.ClueTag)
+                {
+                    foundClue = true;
+                    break;
+                }
+            }
+
+            if (foundClue)
+                continue;
+
+            print("Creating an accusation button for clue " + clue.ClueTag);
+
             Button button = Instantiate(buttonPrefab, accusationButtonPanel.transform);
-            button.GetComponentInChildren<TextMeshProUGUI>().text = qb.clue.ClueTag;
+            button.GetComponentInChildren<TextMeshProUGUI>().text = clue.ClueTag;
 
             // Reset whatever was on the close button.
             button.onClick.RemoveAllListeners();
-            button.onClick.AddListener(() => { GameManager.Instance.AccuseCharacter(qb.clue); });
+            button.onClick.AddListener(() => { GameManager.Instance.AccuseCharacter(clue); });
 
-            accusationButtons.Add(qb);
+            accusationButtons.Add(new QuestionButton(button, clue));
         }
     }
 
@@ -273,5 +317,31 @@ public class UIManager : Singleton<UIManager>
         yield return new WaitForSecondsRealtime(dialogueScreenTime);
 
         obj.SetActive(false);
+    }
+
+    /// <summary>
+    /// Initializes all UI elements (icons, buttons, etc.)
+    /// </summary>
+    private void Init()
+    {
+        journalIcon.SetActive(true);
+        magIcon.SetActive(true);
+        HideSpeechBubble();
+        journal.SetActive(false);
+
+        if (activeNewspaper != null)
+            Destroy(activeNewspaper.gameObject);
+
+        for (int i = 0; i < questionButtons.Count; ++i)
+        {
+            Destroy(questionButtons[i].button.gameObject);
+            questionButtons.RemoveAt(i);
+        }
+
+        for (int i = 0; i < accusationButtons.Count; ++i)
+        {
+            Destroy(accusationButtons[i].button.gameObject);
+            accusationButtons.RemoveAt(i);
+        }
     }
 }

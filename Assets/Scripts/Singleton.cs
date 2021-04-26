@@ -20,7 +20,7 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T>
     {
         if (instance != null)
         {
-            Debug.LogError("[Singleton] trying to instantiate second instance of a singleton class. Destroying clone...");
+            //Debug.LogWarning("[Singleton] trying to instantiate second instance of a singleton class named '" + gameObject.name + "' . Destroying clone...");
             Destroy(gameObject);
         }
         else

@@ -15,8 +15,6 @@ public class PlayerInteractor : IInteractor
 
     private void Update()
     {
-        if (GetInteractable()!= null && GetInteractable() is NPCInteraction) speechBubble.gameObject.SetActive(true);
-        else speechBubble.gameObject.SetActive(false);
         if (Input.GetKeyDown(KeyCode.E) && !magnifyingGlass.activeInHierarchy)
             PerformInteraction();
     }

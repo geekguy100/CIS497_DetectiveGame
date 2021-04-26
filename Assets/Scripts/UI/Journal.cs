@@ -27,11 +27,13 @@ public class Journal : Singleton<Journal>
     private void OnEnable()
     {
         EventManager.OnClueFound += AddClue;
+        EventManager.OnGameRestart += Init;
     }
 
     private void OnDisable()
     {
         EventManager.OnClueFound -= AddClue;
+        EventManager.OnGameRestart -= Init;
     }
 
     void Start()
@@ -182,5 +184,21 @@ public class Journal : Singleton<Journal>
 
             clueSlots[i].text = clueDesc;
         }
+    }
+
+    private void Init()
+    {
+        foreach (JournalPage page in pages)
+        {
+            if (page.charName == "Case")
+                continue;
+
+            page.cluesDiscovered = 0;
+
+            // Reset to our primary 10 blank clues per page.
+            page.clues = new Clue[10];
+        }
+
+        UpdateJournalDisplay();
     }
 }

@@ -27,12 +27,18 @@ public class GameManager : Singleton<GameManager>
 
     public void PauseGame()
     {
+        if (gameOver)
+            return;
+
         paused = true;
         Time.timeScale = 0;
     }
 
     public void UnpauseGame()
     {
+        if (gameOver)
+            return;
+
         paused = false;
         Time.timeScale = 1;
     }
@@ -136,6 +142,7 @@ public class GameManager : Singleton<GameManager>
 
     private void HandleEndGame(bool correctAccusation)
     {
+        UnpauseGame();
         gameOver = true;
         this.correctAccusation = correctAccusation;
 
@@ -152,17 +159,24 @@ public class GameManager : Singleton<GameManager>
 
     private void AfterEndSceneLoad(AsyncOperation asyncOperation)
     {
-        Debug.Log(NPCInteraction.activeCharacter == null);
-        GameObject culrpit = Instantiate(CharacterFactory.GetCharacterPrefab(NPCInteraction.activeCharacter.Name), GameObject.FindGameObjectWithTag("Finish").transform);
-        culrpit.transform.localPosition = Vector3.zero;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
-        //EventManager.Accusation(correctAccusation);
+        Debug.Log(NPCInteraction.activeCharacter == null);
+        GameObject culprit = Instantiate(CharacterFactory.GetCharacterPrefab(NPCInteraction.activeCharacter.Name), GameObject.FindGameObjectWithTag("Finish").transform);
+        culprit.transform.localPosition = Vector3.zero;
+
+        EventManager.Accusation(correctAccusation);
         TransitionHandler.Instance.FadeOut();
     }
 
     public void Restart()
     {
+        EventManager.GameRestart();
         gameOver = false;
+        correctAccusation = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         UnpauseGame();
         SceneManager.LoadScene("ChrisScene");
     }

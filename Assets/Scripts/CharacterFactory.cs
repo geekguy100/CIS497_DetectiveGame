@@ -11,7 +11,6 @@ public static class CharacterFactory
 {
     public static GameObject GetCharacterPrefab(string characterName)
     {
-        Debug.Log(characterName);
         return Resources.Load<GameObject>("Characters/" + characterName);
     }
 }

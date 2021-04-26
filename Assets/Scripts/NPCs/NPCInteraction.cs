@@ -41,11 +41,11 @@ public class NPCInteraction : MonoBehaviour, IInteractable
 
     public void OnAssigned(IInteractor interactor)
     {
-        
+        UIManager.Instance.ShowSpeechBubble();
     }
 
     public void OnUnassigned(IInteractor interactor)
     {
-        
+        UIManager.Instance.HideSpeechBubble();
     }
 }
