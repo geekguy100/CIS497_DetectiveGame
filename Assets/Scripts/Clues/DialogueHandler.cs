@@ -39,7 +39,7 @@ public static class DialogueHandler
         
         dialogue = JsonUtility.FromJson<CharacterDialogue>(jsonFile.text);
 
-        Debug.Log("Retrieved character dialogue.");
+        Debug.Log("****Retrieved character dialogue.");
     }
 
     /// <summary>

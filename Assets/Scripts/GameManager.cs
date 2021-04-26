@@ -134,12 +134,6 @@ public class GameManager : Singleton<GameManager>
 
     #endregion
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-            HandleEndGame(true);
-    }
-
     private void HandleEndGame(bool correctAccusation)
     {
         UnpauseGame();
