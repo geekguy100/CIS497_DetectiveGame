@@ -145,8 +145,13 @@ public class GameManager : Singleton<GameManager>
     private void AfterTransition()
     {
         print("Scene End loaded");
-        SceneManager.LoadScene("EndScene");
+        AsyncOperation asyncOperation;
+        asyncOperation = SceneManager.LoadSceneAsync("EndScene", LoadSceneMode.Single);
+        asyncOperation.completed += AfterEndSceneLoad;
+    }
 
+    private void AfterEndSceneLoad(AsyncOperation asyncOperation)
+    {
         Debug.Log(NPCInteraction.activeCharacter == null);
         GameObject culrpit = Instantiate(CharacterFactory.GetCharacterPrefab(NPCInteraction.activeCharacter.Name), GameObject.FindGameObjectWithTag("Finish").transform);
         culrpit.transform.localPosition = Vector3.zero;
