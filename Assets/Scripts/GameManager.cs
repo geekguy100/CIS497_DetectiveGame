@@ -6,6 +6,7 @@
 // Brief Description : ADD BRIEF DESCRIPTION OF THE FILE HERE
 *****************************************************************************/
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Linq;
 
 public class GameManager : Singleton<GameManager>
@@ -13,14 +14,31 @@ public class GameManager : Singleton<GameManager>
     private bool paused = false;
     public bool Paused { get { return paused; } }
 
+    private bool gameOver = false;
+    public bool GameOver { get { return gameOver; } }
+
+    private bool correctAccusation = false;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        DontDestroyOnLoad(gameObject);
+    }
+
     public void PauseGame()
     {
+        if (gameOver)
+            return;
+
         paused = true;
         Time.timeScale = 0;
     }
 
     public void UnpauseGame()
     {
+        if (gameOver)
+            return;
+
         paused = false;
         Time.timeScale = 1;
     }
@@ -78,13 +96,12 @@ public class GameManager : Singleton<GameManager>
     {
         string result = "You made the right accusation! " + NPCInteraction.activeCharacter.Name + " == " + DialogueHandler.GetCulpritName() + " is the culprit!\n";
         result += "Clue passed in: " + clue.ClueTag;
-        EventManager.Accusation(result);
+
+        HandleEndGame(true);
     }
 
     private void IncorrectAccusation(Clue accusation)
     {
-        string result = "WRONG ACCUSATION\n";
-
         string accusedCharacterName = NPCInteraction.activeCharacter.Name;
         string missingTags = string.Empty;
 
@@ -112,8 +129,49 @@ public class GameManager : Singleton<GameManager>
         //if (DialogueHandler.GetCulpritName() != accusedCharacterName)
         //    result += "You did not accuse the correct character. The culprit was actually " + DialogueHandler.GetCulpritName();
 
-        EventManager.Accusation(result);
+        HandleEndGame(false);
     }
 
     #endregion
+
+    private void HandleEndGame(bool correctAccusation)
+    {
+        UnpauseGame();
+        gameOver = true;
+        this.correctAccusation = correctAccusation;
+
+        TransitionHandler.Instance.FadeIn(AfterTransition);
+    }
+
+    private void AfterTransition()
+    {
+        print("Scene End loaded");
+        AsyncOperation asyncOperation;
+        asyncOperation = SceneManager.LoadSceneAsync("EndScene", LoadSceneMode.Single);
+        asyncOperation.completed += AfterEndSceneLoad;
+    }
+
+    private void AfterEndSceneLoad(AsyncOperation asyncOperation)
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        Debug.Log(NPCInteraction.activeCharacter == null);
+        GameObject culprit = Instantiate(CharacterFactory.GetCharacterPrefab(NPCInteraction.activeCharacter.Name), GameObject.FindGameObjectWithTag("Finish").transform);
+        culprit.transform.localPosition = Vector3.zero;
+
+        EventManager.Accusation(correctAccusation);
+        TransitionHandler.Instance.FadeOut();
+    }
+
+    public void Restart()
+    {
+        EventManager.GameRestart();
+        gameOver = false;
+        correctAccusation = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        UnpauseGame();
+        SceneManager.LoadScene("ChrisScene");
+    }
 }

@@ -16,12 +16,12 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T>
         get { return instance != null; }
     }
 
-    private void Awake()
+    protected virtual void Awake()
     {
         if (instance != null)
         {
-            Debug.LogError("[Singleton] trying to instantiate second instance of a singleton class. Destroying Instance...");
-            Destroy(instance);
+            //Debug.LogWarning("[Singleton] trying to instantiate second instance of a singleton class named '" + gameObject.name + "' . Destroying clone...");
+            Destroy(gameObject);
         }
         else
         {

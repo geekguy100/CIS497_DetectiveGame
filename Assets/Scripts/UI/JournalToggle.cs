@@ -9,7 +9,7 @@ public class JournalToggle : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.J))
+        if(Input.GetKeyDown(KeyCode.J) && !GameManager.Instance.GameOver)
         {
             ToggleJournal();
         }
