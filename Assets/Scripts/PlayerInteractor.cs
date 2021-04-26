@@ -11,11 +11,11 @@ using UnityEngine;
 public class PlayerInteractor : IInteractor
 {
     [SerializeField] private GameObject magnifyingGlass;
-    [SerializeField] GameObject speechBubble;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && !magnifyingGlass.activeInHierarchy)
             PerformInteraction();
+            
     }
 }
