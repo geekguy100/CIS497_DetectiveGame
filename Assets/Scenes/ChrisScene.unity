@@ -4980,10 +4980,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CLUE_CardboardSign
       objectReference: {fileID: 0}
-    - target: {fileID: 4562464348610680701, guid: 87a077f9de14bea4e85461248a022f43, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 8725266675303853816, guid: 87a077f9de14bea4e85461248a022f43, type: 3}
       propertyPath: m_RootOrder
       value: 21

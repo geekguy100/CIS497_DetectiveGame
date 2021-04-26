@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1465793797490940461}
   - component: {fileID: 5774968614798015528}
   - component: {fileID: 194394583755745489}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CLUE_CardboardSign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,6 +109,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clue:
-    clueTag: Cardbaord Sign
+    clueTag: Cardboard Sign
     clueDesc: A cardboard sign found near Paul's corner. It reads, "Anything Helps".
     person: Paul Butler
