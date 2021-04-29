@@ -38,8 +38,8 @@ public class Journal : Singleton<Journal>
 
     void Start()
     {
-        //AddClue("Case", new Clue("Knowledge", ""));
-        ChangePage(5);
+        currentPage = 5;
+        UpdateJournalDisplay();
     }
 
     public void AddClue(Clue clue)
@@ -168,6 +168,7 @@ public class Journal : Singleton<Journal>
 
     public void ChangePage(int page)
     {
+        SFXManager.Instance.source.PlayOneShot(SFXManager.Instance.journalClose);
         currentPage = page;
         UpdateJournalDisplay();
     }

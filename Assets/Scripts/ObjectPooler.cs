@@ -84,11 +84,17 @@ public class ObjectPooler : Singleton<ObjectPooler>
 
     public void ReturnObjectToPool(string tag, GameObject objectToReturn)
     {
+        StartCoroutine(Delay());
         // Set obj as inactive
         objectToReturn.SetActive(false);
 
         // Add the object back to the queue of objects (to the back of the line)
         poolDictionary[tag].Enqueue(objectToReturn);
 
+    }
+
+    public IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(2f);
     }
 }

@@ -28,6 +28,7 @@ public class ToggleMagnifyingGlass : MonoBehaviour
 
     private void Toggle()
     {
+        SFXManager.Instance.source.PlayOneShot(SFXManager.Instance.equipMag);
         magnifyingGlass.SetActive(!magnifyingGlass.activeInHierarchy);
     }
 }

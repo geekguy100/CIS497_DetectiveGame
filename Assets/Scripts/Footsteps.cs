@@ -25,5 +25,8 @@ public class Footsteps : MonoBehaviour
     {
         AudioClip clip = AudioClipHepler.GetRandomAudioClipFromSet(footstepClips);
         audioSource.PlayOneShot(clip);
+        GameObject go = ObjectPooler.Instance.SpawnFromPool("dust", this.gameObject.transform.position, Quaternion.identity);
+        go.GetComponent<ParticleSystem>().Play();
+        ObjectPooler.Instance.ReturnObjectToPool("dust", go);
     }
 }

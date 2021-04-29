@@ -5,12 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Kyle_motel test.unity
-    guid: 51afa473f49f73642a8d9abe12e29c7b
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 386b0773b4f0d0341b58dfec67f76489
   - enabled: 1
     path: Assets/Scenes/ChrisScene.unity
     guid: 45ba000a013440d45a27fd5dad35ec78
+  - enabled: 1
+    path: Assets/Scenes/Kyle_motel test.unity
+    guid: 51afa473f49f73642a8d9abe12e29c7b
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: 1d214edef09f9fe4e9fedd9b47cecf52

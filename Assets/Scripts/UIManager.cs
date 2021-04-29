@@ -128,6 +128,10 @@ public class UIManager : Singleton<UIManager>
         if (questionPanel.activeInHierarchy)
         {
             DisplayDialoguePanel(characterName, characterIntro);
+            if (!SFXManager.Instance.source.isPlaying)
+            {
+                SFXManager.Instance.source.PlayOneShot(SFXManager.Instance.gibberish);
+            }
 
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
@@ -143,7 +147,7 @@ public class UIManager : Singleton<UIManager>
     public void DisplayAccusationPanel()
     {
         questionPanel.SetActive(false);
-        accusationPanel?.SetActive(true);
+        accusationPanel.SetActive(true);
 
         // If we toggled on the accusation panel, fill it with all of the
         // button we need.
@@ -167,6 +171,10 @@ public class UIManager : Singleton<UIManager>
 
     public void OnQuestionPanelDisable()
     {
+        if (SFXManager.Instance.source.isPlaying)
+        {
+            SFXManager.Instance.source.Stop();
+        }
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         dialoguePanel.SetActive(false);
@@ -186,6 +194,7 @@ public class UIManager : Singleton<UIManager>
     private void UpdateClueText(Clue clue)
     {
         print("CLUE FOUND: " + clue.ClueTag);
+        SFXManager.Instance.source.PlayOneShot(SFXManager.Instance.clueFound);
         clueFoundText.text = "Clue Recorded: " + clue.ClueTag.ToUpper();
         clueFoundPanel.SetActive(true);
         //PopulateQuestionPanelButtons();

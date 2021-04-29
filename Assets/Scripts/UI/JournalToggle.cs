@@ -23,6 +23,7 @@ public class JournalToggle : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             GameManager.Instance.UnpauseGame();
+            SFXManager.Instance.source.PlayOneShot(SFXManager.Instance.journalClose);
         }
         else
         {
@@ -30,6 +31,7 @@ public class JournalToggle : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             GameManager.Instance.PauseGame();
+            SFXManager.Instance.source.PlayOneShot(SFXManager.Instance.journalOpen);
         }
     }
 }

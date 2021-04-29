@@ -63,6 +63,9 @@ public class InGameClue : MonoBehaviour, IInteractable
             EventManager.ClueFound(clue);
             gameObject.layer = LayerMask.NameToLayer("Default"); // Makes sure the clue shader is not present after discovering the clue.
             interactor.UnassignInteractable();
+            GameObject go = ObjectPooler.Instance.SpawnFromPool("pickup", this.gameObject.transform.position, Quaternion.identity);
+            go.GetComponent<ParticleSystem>().Play();
+            ObjectPooler.Instance.ReturnObjectToPool("pickup", go);
             //UIManager.Instance.HideScanPanel();
             //UIManager.Instance.UpdateClueText(clue.ClueTag);
             //Journal.Instance.AddClue("Case", clue);

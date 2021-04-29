@@ -2,17 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PFXManager : MonoBehaviour
+public class PFXManager : Singleton<PFXManager>
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public ParticleSystem pickup;
+    public ParticleSystem dust;
 
-    // Update is called once per frame
-    void Update()
+    public void SpawnParticle(string particleType, Vector3 pos)
     {
-        
+        ParticleSystem particle = null;
+        switch (particleType)
+        {
+            case "pickup":
+                particle = pickup;
+                break;
+            case "dust":
+                particle = dust;
+                break;
+            default:
+                Debug.LogWarning("Particle type \'" + particleType + "\' not found!");
+                return;
+        }
+
+        particle = Instantiate(particle, pos, particle.transform.rotation);
+        particle.Play();
+        Destroy(particle.gameObject, 1f);
     }
 }
