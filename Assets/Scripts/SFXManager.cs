@@ -10,10 +10,16 @@ public class SFXManager : Singleton<SFXManager>
     public AudioClip equipMag;
     public AudioClip journalClose;
     public AudioClip journalOpen;
+    public AudioClip click;
 
     // Start is called before the first frame update
     void Start()
     {
         source = GetComponent<AudioSource>();
+    }
+
+    public void PlayClip(AudioClip clip)
+    {
+        source.PlayOneShot(clip);
     }
 }

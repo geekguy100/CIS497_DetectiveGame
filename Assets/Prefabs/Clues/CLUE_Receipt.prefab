@@ -110,5 +110,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clue:
     clueTag: Receipt
-    clueDesc: The receipt for room 221. Found in a trash can.
+    clueDesc: A receipt for a motel room. Found on the ground.
     person: Faith Phillips

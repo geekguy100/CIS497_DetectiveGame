@@ -27,6 +27,11 @@ public class JournalToggle : MonoBehaviour
         }
         else
         {
+            if (UIManager.Instance.IsQPanelActive())
+            {
+                UIManager.Instance.OnQuestionPanelDisable();
+                //UIManager.Instance.ToggleQuestionPanel();
+            }
             journal.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;

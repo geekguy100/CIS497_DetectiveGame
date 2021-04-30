@@ -110,5 +110,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clue:
     clueTag: Room Key
-    clueDesc: Key to room 221. Found in Michael's pocket.
+    clueDesc: Key to a motel room. Found in Michael's pocket.
     person: Faith Phillips

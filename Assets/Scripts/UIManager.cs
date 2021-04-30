@@ -118,6 +118,11 @@ public class UIManager : Singleton<UIManager>
 
     public void ToggleQuestionPanel(string characterName, string characterIntro)
     {
+        if (journal.activeInHierarchy)
+        {
+            journal.SetActive(false);
+        }
+
         if (accusationPanel.activeInHierarchy)
             return;
 
@@ -142,6 +147,11 @@ public class UIManager : Singleton<UIManager>
         {
             OnQuestionPanelDisable();
         }
+    }
+
+    public bool IsQPanelActive()
+    {
+        return questionPanel.activeInHierarchy;
     }
 
     public void DisplayAccusationPanel()
@@ -178,6 +188,7 @@ public class UIManager : Singleton<UIManager>
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         dialoguePanel.SetActive(false);
+        questionPanel.SetActive(false);
         GameManager.Instance.UnpauseGame();
     }
 
@@ -275,6 +286,7 @@ public class UIManager : Singleton<UIManager>
             // Reset whatever was on the close button.
             button.onClick.RemoveAllListeners();
             button.onClick.AddListener(() => { QuestionHandler.ProbeClue(clue); });
+            button.onClick.AddListener(() => {SFXManager.Instance.source.PlayOneShot(SFXManager.Instance.click);});
 
             questionButtons.Add(new QuestionButton(button, clue));
         }
@@ -313,6 +325,7 @@ public class UIManager : Singleton<UIManager>
             // Reset whatever was on the close button.
             button.onClick.RemoveAllListeners();
             button.onClick.AddListener(() => { GameManager.Instance.AccuseCharacter(clue); });
+            button.onClick.AddListener(() => { SFXManager.Instance.source.PlayOneShot(SFXManager.Instance.click); });
 
             accusationButtons.Add(new QuestionButton(button, clue));
         }
