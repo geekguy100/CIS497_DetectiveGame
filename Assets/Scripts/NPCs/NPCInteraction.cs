@@ -37,6 +37,8 @@ public class NPCInteraction : MonoBehaviour, IInteractable
         // TODO: We'll need a new JSON field for IntroDialogue. For now, I'm hard coding it.
         _activeCharacter = character;
         UIManager.Instance.ToggleQuestionPanel(character.Name, character.Intro);
+
+        Tutorial.Instance.ContinueOnTalk();
     }
 
     public void OnAssigned(IInteractor interactor)

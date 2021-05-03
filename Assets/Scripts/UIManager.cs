@@ -190,6 +190,8 @@ public class UIManager : Singleton<UIManager>
         dialoguePanel.SetActive(false);
         questionPanel.SetActive(false);
         GameManager.Instance.UnpauseGame();
+
+        Tutorial.Instance.ContinueOnNevermind();
     }
 
     public void DisplayScanPanel()

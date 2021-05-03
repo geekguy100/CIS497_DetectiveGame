@@ -52,6 +52,8 @@ public class Journal : Singleton<Journal>
             return;
         }
 
+        Tutorial.Instance.ContinueOnScan();
+
         int characterIndex = Array.IndexOf(pages, pageToAddClueTo);
 
         pages[characterIndex].clues[pages[characterIndex].cluesDiscovered] = clue;
@@ -171,6 +173,8 @@ public class Journal : Singleton<Journal>
         SFXManager.Instance.source.PlayOneShot(SFXManager.Instance.journalClose);
         currentPage = page;
         UpdateJournalDisplay();
+
+        Tutorial.Instance.ContinueOnPage();
     }
 
     void UpdateJournalDisplay()

@@ -62,5 +62,7 @@ public static class QuestionHandler
         }
         else
             UIManager.Instance.DisplayDialoguePanel(activeCharacterData.name, "I'm not sure what you're talking about...");
+
+        Tutorial.Instance.ContinueOnAsk();
     }
 }

@@ -23,6 +23,8 @@ public class ToggleMagnifyingGlass : MonoBehaviour
         {
             interactor.UnassignInteractable();
             Toggle();
+
+            Tutorial.Instance.ContinueOnMagnify();
         }
     }
 

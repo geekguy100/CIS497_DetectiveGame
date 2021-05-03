@@ -14,6 +14,7 @@ public class TutorialMessage
     public bool continueOnMagnify;
     public bool continueOnScan;
     public bool continueOnTalk;
+    public bool continueOnAsk;
     public bool continueOnNevermind;
 }
 
@@ -24,6 +25,7 @@ public class Tutorial : Singleton<Tutorial>
     [SerializeField] TextMeshProUGUI tutorialText;
     private string currentMessage;
     private bool startedTutorial = false;
+    private bool skipTutorial = false;
     private int index = 0;
 
     public void NextMessage()
@@ -39,7 +41,7 @@ public class Tutorial : Singleton<Tutorial>
 
     private void Update()
     {
-        if (startedTutorial == false && SceneManager.GetActiveScene().name == "ChrisScene")
+        if (startedTutorial == false && SceneManager.GetActiveScene().name == "ChrisScene" && !skipTutorial)
         {
             index = 0;
             tutorialPanel.SetActive(true);
@@ -57,22 +59,30 @@ public class Tutorial : Singleton<Tutorial>
     }
     public void ContinueOnTalk()
     {
-
+        if (messages[index].continueOnTalk == true) NextMessage();
     }
     public void ContinueOnScan()
     {
-
+        if (messages[index].continueOnScan == true) NextMessage();
     }
     public void ContinueOnJournal()
     {
-
+        if (messages[index].continueOnJournal == true) NextMessage();
     }
     public void ContinueOnPage()
     {
-
+        if (messages[index].continueOnPage == true) NextMessage();
     }
     public void ContinueOnNevermind()
     {
-
+        if (messages[index].continueOnNevermind == true) NextMessage();
+    }
+    public void ContinueOnAsk()
+    {
+        if (messages[index].continueOnAsk == true) NextMessage();
+    }
+    public void SkipTutorial(bool value)
+    {
+        skipTutorial = !value;
     }
 }

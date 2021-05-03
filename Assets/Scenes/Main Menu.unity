@@ -353,7 +353,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1802460404}
+        m_TargetAssemblyTypeName: Tutorial, Assembly-CSharp
+        m_MethodName: SkipTutorial
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!1 &157134169
 GameObject:
@@ -530,8 +542,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -0.030029297}
+  m_AnchoredPosition: {x: 0.859375, y: -4.2963867}
+  m_SizeDelta: {x: -18.9044, y: -8.6229}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &180564492
 MonoBehaviour:
@@ -546,8 +558,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
+  m_Color: {r: 0.2, g: 0.17254902, b: 0.17254902, a: 1}
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -611,15 +623,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
-  m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -636,8 +648,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 34
+  m_fontSizeBase: 34
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -672,7 +684,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 15.518005, y: 100.49402, z: 7.814453, w: 99.81372}
+  m_margin: {x: 0.6923828, y: 112.19861, z: 1.1845703, w: 106.97717}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -902,8 +914,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.234375, y: 611.4457}
-  m_SizeDelta: {x: -1290.0919, y: -1273.0912}
+  m_AnchoredPosition: {x: -4.97876, y: 619.6272}
+  m_SizeDelta: {x: -1276.6941, y: -1289.4542}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &475828298
 MonoBehaviour:
@@ -919,7 +931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1614,6 +1626,8 @@ MonoBehaviour:
     continueOnMagnify: 1
     continueOnScan: 0
     continueOnTalk: 0
+    continueOnAsk: 0
+    continueOnNevermind: 0
   - message: Now look around using the mouse while you have the magnifying glass
       out. Try to find a clue. You will know something is a clue because it will
       glow orange while looking through the magnifying glass. Once you see one, approach
@@ -1623,6 +1637,8 @@ MonoBehaviour:
     continueOnMagnify: 0
     continueOnScan: 1
     continueOnTalk: 0
+    continueOnAsk: 0
+    continueOnNevermind: 0
   - message: 'You have successfully scanned and logged this clue. Press ''M'' again
       to put away the manifying glass, then press ''J'' to open your Journal. '
     continueOnJournal: 1
@@ -1630,31 +1646,38 @@ MonoBehaviour:
     continueOnMagnify: 0
     continueOnScan: 0
     continueOnTalk: 0
-  - message: 'All the clues you have discovered will appear here. Note that clues
-      may also be discovered by speaking to NPCs, so be sure to check back here often.
-      You can click on the orange tabs to change pages. Each page contains information
-      relevant to different characters. The character''s initials are on their relevant
-      tab. '
+    continueOnAsk: 0
+    continueOnNevermind: 0
+  - message: 'All the clues you have discovered will appear here. You can click on
+      the orange tabs to change pages. Each page contains information relevant to
+      different characters. The character''s initials are on their relevant tab. '
     continueOnJournal: 0
     continueOnPage: 1
     continueOnMagnify: 0
     continueOnScan: 0
     continueOnTalk: 0
-  - message: Now that you have inspected the clue more closely, question someone
-      about it. Press 'J' again to close the jounral, then approach an NPC and press
-      'E' to start a conversation.
+    continueOnAsk: 0
+    continueOnNevermind: 0
+  - message: Once you have inspected the clue more closely, question someone about
+      it. Press 'J' again to close the jounral, then approach an NPC and press 'E'
+      to start a conversation.
     continueOnJournal: 0
     continueOnPage: 0
     continueOnMagnify: 0
     continueOnScan: 0
     continueOnTalk: 1
-  - message: 'On the right is a list of potential topics you may talk about. Click
-      any of them to hear what this character has to say about it. '
+    continueOnAsk: 0
+    continueOnNevermind: 0
+  - message: On the right is a list of potential topics you may talk about. Click
+      any of them to hear what this character has to say about it. Note that clues
+      can also be discovered throught dialogue.
     continueOnJournal: 0
     continueOnPage: 0
     continueOnMagnify: 0
     continueOnScan: 0
     continueOnTalk: 0
+    continueOnAsk: 1
+    continueOnNevermind: 0
   - message: 'Once you have collected enough evidence, and think you know who is
       guilty, you may click the red ''Accuse'' button at the bottom of this list,
       but don''t do it yet! You can click "Nevermind" to leave the conversation and
@@ -1664,6 +1687,8 @@ MonoBehaviour:
     continueOnMagnify: 0
     continueOnScan: 0
     continueOnTalk: 0
+    continueOnAsk: 0
+    continueOnNevermind: 1
   tutorialPanel: {fileID: 475828296}
   tutorialText: {fileID: 273411907}
 --- !u!114 &1802460405
@@ -1673,7 +1698,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802460403}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
