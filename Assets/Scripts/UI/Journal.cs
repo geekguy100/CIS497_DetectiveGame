@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 using System.Linq;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ public class JournalPage
     public string charName;
     public string charDesc;
     public Clue[] clues;
+    public Sprite picture;
 
     public int cluesDiscovered = 0;
 }
@@ -20,6 +22,7 @@ public class Journal : Singleton<Journal>
 
     [SerializeField] TextMeshProUGUI characterName;
     [SerializeField] TextMeshProUGUI characterDesc;
+    [SerializeField] Image picDisplay;
     [SerializeField] TextMeshProUGUI[] clueSlots;
 
     private int currentPage;
@@ -181,6 +184,8 @@ public class Journal : Singleton<Journal>
     {
         characterName.text = pages[currentPage].charName;
         characterDesc.text = pages[currentPage].charDesc;
+        picDisplay.sprite = pages[currentPage].picture;
+        
         for (int i = 0; i < pages[currentPage].clues.Length; i++)
         {
             string clueDesc = pages[currentPage].clues[i].ClueDesc;

@@ -212,6 +212,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CLUE_Bruising
       objectReference: {fileID: 0}
+    - target: {fileID: 8853522308301713311, guid: df0a5c08887ec3645b0fc3b04d6131bb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df0a5c08887ec3645b0fc3b04d6131bb, type: 3}
 --- !u!4 &5622472699361547816 stripped

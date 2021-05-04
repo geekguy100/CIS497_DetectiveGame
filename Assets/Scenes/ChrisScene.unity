@@ -4109,6 +4109,7 @@ MonoBehaviour:
     - clueTag: 
       clueDesc: 
       person: 
+    picture: {fileID: 21300000, guid: 768f72c282f6a5340a19334f23e510a7, type: 3}
     cluesDiscovered: 0
   - charName: Richard Wright
     charDesc: The housekeeper and maintenance man for the motel
@@ -4143,6 +4144,7 @@ MonoBehaviour:
     - clueTag: 
       clueDesc: 
       person: 
+    picture: {fileID: 21300000, guid: 040e0577135b4df4f80f6f2f61f2c61a, type: 3}
     cluesDiscovered: 0
   - charName: Nancy Reed
     charDesc: The late night receptionist at the motel.
@@ -4177,6 +4179,7 @@ MonoBehaviour:
     - clueTag: 
       clueDesc: 
       person: 
+    picture: {fileID: 21300000, guid: e6a23c12cfd11174f8fb696a179215b0, type: 3}
     cluesDiscovered: 0
   - charName: Mary "Cherry" Ross
     charDesc: A floozy that was found lingering outside the motel.
@@ -4211,6 +4214,7 @@ MonoBehaviour:
     - clueTag: 
       clueDesc: 
       person: 
+    picture: {fileID: 21300000, guid: 39f772ae986c34041969356b222ff057, type: 3}
     cluesDiscovered: 0
   - charName: Paul Butler
     charDesc: A homeless man who sleeps in the bus stop near the motel.
@@ -4245,6 +4249,7 @@ MonoBehaviour:
     - clueTag: 
       clueDesc: 
       person: 
+    picture: {fileID: 21300000, guid: 89d74622d57e4ba4d942460f90e3e5f2, type: 3}
     cluesDiscovered: 0
   - charName: Case
     charDesc: A young man named Michael Phillips has died a mysterious death at a
@@ -4281,6 +4286,7 @@ MonoBehaviour:
     - clueTag: 
       clueDesc: 
       person: 
+    picture: {fileID: 21300000, guid: fe561965ed4e8404f82478d863fe489e, type: 3}
     cluesDiscovered: 9
   - charName: Misc
     charDesc: Clues that don't relate directly to a character appear here.
@@ -4315,9 +4321,11 @@ MonoBehaviour:
     - clueTag: 
       clueDesc: 
       person: 
+    picture: {fileID: 21300000, guid: fe561965ed4e8404f82478d863fe489e, type: 3}
     cluesDiscovered: 0
   characterName: {fileID: 1189430720}
   characterDesc: {fileID: 1189430719}
+  picDisplay: {fileID: 5659210898031355513}
   clueSlots:
   - {fileID: 1189430718}
   - {fileID: 1189430717}
@@ -11378,6 +11386,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 9078550428659872770, guid: 92922f0f3816e244da8ceb7f3db74dff, type: 3}
   m_PrefabInstance: {fileID: 5659210898031355510}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5659210898031355513 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4371311353091759262, guid: 92922f0f3816e244da8ceb7f3db74dff, type: 3}
+  m_PrefabInstance: {fileID: 5659210898031355510}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &5665446664474496007
 BoxCollider:
   m_ObjectHideFlags: 0
