@@ -1659,7 +1659,7 @@ MonoBehaviour:
     continueOnAsk: 0
     continueOnNevermind: 0
   - message: Once you have inspected the clue more closely, question someone about
-      it. Press 'J' again to close the jounral, then approach an NPC and press 'E'
+      it. Press 'J' again to close the journal, then approach an NPC and press 'E'
       to start a conversation.
     continueOnJournal: 0
     continueOnPage: 0
