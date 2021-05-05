@@ -16,6 +16,7 @@ public class SFXManager : Singleton<SFXManager>
     void Start()
     {
         source = GetComponent<AudioSource>();
+        DontDestroyOnLoad(gameObject);
     }
 
     public void PlayClip(AudioClip clip)
