@@ -7,6 +7,7 @@
 *****************************************************************************/
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class Newspaper : MonoBehaviour
 {
@@ -16,5 +17,17 @@ public class Newspaper : MonoBehaviour
     private void Awake()
     {
         GetComponentInChildren<Button>().onClick.AddListener(() => { GameManager.Instance.Restart(); });
+    }
+
+    private void Start()
+    {
+        transform.GetChild(0).gameObject.SetActive(false);
+        StartCoroutine(ActivateButtonAfterTime());
+    }
+
+    private IEnumerator ActivateButtonAfterTime()
+    {
+        yield return new WaitForSeconds(2f);
+        transform.GetChild(0).gameObject.SetActive(true);
     }
 }
