@@ -26,14 +26,14 @@ public class ToggleMagnifyingGlass : MonoBehaviour
         if (GameManager.Instance.GameOver)
             return;
 
-        if (Input.GetButtonDown(buttonName))
+        if (Input.GetButtonDown(buttonName) && !UIManager.Instance.IsPanelOpen())
         {
             Toggle();
 
             Tutorial.Instance.ContinueOnMagnify();
         }
 
-        if (!toggle && Input.GetButtonUp(buttonName))
+        if (!toggle && Input.GetButtonUp(buttonName) && !UIManager.Instance.IsPanelOpen())
             Toggle();
     }
 

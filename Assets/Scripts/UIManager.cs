@@ -204,6 +204,11 @@ public class UIManager : Singleton<UIManager>
         scanPanel.SetActive(false);
     }
 
+    public bool IsPanelOpen()
+    {
+        return (questionButtonPanel.activeInHierarchy || accusationButtonPanel.activeInHierarchy);
+    }
+
     private void UpdateClueText(Clue clue)
     {
         print("CLUE FOUND: " + clue.ClueTag);
