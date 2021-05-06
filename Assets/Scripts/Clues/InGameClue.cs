@@ -70,7 +70,7 @@ public class InGameClue : MonoBehaviour, IInteractable
             interactor.UnassignInteractable();
             GameObject go = ObjectPooler.Instance.SpawnFromPool("pickup", this.gameObject.transform.position, Quaternion.identity);
             go.GetComponent<ParticleSystem>().Play();
-            ObjectPooler.Instance.ReturnObjectToPool("pickup", go);
+            //ObjectPooler.Instance.ReturnObjectToPool("pickup", go);
             //UIManager.Instance.HideScanPanel();
             //UIManager.Instance.UpdateClueText(clue.ClueTag);
             //Journal.Instance.AddClue("Case", clue);
