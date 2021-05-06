@@ -12,6 +12,10 @@ public class ToggleMagnifyingGlass : MonoBehaviour
     [SerializeField] private GameObject magnifyingGlass;
     private MagnifyingGlassInteractor interactor;
 
+    [Header("Settings")]
+    [SerializeField] private string buttonName;
+    [SerializeField] private bool toggle;
+
     private void Awake()
     {
         interactor = magnifyingGlass.GetComponent<MagnifyingGlassInteractor>();
@@ -19,17 +23,23 @@ public class ToggleMagnifyingGlass : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M) && !GameManager.Instance.GameOver)
+        if (GameManager.Instance.GameOver)
+            return;
+
+        if (Input.GetButtonDown(buttonName))
         {
-            interactor.UnassignInteractable();
             Toggle();
 
             Tutorial.Instance.ContinueOnMagnify();
         }
+
+        if (!toggle && Input.GetButtonUp(buttonName))
+            Toggle();
     }
 
     private void Toggle()
     {
+        interactor.UnassignInteractable();
         SFXManager.Instance.source.PlayOneShot(SFXManager.Instance.equipMag);
         magnifyingGlass.SetActive(!magnifyingGlass.activeInHierarchy);
     }
