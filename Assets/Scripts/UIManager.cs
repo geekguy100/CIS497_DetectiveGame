@@ -252,6 +252,8 @@ public class UIManager : Singleton<UIManager>
     {
         yield return new WaitForSeconds(2f);
         activeNewspaper = Instantiate(newspaper, transform.GetChild(0));
+        resultsPanel.SetActive(true);
+        IterateClues();
     }
 
     //public void HideOpenPanels()
@@ -359,6 +361,7 @@ public class UIManager : Singleton<UIManager>
         magIcon.SetActive(true);
         HideSpeechBubble();
         journal.SetActive(false);
+        resultsPanel.SetActive(false);
 
         if (activeNewspaper != null)
             Destroy(activeNewspaper.gameObject);
@@ -373,6 +376,18 @@ public class UIManager : Singleton<UIManager>
         {
             Destroy(accusationButtons[i].button.gameObject);
             accusationButtons.RemoveAt(i);
+        }
+    }
+
+    public void IterateClues()
+    {
+        ClueIterator iterator = new ClueIterator(Journal.Instance.GetAllKnownClues());
+        resultsText.text = string.Empty;
+        while(iterator.hasNext())
+        {
+            string thing = iterator.next().ToString();
+            print("HAHA: " + thing);
+            resultsText.text += thing + "\n";
         }
     }
 }

@@ -23,6 +23,11 @@ public struct Clue
         this.person = person;
     }
 
+    public override string ToString()
+    {
+        return clueTag;
+    }
+
     [Tooltip("The clue tag exactly as it is written in the JSON file.")]
     [SerializeField] private string clueTag;
 
