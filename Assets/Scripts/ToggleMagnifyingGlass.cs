@@ -30,6 +30,7 @@ public class ToggleMagnifyingGlass : MonoBehaviour
         {
             Toggle();
 
+            GetComponent<CharacterMovement>().SlowSpeed();
             UIManager.Instance.HideSpeechBubble();
             Tutorial.Instance.ContinueOnMagnify();
         }
@@ -37,6 +38,7 @@ public class ToggleMagnifyingGlass : MonoBehaviour
         if (!toggle && Input.GetButtonUp(buttonName) && !UIManager.Instance.IsPanelOpen())
         {
             Toggle();
+            GetComponent<CharacterMovement>().ResetSpeed();
             if (UIManager.Instance.SpeechIconShouldBeActive)
                 UIManager.Instance.ShowSpeechBubble();
         }

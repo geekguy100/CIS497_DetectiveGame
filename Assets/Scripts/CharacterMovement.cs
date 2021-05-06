@@ -13,6 +13,8 @@ public class CharacterMovement : MonoBehaviour
     #region --- Serialized Fields ---
     [Tooltip("The character's movement speed.")]
     [SerializeField] private float speed;
+    [SerializeField] private float slowedSpeed;
+    private float currentSpeed;
 
     [Tooltip("The amount of gravity the affects this character.")]
     [SerializeField] private float gravity = -9.81f;
@@ -34,6 +36,7 @@ public class CharacterMovement : MonoBehaviour
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
+        currentSpeed = speed;
     }
 
     /// <summary>
@@ -49,7 +52,7 @@ public class CharacterMovement : MonoBehaviour
 
         isMoving = (dir.magnitude > 0) ? true : false;
 
-        characterController.Move(dir * speed * Time.deltaTime);
+        characterController.Move(dir * currentSpeed * Time.deltaTime);
 
         characterVelocity.y += gravity * Time.deltaTime;
         characterController.Move(characterVelocity * Time.deltaTime);
@@ -68,5 +71,15 @@ public class CharacterMovement : MonoBehaviour
     public float GetSpeed()
     {
         return speed;
+    }
+
+    public void SlowSpeed()
+    {
+        currentSpeed = slowedSpeed;
+    }
+
+    public void ResetSpeed()
+    {
+        currentSpeed = speed;
     }
 }
