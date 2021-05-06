@@ -386,7 +386,6 @@ public class UIManager : Singleton<UIManager>
         while(iterator.hasNext())
         {
             string thing = iterator.next().ToString();
-            print("HAHA: " + thing);
             resultsText.text += thing + "\n";
         }
     }
