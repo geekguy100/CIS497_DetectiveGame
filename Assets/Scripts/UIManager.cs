@@ -363,6 +363,7 @@ public class UIManager : Singleton<UIManager>
         HideSpeechBubble();
         journal.SetActive(false);
         resultsPanel.SetActive(false);
+        
 
         if (activeNewspaper != null)
             Destroy(activeNewspaper.gameObject);

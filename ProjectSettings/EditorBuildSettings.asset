@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ChrisScene.unity
     guid: 45ba000a013440d45a27fd5dad35ec78
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Kyle_motel test.unity
     guid: 51afa473f49f73642a8d9abe12e29c7b
   - enabled: 1

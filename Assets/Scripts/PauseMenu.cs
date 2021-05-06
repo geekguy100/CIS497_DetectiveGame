@@ -2,11 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
     public bool paused;
     public GameObject pauseMenu;
+
+    private void OnEnable()
+    {
+        EventManager.OnGameRestart += UnPause;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnGameRestart -= UnPause;
+    }
+
 
     private void Start()
     {
@@ -43,9 +55,19 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    private void UnPause()
+    {
+        paused = false;
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
     public void ReturnToMenu()
     {
-        Time.timeScale = 1;
+        UnPause();
+        EventManager.OnGameRestart();
         SceneManager.LoadScene("Main Menu");
     }
 

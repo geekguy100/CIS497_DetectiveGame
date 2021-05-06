@@ -172,6 +172,6 @@ public class GameManager : Singleton<GameManager>
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         UnpauseGame();
-        SceneManager.LoadScene("ChrisScene");
+        SceneManager.LoadScene("Main Menu");
     }
 }

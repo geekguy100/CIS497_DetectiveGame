@@ -4196,7 +4196,8 @@ MonoBehaviour:
       clueDesc: Question the suspects (E).
       person: 
     - clueTag: 
-      clueDesc: Find clues by using your magnifying glass (M).
+      clueDesc: Find clues by using your magnifying glass (Hold Right Mouse, Left
+        Mouse to Record Clue).
       person: 
     - clueTag: 
       clueDesc: Toggle your journal (J).
@@ -5160,7 +5161,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1222816468}
   - component: {fileID: 1222816467}
-  - component: {fileID: 1222816469}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5194,20 +5194,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1222816469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1222816466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5702cbf676e37aa44a7801d9153377e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paused: 0
-  pauseMenu: {fileID: 1516459327}
 --- !u!4 &1223025351 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 36852d9c29c14f347b0db35d9d3e2bd7, type: 3}
@@ -6025,6 +6011,7 @@ GameObject:
   - component: {fileID: 1404913649}
   - component: {fileID: 1404913648}
   - component: {fileID: 1404913651}
+  - component: {fileID: 1404913650}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -6084,6 +6071,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1404913650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404913647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5702cbf676e37aa44a7801d9153377e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paused: 0
+  pauseMenu: {fileID: 1516459327}
+  quitButton: {fileID: 1614585791}
 --- !u!114 &1404913651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6981,6 +6983,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36852d9c29c14f347b0db35d9d3e2bd7, type: 3}
+--- !u!114 &1614585791 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1280279495353147991, guid: 92922f0f3816e244da8ceb7f3db74dff, type: 3}
+  m_PrefabInstance: {fileID: 5659210898031355510}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1625072956
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10550,11 +10563,23 @@ PrefabInstance:
     - target: {fileID: 1621264177, guid: 92922f0f3816e244da8ceb7f3db74dff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1222816469}
+      objectReference: {fileID: 0}
     - target: {fileID: 1774337167, guid: 92922f0f3816e244da8ceb7f3db74dff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1222816469}
+      objectReference: {fileID: 1404913650}
+    - target: {fileID: 1774337167, guid: 92922f0f3816e244da8ceb7f3db74dff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PauseGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280279495353147991, guid: 92922f0f3816e244da8ceb7f3db74dff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1404913650}
+    - target: {fileID: 1280279495353147991, guid: 92922f0f3816e244da8ceb7f3db74dff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReturnToMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 2423727821253350644, guid: 92922f0f3816e244da8ceb7f3db74dff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -10583,6 +10608,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1046337375}
+    - target: {fileID: 4371311353003307249, guid: 92922f0f3816e244da8ceb7f3db74dff, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4371311353258694401, guid: 92922f0f3816e244da8ceb7f3db74dff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
