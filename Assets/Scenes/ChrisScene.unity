@@ -10647,6 +10647,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 459562405}
+    - target: {fileID: 9078550428176275607, guid: 92922f0f3816e244da8ceb7f3db74dff, type: 3}
+      propertyPath: m_text
+      value: 'Clue Recorded: Random Sphere'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078550428176275607, guid: 92922f0f3816e244da8ceb7f3db74dff, type: 3}
+      propertyPath: m_fontSize
+      value: 24.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078550428176275607, guid: 92922f0f3816e244da8ceb7f3db74dff, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078550428176275607, guid: 92922f0f3816e244da8ceb7f3db74dff, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078550428176275607, guid: 92922f0f3816e244da8ceb7f3db74dff, type: 3}
+      propertyPath: m_lineSpacing
+      value: -20
+      objectReference: {fileID: 0}
     - target: {fileID: 9078550428409657671, guid: 92922f0f3816e244da8ceb7f3db74dff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 

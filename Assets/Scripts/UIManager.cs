@@ -211,9 +211,9 @@ public class UIManager : Singleton<UIManager>
 
     private void UpdateClueText(Clue clue)
     {
-        print("CLUE FOUND: " + clue.ClueTag);
+        print("CLUE FOUND: " + clue.ClueTag + " : " + clue.Person);
         SFXManager.Instance.source.PlayOneShot(SFXManager.Instance.clueFound);
-        clueFoundText.text = "Clue Recorded: " + clue.ClueTag.ToUpper();
+        clueFoundText.text = "Clue Recorded: " + clue.ClueTag.ToUpper() + ": <i>" + clue.Person + "</i>";
         clueFoundPanel.SetActive(true);
         //PopulateQuestionPanelButtons();
         StartCoroutine(DeactivateAfterTime(clueFoundPanel));
