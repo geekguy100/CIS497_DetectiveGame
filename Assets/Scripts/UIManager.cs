@@ -226,8 +226,6 @@ public class UIManager : Singleton<UIManager>
         journal.SetActive(false);
         dialoguePanel.SetActive(false);
         accusationPanel.SetActive(false);
-        HideSpeechBubble();
-        Tutorial.Instance.HideTutorial();
 
         Newspaper newspaper;
 

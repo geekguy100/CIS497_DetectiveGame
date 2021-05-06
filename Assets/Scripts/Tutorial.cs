@@ -85,9 +85,4 @@ public class Tutorial : Singleton<Tutorial>
     {
         skipTutorial = !value;
     }
-
-    public void HideTutorial()
-    {
-        tutorialPanel.SetActive(false);
-    }
 }
