@@ -210,6 +210,10 @@
           "Dialogue": "Um... yeah. I used to date a guy who was part of a gang and one night I got really drunk and ended up with a tattoo. I'm not part of any gang, and I definitely regret getting it."
         },
         {
+          "ClueTag": "Criminal Record",
+          "Dialogue": "I've had a few... issues in my past, but I've never hurt anyone."
+        },
+        {
           "ClueTag": "Dirty Note",
           "Dialogue": "I have never seen that before and it's covered in mud. I keep my hands clean, it can't be mine."
         },
