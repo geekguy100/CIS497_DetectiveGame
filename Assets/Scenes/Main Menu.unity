@@ -1728,7 +1728,7 @@ MonoBehaviour:
   messages:
   - message: 'Welcome to Mystery At The Murder Hotel. Your job is collect enough
       evidence to confidently accuse a suspect of murder. To begin you will need
-      to learn how to collect evidence. Press ''M'' to pull out your magnifying glass. '
+      to learn how to collect evidence. Hold ''RMB'' to equip your magnifying glass. '
     continueOnJournal: 0
     continueOnPage: 0
     continueOnMagnify: 1
@@ -1738,8 +1738,8 @@ MonoBehaviour:
     continueOnNevermind: 0
   - message: Now look around using the mouse while you have the magnifying glass
       out. Try to find a clue. You will know something is a clue because it will
-      glow orange while looking through the magnifying glass. Once you see one, approach
-      it and press 'E'.
+      glow orange while looking through the magnifying glass. Once you see one, equip
+      the magnifying glass and press 'LMB' when the prompt appears.
     continueOnJournal: 0
     continueOnPage: 0
     continueOnMagnify: 0
@@ -1747,7 +1747,7 @@ MonoBehaviour:
     continueOnTalk: 0
     continueOnAsk: 0
     continueOnNevermind: 0
-  - message: 'You have successfully scanned and logged this clue. Press ''M'' again
+  - message: 'You have successfully scanned and logged this clue. Hold ''RMB'' again
       to put away the manifying glass, then press ''J'' to open your Journal. '
     continueOnJournal: 1
     continueOnPage: 0
@@ -1778,7 +1778,7 @@ MonoBehaviour:
     continueOnNevermind: 0
   - message: On the right is a list of potential topics you may talk about. Click
       any of them to hear what this character has to say about it. Note that clues
-      can also be discovered throught dialogue.
+      can also be discovered through dialogue.
     continueOnJournal: 0
     continueOnPage: 0
     continueOnMagnify: 0
