@@ -36,10 +36,19 @@ public class RaycastInteraction : MonoBehaviour
     /// </summary>
     private void CheckForInteractables()
     {
-        bool hitInteractable = Physics.Raycast(origin.position, origin.forward, out RaycastHit hit, rayLength, whatIsInteractable);
+        bool hitInteractable = Physics.Raycast(origin.position, origin.forward, out RaycastHit hit, rayLength);
 
         if (hitInteractable)
         {
+            // Make sure we hit something on our interactable layer. If not, unassign any interactables we have currently assigned.
+            if (whatIsInteractable != (whatIsInteractable | 1 << hit.transform.gameObject.layer))
+            {
+                if(interactor.GetInteractable() != null)
+                    interactor.UnassignInteractable();
+
+                return;
+            }
+
             IInteractable interactable = hit.transform.GetComponent<IInteractable>();
             if (interactable == null)
             {
@@ -52,7 +61,5 @@ public class RaycastInteraction : MonoBehaviour
                 interactor.SetInteractable(interactable);
             }
         }
-        else if (interactor.GetInteractable() != null)
-            interactor.UnassignInteractable();
     }
 }
