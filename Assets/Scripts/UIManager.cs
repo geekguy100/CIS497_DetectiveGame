@@ -369,15 +369,18 @@ public class UIManager : Singleton<UIManager>
 
         for (int i = 0; i < questionButtons.Count; ++i)
         {
+            print("dESTROYING CLUR TAG BTTN " + questionButtons[i].clue.ClueTag);
             Destroy(questionButtons[i].button.gameObject);
-            questionButtons.RemoveAt(i);
         }
+
+        questionButtons.Clear();
 
         for (int i = 0; i < accusationButtons.Count; ++i)
         {
             Destroy(accusationButtons[i].button.gameObject);
-            accusationButtons.RemoveAt(i);
         }
+
+        accusationButtons.Clear();
     }
 
     public void IterateClues()
@@ -387,6 +390,9 @@ public class UIManager : Singleton<UIManager>
         while(iterator.hasNext())
         {
             string thing = iterator.next().ToString();
+            if (string.IsNullOrEmpty(thing))
+                continue;
+
             resultsText.text += thing + "\n";
         }
     }
