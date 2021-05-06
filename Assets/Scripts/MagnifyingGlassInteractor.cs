@@ -9,9 +9,11 @@ using UnityEngine;
 
 public class MagnifyingGlassInteractor : IInteractor
 {
+    [SerializeField] private string interactionButton;
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetButtonDown(interactionButton))
             PerformInteraction();
     }
 }

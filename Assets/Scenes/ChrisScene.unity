@@ -8337,6 +8337,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5527331411686893234, guid: 5223fea1de9332a419749ffc58d7ef3a, type: 3}
+      propertyPath: interactionButton
+      value: Scan Clue
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5223fea1de9332a419749ffc58d7ef3a, type: 3}
 --- !u!1001 &1922108385
@@ -10575,9 +10579,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1404913648}
+    - target: {fileID: 5659210896326792848, guid: 92922f0f3816e244da8ceb7f3db74dff, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5659210896552329053, guid: 92922f0f3816e244da8ceb7f3db74dff, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -27.99826
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659210897213336842, guid: 92922f0f3816e244da8ceb7f3db74dff, type: 3}
+      propertyPath: m_text
+      value: Press 'LMB' To Discover
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659210897249232964, guid: 92922f0f3816e244da8ceb7f3db74dff, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7358558318626074620, guid: 92922f0f3816e244da8ceb7f3db74dff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
