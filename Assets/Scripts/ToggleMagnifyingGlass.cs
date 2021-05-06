@@ -30,11 +30,16 @@ public class ToggleMagnifyingGlass : MonoBehaviour
         {
             Toggle();
 
+            UIManager.Instance.HideSpeechBubble();
             Tutorial.Instance.ContinueOnMagnify();
         }
 
         if (!toggle && Input.GetButtonUp(buttonName) && !UIManager.Instance.IsPanelOpen())
+        {
             Toggle();
+            if (UIManager.Instance.SpeechIconShouldBeActive)
+                UIManager.Instance.ShowSpeechBubble();
+        }
     }
 
     private void Toggle()

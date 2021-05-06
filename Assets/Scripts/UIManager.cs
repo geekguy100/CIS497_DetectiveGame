@@ -40,6 +40,7 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private GameObject clueFoundPanel;
     [SerializeField] private TextMeshProUGUI clueFoundText;
     [SerializeField] private GameObject scanPanel;
+    public bool SpeechIconShouldBeActive { get; set; }
 
     [Header("Icons")]
     [SerializeField] private GameObject journalIcon;

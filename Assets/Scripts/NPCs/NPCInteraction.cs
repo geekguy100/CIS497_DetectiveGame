@@ -43,11 +43,15 @@ public class NPCInteraction : MonoBehaviour, IInteractable
 
     public void OnAssigned(IInteractor interactor)
     {
-        UIManager.Instance.ShowSpeechBubble();
+        UIManager.Instance.SpeechIconShouldBeActive = true;
+
+        if (GameObject.FindGameObjectWithTag("magnifying glass") == null)
+            UIManager.Instance.ShowSpeechBubble();
     }
 
     public void OnUnassigned(IInteractor interactor)
     {
+        UIManager.Instance.SpeechIconShouldBeActive = false;
         UIManager.Instance.HideSpeechBubble();
     }
 }

@@ -8293,6 +8293,10 @@ PrefabInstance:
       propertyPath: speechBubble
       value: 
       objectReference: {fileID: 2141638701}
+    - target: {fileID: 919132147743493053, guid: 5223fea1de9332a419749ffc58d7ef3a, type: 3}
+      propertyPath: m_TagString
+      value: magnifying glass
+      objectReference: {fileID: 0}
     - target: {fileID: 3204609475765253244, guid: 5223fea1de9332a419749ffc58d7ef3a, type: 3}
       propertyPath: buttonName
       value: Magnifying Glass
