@@ -333,6 +333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 141608979}
   - component: {fileID: 141608980}
+  - component: {fileID: 141608981}
   m_Layer: 5
   m_Name: Toggle
   m_TagString: Untagged
@@ -406,20 +407,20 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1802460404}
-        m_TargetAssemblyTypeName: Tutorial, Assembly-CSharp
-        m_MethodName: SkipTutorial
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 1
+--- !u!114 &141608981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141608978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4715e515dabf1b9458b228c1a5283f6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &157134169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1728,7 +1729,8 @@ MonoBehaviour:
   messages:
   - message: 'Welcome to Mystery At The Murder Hotel. Your job is collect enough
       evidence to confidently accuse a suspect of murder. To begin you will need
-      to learn how to collect evidence. Hold ''RMB'' to equip your magnifying glass. '
+      to learn how to collect evidence. Hold ''Right Mouse Button'' (''RMB'') to
+      equip your magnifying glass. '
     continueOnJournal: 0
     continueOnPage: 0
     continueOnMagnify: 1
@@ -1739,7 +1741,8 @@ MonoBehaviour:
   - message: Now look around using the mouse while you have the magnifying glass
       out. Try to find a clue. You will know something is a clue because it will
       glow orange while looking through the magnifying glass. Once you see one, equip
-      the magnifying glass and press 'LMB' when the prompt appears.
+      the magnifying glass and press 'Left Mouse Button' ('LMB') when the prompt
+      appears.
     continueOnJournal: 0
     continueOnPage: 0
     continueOnMagnify: 0
@@ -1747,7 +1750,7 @@ MonoBehaviour:
     continueOnTalk: 0
     continueOnAsk: 0
     continueOnNevermind: 0
-  - message: 'You have successfully scanned and logged this clue. Hold ''RMB'' again
+  - message: 'You have successfully scanned and logged this clue. Release ''RMB'' 
       to put away the manifying glass, then press ''J'' to open your Journal. '
     continueOnJournal: 1
     continueOnPage: 0

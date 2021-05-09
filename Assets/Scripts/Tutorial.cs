@@ -28,6 +28,16 @@ public class Tutorial : Singleton<Tutorial>
     private bool skipTutorial = false;
     private int index = 0;
 
+    private void OnEnable()
+    {
+        EventManager.OnGameRestart += Init;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnGameRestart -= Init;
+    }
+
     public void NextMessage()
     {
         index++;
@@ -89,5 +99,10 @@ public class Tutorial : Singleton<Tutorial>
     public void HideTutorial()
     {
         tutorialPanel.SetActive(false);
+    }
+
+    private void Init()
+    {
+        startedTutorial = false;
     }
 }
